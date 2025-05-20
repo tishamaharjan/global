@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/main.astro";
+import Hero from "@/components/sections/Hero";
+import Services from "@/components/sections/Services";
+import CompanyIdentity from "@/components/sections/CompanyIdentity";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import Testimonials from "@/components/sections/Testimonials";
+import FAQ from "@/components/sections/FAQ";
+import Newsletter from "@/components/sections/Newsletter";
+import Contact from "@/components/sections/Contact";
+---
+
+<Layout title="Global Square - Digital Innovation Agency">
+  <main class="overflow-hidden">
+    <Hero client:load />
+    <Services />
+    <CompanyIdentity />
+    <WhyChooseUs />
+    <FAQ client:load />
+    <Testimonials />
+    <Contact client:load />
+    <Newsletter />
+  </main>
+</Layout>
