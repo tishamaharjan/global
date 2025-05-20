@@ -152,12 +152,12 @@ const Footer = () => {
               </div>
               <div className="flex items-start gap-3">
                 <Phone size={18} className="text-[#C6FF00] mt-1" />
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <a href="tel:+(977) 9763596355" className="text-sm">+(977)-9763596355</a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#C6FF00] mt-1" />
                 <span className="text-sm">
-                  Ekata Marga, New Baneshwor, Kathmandu, Bagmati 44600, NP
+                  Ekata Marga, New Baneshwor, Kathmandu
                 </span>
               </div>
               <a

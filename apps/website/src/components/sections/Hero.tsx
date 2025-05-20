@@ -47,6 +47,13 @@ const floatingIcons = [
   },
 ];
 
+
+declare global {
+  interface Window {
+    Calendly?: any;
+  }
+}
+
 const Hero = () => {
   const scrollToServices = () => {
     const servicesSection = document.getElementById("services");
@@ -56,10 +63,8 @@ const Hero = () => {
   };
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+    window.Calendly?.initPopupWidget({ url: 'https://calendly.com/gs-developer01/30min' });
+    return false;
   };
 
   return (
