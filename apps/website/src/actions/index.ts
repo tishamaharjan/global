@@ -15,7 +15,7 @@ export const server = {
 
       const { data, error } = await resend.emails.send({
         from: 'noreply@globalsquareit.com',
-        to: ['nabings1010@gmail.com', 'shahithakurisundar@gmail.com'],
+        to: ['nabings1010@gmail.com','gs.developer01@gmail.com', 'shahithakurisundar@gmail.com'],
         subject: `${subject}`,
         html: ` <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
