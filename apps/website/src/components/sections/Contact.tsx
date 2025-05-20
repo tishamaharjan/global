@@ -1,19 +1,13 @@
 import { Button } from "@workspace/ui/components/button";
 import { Input } from "@workspace/ui/components/input";
 import { Textarea } from "@workspace/ui/components/textarea";
-import { useToast } from "@/hooks/use-toast";
+import { actions } from "astro:actions";
+import { useTransition } from "react";
+
 
 const Contact = () => {
-  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
-  };
-
+  const [isPending, setIsPending] = useTransition()
   return (
     <section id="contact" className="py-20 bg-[#0A0A0A]">
       <div className="container mx-auto px-4 md:px-6">
@@ -28,7 +22,14 @@ const Contact = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            action={async (formData) => {
+              setIsPending(async () => {
+                await actions.send(formData);
+              })
+            }}
+            className="space-y-6"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label
@@ -39,6 +40,7 @@ const Contact = () => {
                 </label>
                 <Input
                   id="name"
+                  name="name"
                   placeholder="John Doe"
                   required
                   className="bg-white/5 border-white/10 text-white placeholder:text-white/40"
@@ -53,6 +55,7 @@ const Contact = () => {
                 </label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="john@example.com"
                   required
@@ -70,6 +73,7 @@ const Contact = () => {
               </label>
               <Input
                 id="subject"
+                name="subject"
                 placeholder="Project Inquiry"
                 required
                 className="bg-white/5 border-white/10 text-white placeholder:text-white/40"
@@ -85,6 +89,7 @@ const Contact = () => {
               </label>
               <Textarea
                 id="message"
+                name="message"
                 placeholder="Tell us about your project..."
                 required
                 className="min-h-[150px] bg-white/5 border-white/10 text-white placeholder:text-white/40"
@@ -94,8 +99,9 @@ const Contact = () => {
             <Button
               type="submit"
               className="w-full bg-[#C6FF00] text-black hover:bg-[#a8d900] h-12"
+              disabled={isPending}
             >
-              Send Message
+              {isPending ? 'Sending...' : "Send Message"}
             </Button>
           </form>
         </div>
@@ -105,3 +111,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
