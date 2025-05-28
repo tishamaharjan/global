@@ -13,6 +13,19 @@ const FAQ = () => {
         "We offer a comprehensive range of IT services including web development, mobile app development, UI/UX design, digital transformation consulting, cloud solutions, and custom software development tailored to your business needs.",
     },
     {
+      question:
+        "How involved will I be in the project development process?How do you ensure my product security ?",
+      answer: "asd",
+    },
+    {
+      question: "Can you assist with cloud migration?",
+      answer: "asd",
+    },
+    {
+      question: "How do you ensure my product security ?",
+      answer: "asd",
+    },
+    {
       question: "How can Global Square help my business?",
       answer:
         "We help businesses leverage technology to solve problems, improve efficiency, enhance customer experiences, and drive growth. Our team works closely with you to understand your specific challenges and goals to deliver customized solutions.",
@@ -40,32 +53,54 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-[#0F0F0F]">
+    <section
+      id="faq"
+      className="py-20 md:px-12 lg:px-[156px] bg-[#FBFFE7] text-black md:bg-black md:text-[#E6E6E6]"
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Got Questions?{" "}
-              <span className="text-[#C6FF00]">We've Got Answers!</span>
+            <span className="py-[6px] px-[12px] rounded-full text-black bg-[color:var(--greenbackground)] md:text-[color:var(--greenyellow)] md:bg-[color:var(--blackbackground)]">
+              FAQs
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold my-4">
+              Got Questions? <br />
+              <span
+                className="max-md:hidden bg-clip-text text-transparent"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(18deg, #118E45 -2.03%, rgba(209, 232, 77, 0.70) 46.84%, #CFE93A 101.07%)",
+                }}
+              >
+                We've Got Answers!
+              </span>
+              <span className="md:hidden text-3xl md:text-4xl font-bold my-4">
+                We've Got Answers!
+              </span>
             </h2>
-            <p className="text-white/60">
+            <p className="max-md:text-[#141414] text-[#B3B3B3]">
               If you have any additional questions or need further
               clarification, don't hesitate to get in touch with our team
               directly.
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion
+            type="single"
+            collapsible
+            className="space-y-2 lg:grid lg:grid-cols-2"
+          >
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border border-white/10 rounded-lg bg-[#1A1A1A] px-6 overflow-hidden"
+                className="border-b-[1px] border-[#F0F5DA] md:border-[#141414] rounded-lg md:bg-[#050505] px-6 overflow-hidden"
               >
-                <AccordionTrigger className="text-left py-5 text-white hover:text-[#C6FF00] transition-colors">
-                  {faq.question}
+                <AccordionTrigger className="text-left py-5 md:text-white hover:text-[#C6FF00] md:group-data-[state=open]:text-[#C6FF00] md:text-[#CCC] transition-colors justify-normal items-start">
+                  <span className="mr-[15px]">0{index + 1}</span>
+                  <span>{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-white/70 pb-5">
+                <AccordionContent className="md:text-white/70 pb-5 ml-[32px] md:w-[605px] w-[295px] lg:w-[340px]">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

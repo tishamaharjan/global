@@ -23,11 +23,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
+   
     <!-- Calendly link widget begin -->
     <link
       href="https://assets.calendly.com/assets/external/widget.css"
@@ -53,11 +49,12 @@ const { title } = Astro.props;
     --accent-color: #c6ff00;
   }
   html {
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "Inter", system-ui, "Space Grotesk" ;
     scroll-behavior: smooth;
   }
   body {
     min-height: 100vh;
+   
   }
   @keyframes float {
     0% {

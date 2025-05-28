@@ -1,35 +1,29 @@
 import { Layers, Code, Palette, BarChart } from "lucide-react";
 
-type ServiceCardProps = {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  number: string;
-  className?: string;
-};
+// type ServiceCardProps = {
+//   title: string;
+//   description: string;
+//   number: string;
+//   className?: string;
+// };
 
-const ServiceCard: React.FC<ServiceCardProps> = ({
-  title,
-  description,
-  icon,
-  number,
-  className,
-}) => {
-  return (
-    <div
-      className={`bg-[#1A1A1A] rounded-xl p-6 border border-white/5 hover:border-[#C6FF00]/30 transition-all group relative overflow-hidden ${className}`}
-    >
-      <div className="absolute top-3 right-3 text-5xl font-bold text-white/5 group-hover:text-[#C6FF00]/10 transition-colors">
-        {number}
-      </div>
-      <div className="p-3 bg-[#232323] rounded-lg inline-flex mb-4 text-[#C6FF00] group-hover:bg-[#C6FF00] group-hover:text-black transition-colors">
-        {icon}
-      </div>
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-white/60 text-sm leading-relaxed">{description}</p>
-    </div>
-  );
-};
+// const ServiceCard: React.FC<ServiceCardProps> = ({
+//   title,
+//   description,
+//   number,
+//   className,
+// }) => {
+//   return (
+//     <div className={`w-full`}>
+//       <div className="absolute top-3 right-3 text-5xl font-bold text-white/5 group-hover:text-[#C6FF00]/10 transition-colors">
+//         {number}
+//       </div>
+
+//       <h3 className="text-xl font-semibold mb-3">{title}</h3>
+//       <p className="text-white/60 text-sm leading-relaxed">{description}</p>
+//     </div>
+//   );
+// };
 
 const Services = () => {
   const services = [
@@ -37,56 +31,169 @@ const Services = () => {
       title: "Ideation & Planning",
       description:
         "We turn ideas into actionable strategy by understanding the essence of your business and creating a strategic blueprint for success.",
-      icon: <Layers className="h-6 w-6" />,
+
       number: "01",
+      img: "service1.svg",
     },
     {
       title: "Design & Development",
       description:
         "Bringing designs to life with pixel-perfect UI, from concept to code. We create engaging designs and develop robust systems.",
-      icon: <Code className="h-6 w-6" />,
+
       number: "02",
+      img: "service2.svg",
     },
     {
       title: "Launch Execution",
       description:
         "Ensuring a smooth launch with thorough testing and quality assurance. We manage your audience efficiently during the launch.",
-      icon: <Palette className="h-6 w-6" />,
       number: "03",
+      img: "service3.svg",
     },
     {
       title: "Performance Metrics & Optimization",
       description:
         "We measure and fine-tune your digital presence for optimal performance, analyzing user behavior to boost conversion rates.",
-      icon: <BarChart className="h-6 w-6" />,
       number: "04",
+      img: "service4.svg",
     },
   ];
 
   return (
-    <section id="services" className="py-20 bg-[#0F0F0F]">
+    <section
+      id="services"
+      className="py-20 md:px-[48px] lg:px-[156px] bg-black"
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Your Thoughts, <span className="text-[#C6FF00]">Our Launch</span>
+          <span className="pb-1 pt-1 pl-3 pr-3  rounded-full text-[color:var(--greenyellow)] bg-[color:var(--blackbackground)]">
+            Services
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 mt-5 text-white flex flex-col">
+            <span className="text-white/60">Your Thoughts, </span>
+            <span
+              className="bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, #CFE93A 35.52%)",
+              }}
+            >
+              Our Launch
+            </span>
           </h2>
-          <p className="text-white/60">
-            Our mission is to blend technology with a vision into a powerful
-            partnership. We transform abstract ideas into tangible, innovative
-            digital experiences.
+          <p className="text-white/50">
+            We believe in breakthroughs where others see boundaries. If you're
+            looking for sharper insights, streamlined processes, or a fresh
+            perspective, let's connect—coffee's on us.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              number={service.number}
-            />
-          ))}
+        <div className="flex flex-col md:grid-cols-2 gap-6 content-center w-[100%]">
+          <div className="md:hidden flex flex-col gap-6">
+            {services.map((service, index) => (
+              <div className="w-full p-8 border border-gray-600 rounded-lg">
+                <div className="flex">
+                  <span className="text-[color:var(--greenyellow)] mb-2 text-[20px]">
+                    {service.title}
+                  </span>
+                  <span className="ml-auto font-bold text-gray-200 text-[20px]">
+                    {service.number}
+                  </span>
+                </div>
+                <p className="text-white/50 mb-2 text-[16px]">
+                  {service.description}
+                </p>
+                <div className="flex justify-center">
+                  <img src={service.img} alt={service.title} />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="max-md:hidden">
+            <div className="flex gap-4">
+              <div className="w-[50%] p-8 border border-gray-600 rounded-lg bg-[#131A25]">
+                <div className="flex">
+                  <span className="text-[color:var(--greenyellow)] mb-2 text-[20px]">
+                    Ideation & Planning
+                  </span>
+                  <span className="ml-auto font-bold text-gray-200 text-[20px]">
+                    01
+                  </span>
+                </div>
+                <p className="text-white/50 text-[16px]">
+                  We turn ideas into actionable strategy by understanding the
+                  essence of your business and creating a strategic blueprint
+                  for success.
+                </p>
+
+                <div className="flex justify-center">
+                  <img src="service1.svg" alt="01" />
+                </div>
+              </div>
+
+              <div className="w-[50%] p-8 border border-gray-600 rounded-lg ">
+                <div className="flex">
+                  <span className="text-[color:var(--greenyellow)] mb-2 text-[20px]">
+                    Design & Development
+                  </span>
+                  <span className="ml-auto font-bold text-gray-200 text-[20px]">
+                    02
+                  </span>
+                </div>
+                <p className="text-white/50 text-[16px]">
+                  Bringing designs to life with pixel-perfect UI, from concept
+                  to code. We create engaging designs and develop robust
+                  systems.
+                </p>
+
+                <div className="flex justify-center">
+                  <img src="service2.svg" alt="01" />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex gap-4 mt-4">
+              <div className="w-[30%] p-8 border border-gray-600 rounded-lg ">
+                <div className="flex">
+                  <span className="text-[color:var(--greenyellow)] mb-2 text-[20px]">
+                    Launch Execution
+                  </span>
+                  <span className="ml-auto font-bold text-gray-200 text-[20px]">
+                    03
+                  </span>
+                </div>
+                <p className="text-white/50 text-[16px]">
+                  Ensuring a smooth launch with thorough testing and quality
+                  assurance. We manage your audience efficiently during the
+                  launch.
+                </p>
+
+                <div className="flex justify-center">
+                  <img src="service3.svg" alt="01" />
+                </div>
+              </div>
+
+              <div className="w-[70%] p-8 border border-gray-600 rounded-lg bg-[#161616]">
+                <div className="flex">
+                  <span className="text-[color:var(--greenyellow)] mb-2 text-[20px]">
+                    Performance Metrics & Optimization
+                  </span>
+                  <span className="ml-auto font-bold text-gray-200 text-[20px]">
+                    04
+                  </span>
+                </div>
+                <p className="text-white/50 text-[16px]">
+                  We measure and fine-tune your digital presence for optimal
+                  performance, analyzing user behavior to boost conversion
+                  rates.
+                </p>
+                <div className="flex justify-center">
+                  <img src="service4.svg" alt="01" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

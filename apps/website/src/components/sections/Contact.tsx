@@ -4,17 +4,16 @@ import { Textarea } from "@workspace/ui/components/textarea";
 import { actions } from "astro:actions";
 import { useTransition } from "react";
 
-
 const Contact = () => {
-
-  const [isPending, setIsPending] = useTransition()
+  const [isPending, setIsPending] = useTransition();
   return (
     <section id="contact" className="py-20 bg-[#0A0A0A]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Let's Start Your <span className="text-[#C6FF00]">Project</span>
+              Let's Start Your{" "}
+              <span className="text-[color:var(--green)]">Project</span>
             </h2>
             <p className="text-white/60">
               Ready to transform your ideas into reality? Get in touch with us
@@ -26,7 +25,7 @@ const Contact = () => {
             action={async (formData) => {
               setIsPending(async () => {
                 await actions.send(formData);
-              })
+              });
             }}
             className="space-y-6"
           >
@@ -98,10 +97,10 @@ const Contact = () => {
 
             <Button
               type="submit"
-              className="w-full bg-[#C6FF00] text-black hover:bg-[#a8d900] h-12"
+              className="w-full bg-[color:var(--green)] text-black hover:bg-[color:var(--darkergreen)] h-12"
               disabled={isPending}
             >
-              {isPending ? 'Sending...' : "Send Message"}
+              {isPending ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </div>
@@ -111,5 +110,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-

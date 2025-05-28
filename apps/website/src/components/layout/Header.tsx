@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
+    const contactSection = document.getElementById("footer");
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" });
       if (isMenuOpen) {
@@ -45,38 +45,35 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 bg-[#C6FF00] rounded-md flex items-center justify-center">
-              <span className="font-bold text-black">G</span>
+          <a href="#">
+            <div className="flex items-center gap-2">
+              <img src="logo.svg" alt="Logo" />
             </div>
-            <span className="text-xl font-bold">
-              Global<span className="text-[#C6FF00]">Square</span>
-            </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6 h-12 pl-9 pr-9 rounded-[25px] bg-[#0F0F0F]">
             <a
               href="#services"
-              className="text-sm hover:text-[#C6FF00] transition-colors"
+              className="text-sm hover:text-[color:var(--green)] transition-colors"
             >
               Services
             </a>
             <a
               href="#features"
-              className="text-sm hover:text-[#C6FF00] transition-colors"
+              className="text-sm hover:text-[color:var(--green)] transition-colors"
             >
               Features
             </a>
             <a
               href="#about"
-              className="text-sm hover:text-[#C6FF00] transition-colors"
+              className="text-sm hover:text-[color:var(--green)] transition-colors"
             >
               About
             </a>
             <a
               href="#testimonials"
-              className="text-sm hover:text-[#C6FF00] transition-colors"
+              className="text-sm hover:text-[color:var(--green)] transition-colors"
             >
               Testimonials
             </a>
@@ -85,14 +82,17 @@ const Header = () => {
           {/* CTA Button */}
           <Button
             onClick={scrollToContact}
-            className="hidden md:flex bg-[#C6FF00] text-black hover:bg-[#a8d900] transition-colors"
+            className="hidden h-12 lg:flex bg-gradient-to-r from-[#62B904] to-[#EDFE8C] text-black hover:bg-[color:var(--darkergreen)] transition-colors rounded-full"
           >
-            Contact Us
+            Contact Us{" "}
+            <div className="bg-black rounded-full p-2 ml-3">
+              <img src="Component1.svg" alt="component" />
+            </div>
           </Button>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="lg:hidden text-white"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -107,7 +107,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[64px] bg-black z-40">
+        <div className="lg:hidden h-screen fixed inset-0 top-[64px] bg-black">
           <nav className="flex flex-col p-6 space-y-6">
             <a
               href="#services"
@@ -139,7 +139,7 @@ const Header = () => {
             </a>
             <Button
               onClick={scrollToContact}
-              className="bg-[#C6FF00] text-black hover:bg-[#a8d900] w-full"
+              className="bg-[color:var(--greenyellow)] text-black hover:bg-[color:var(--darkergreen)] w-full md:w-[50%]"
             >
               Contact Us
             </Button>
