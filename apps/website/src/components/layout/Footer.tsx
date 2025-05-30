@@ -55,7 +55,7 @@ const Footer = () => {
                     className="pl-6 pr-2 py-1 bg-white/5 max-md:w-[160px] md:w-[436px] text-white placeholder:text-white/40 h-10 rounded-[100px]"
                   />
                   <Button
-                    className="bg-gradient-to-r from-[#62B904] to-[#EDFE8C] hover:bg-[#a8d900] text-black px-2 py-1 h-10 text-base rounded-[25px] animate-fade-in"
+                    className="cursor-pointer bg-gradient-to-r from-[#62B904] to-[#EDFE8C] hover:bg-[#a8d900] text-black px-2 py-1 h-10 text-base rounded-[25px] animate-fade-in"
                     style={{ animationDelay: "0.3s" }}
                   >
                     Join
@@ -65,11 +65,6 @@ const Footer = () => {
                   </Button>
                 </div>
               </div>
-
-              {/* <p className="text-xs text-white/40 mt-4">
-            By subscribing, you agree to our Privacy Policy and consent to
-            receive updates from our company.
-          </p> */}
             </div>
           </div>
 
@@ -97,12 +92,6 @@ const Footer = () => {
                       Ekata Marga, New Baneshwor, Kathmandu, Nepal
                     </span>
                   </div>
-                  {/* <a
-                  href="#contact"
-                  className="cursor-pointer bg-transparent border border-[color:var(--green)] text-[#C6FF00] px-6 py-2 rounded-md hover:bg-[#C6FF00] hover:text-black transition-all mt-2"
-                >
-                  Start Your Project
-                </a> */}
                 </div>
               </div>
               <div className="flex flex-col mt-6">
@@ -177,7 +166,7 @@ const Footer = () => {
 
                 <Button
                   type="submit"
-                  className="w-full text-[color:var(--darkergreen)] hover:bg-[color:var(--darkergreen)] px-[16px] py-[12px] gap-[10px]"
+                  className="cursor-pointer w-full text-[color:var(--darkergreen)] hover:bg-[color:var(--darkergreen)] px-[16px] py-[12px] gap-[10px]"
                   style={{
                     background: "rgba(25, 25, 25, 0.80)",
                     borderRight:
@@ -290,7 +279,7 @@ const Footer = () => {
 
         {/* Footer bottom: Copyright */}
         <div
-          className="py-5 px-[156px] border-t border-white/10 text-sm text-center"
+          className="py-5 md:px-[156px] border-t border-white/10 text-sm text-center"
           style={{
             backgroundImage:
               "linear-gradient(279deg, rgba(0, 0, 0, 0.10) 3.36%, rgba(209, 232, 77, 0.70) 48.72%, #CFE93A 99.06%)",

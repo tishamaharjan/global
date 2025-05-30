@@ -56,7 +56,7 @@ const CompanyIdentity = () => {
                 <div className="flex sm:flex-row justify-center items-center gap-4 max-lg:hidden lg:my-8">
                   <a href="#footer">
                     <Button
-                      className="bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+                      className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
                       style={{ animationDelay: "0.3s" }}
                     >
                       Contact Us
@@ -67,7 +67,7 @@ const CompanyIdentity = () => {
                   </a>
                   <Button
                     variant="outline"
-                    className="bg-black text-[color:var(--greenyellow)] hover:bg-gray/90 hover:text-[color:var(--green)] px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+                    className="cursor-pointer bg-black text-[color:var(--greenyellow)] hover:bg-gray/90 hover:text-[color:var(--green)] px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
                     style={{
                       animationDelay: "0.5s",
                       borderRight: "2px solid rgba(234, 234, 234, 0.50)",

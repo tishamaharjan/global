@@ -97,7 +97,7 @@ const Contact = () => {
 
             <Button
               type="submit"
-              className="w-full bg-[color:var(--green)] text-black hover:bg-[color:var(--darkergreen)] h-12"
+              className="cursor-pointer w-full bg-[color:var(--green)] text-black hover:bg-[color:var(--darkergreen)] h-12"
               disabled={isPending}
             >
               {isPending ? "Sending..." : "Send Message"}

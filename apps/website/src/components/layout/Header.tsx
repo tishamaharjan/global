@@ -82,7 +82,7 @@ const Header = () => {
           {/* CTA Button */}
           <Button
             onClick={scrollToContact}
-            className="hidden h-12 lg:flex bg-gradient-to-r from-[#62B904] to-[#EDFE8C] text-black hover:bg-[color:var(--darkergreen)] transition-colors rounded-full"
+            className="cursor-pointer hidden h-12 lg:flex bg-gradient-to-r from-[#62B904] to-[#EDFE8C] text-black hover:bg-[color:var(--darkergreen)] transition-colors rounded-full"
           >
             Contact Us{" "}
             <div className="bg-black rounded-full p-2 ml-3">
@@ -92,7 +92,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white"
+            className="cursor-pointer lg:hidden text-white"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -139,7 +139,7 @@ const Header = () => {
             </a>
             <Button
               onClick={scrollToContact}
-              className="bg-[color:var(--greenyellow)] text-black hover:bg-[color:var(--darkergreen)] w-full md:w-[50%]"
+              className="cursor-pointer bg-[color:var(--greenyellow)] text-black hover:bg-[color:var(--darkergreen)] w-full md:w-[50%]"
             >
               Contact Us
             </Button>

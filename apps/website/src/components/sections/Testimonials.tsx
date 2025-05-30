@@ -124,7 +124,7 @@ const Testimonials = () => {
         <div className="mt-12 flex justify-center">
           <a href="#footer">
             <Button
-              className=" bg-[#191919] hover:bg-[color:var(--darkergreen)] text-[color:var(--greenbackground)] px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+              className="cursor-pointer bg-[#191919] hover:bg-[color:var(--darkergreen)] text-[color:var(--greenbackground)] px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
               Join Us

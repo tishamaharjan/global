@@ -36,7 +36,7 @@ const Newsletter = () => {
                 />
               </div>
               <Button
-                className="bg-[color:var(--green)] hover:bg-[#a8d900] text-black px-2 py-1 h-10 text-base rounded-[25px] animate-fade-in"
+                className="cursor-pointer bg-[color:var(--green)] hover:bg-[#a8d900] text-black px-2 py-1 h-10 text-base rounded-[25px] animate-fade-in"
                 style={{ animationDelay: "0.3s" }}
               >
                 Join

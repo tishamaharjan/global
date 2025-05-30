@@ -88,6 +88,7 @@ const Services = () => {
           </p>
         </div>
 
+        {/* Mobile View */}
         <div className="flex flex-col md:grid-cols-2 gap-6 content-center w-[100%]">
           <div className="md:hidden flex flex-col gap-6">
             {services.map((service, index) => (
@@ -110,6 +111,7 @@ const Services = () => {
             ))}
           </div>
 
+          {/* Desktop and IPad View */}
           <div className="max-md:hidden">
             <div className="flex gap-4">
               <div className="w-[50%] p-8 border border-gray-600 rounded-lg bg-[#131A25]">
