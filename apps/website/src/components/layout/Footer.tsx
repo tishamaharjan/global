@@ -278,13 +278,7 @@ const Footer = () => {
         </div>
 
         {/* Footer bottom: Copyright */}
-        <div
-          className="py-5 md:px-[156px] border-t border-white/10 text-sm text-center"
-          style={{
-            backgroundImage:
-              "linear-gradient(279deg, rgba(0, 0, 0, 0.10) 3.36%, rgba(209, 232, 77, 0.70) 48.72%, #CFE93A 99.06%)",
-          }}
-        >
+        <div className="py-5 md:px-[156px] border-t border-white/10 text-sm text-center lg:bg-gradient-to-br from-[#CFE93A] to-[#0000001a]">
           <p>© {currentYear} GlobalSquare. All rights reserved.</p>
           <p className="mt-1 text-xs text-white/50">Designed by GlobalSquare</p>
         </div>
