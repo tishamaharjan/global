@@ -1,6 +1,11 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*", "../../tailwind.config.js"],
+  "include": [
+    ".astro/types.d.ts",
+    "**/*",
+    "../../tailwind.config.js",
+    "../../packages/ui/src/icons/dot.tsx"
+  ],
   "exclude": ["dist"],
   "compilerOptions": {
     "jsx": "react-jsx",

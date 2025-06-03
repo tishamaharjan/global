@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
   // };
 
   return (
-    <section className="relative  pb-20 md:pt-40 md:pb-32 object-fit content-center overflow-hidden">
+    <section className="relative pb-20 pt-[88px] md:pb-32 object-fit content-center overflow-hidden">
       {/* Gradient Background */}
       {/* <div className="absolute inset-0 bg-gradient-to-b from-black via-[#121212] to-[#121212] pointer-events-none"></div> */}
 
@@ -141,12 +141,12 @@ const Hero: React.FC = () => {
       <div className="container mt-22 mx-auto px-4 md:px-6 relative z-10 pt-45">
         <div className="max-w-4xl mx-auto text-center">
           {/* Small Subtitle */}
-          <div className="inline-flex md:hidden items-center px-3 py-1 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-white/80 mb-6 max-sm:hidden">
+          {/* <div className="inline-flex md:hidden items-center px-3 py-1 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-white/80 mb-6 max-sm:hidden">
             <span className="inline-block w-2 h-2 rounded-full bg-[color:var(--green)] mr-2"></span>
             <span>
               Quality Results • Professional Services • Digital Design
             </span>
-          </div>
+          </div> */}
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-[58px] lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
@@ -167,7 +167,7 @@ const Hero: React.FC = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-white/70 mb-8 max-w-3xl mx-auto animate-slide-up">
+          <p className="text-lg md:text-xl text-white/70 mb-8 max-w-3xl mx-auto animate-slide-up font-medium">
             We turn ideas into impactful digital experiences. From strategy to
             execution, our Japan-based team delivers tech solutions that drive
             growth and inspire success.

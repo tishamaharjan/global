@@ -1,4 +1,7 @@
 import { Button } from "@workspace/ui/components/button";
+import IconLoop from "@workspace/ui/components/iconloop";
+import ShuffleUI from "../ShuffleCard";
+import SerialShifting from "../ShuffleCard";
 
 const CompanyIdentity = () => {
   const stats = [
@@ -27,14 +30,18 @@ const CompanyIdentity = () => {
           <div>
             <div className="flex gap-[48px]">
               <div className="w-[49%] h-[368px] relative mt-6 mb-6 max-md:hidden">
-                <img
-                  src="aboutus.svg"
+                <video
                   className="w-full h-full"
-                  alt="AboutUs"
-                />
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src="aboutusvid.mp4" type="video/mp4" />
+                </video>
               </div>
-              <div className="md:w-[49%]">
-                <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-[color:var(--greenbackground)] bg-[color:var(--blackbackground)]">
+              <div className="w-full md:w-[49%]">
+                <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-[color:var(--greenbackground)] bg-[color:var(--titlescolor)]">
                   About Us
                 </span>
                 <h2 className="text-3xl md:text-[48px] font-bold mb-5 mt-5">
@@ -53,7 +60,7 @@ const CompanyIdentity = () => {
                   into reality, empowering businesses with seamless digital
                   experiences.
                 </p>
-                <div className="flex sm:flex-row justify-center items-center gap-4 max-lg:hidden lg:my-8">
+                <div className="flex sm:flex-row max-lg:hidden gap-4 lg:my-8">
                   <a href="#footer">
                     <Button
                       className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
@@ -81,28 +88,16 @@ const CompanyIdentity = () => {
                   </Button>
                 </div>
 
-                <div className="flex flex-wrap gap-2 md:hidden lg:flex lg:my-5">
-                  {[
-                    "Innovation",
-                    "Technology",
-                    "Design",
-                    "Development",
-                    "Strategy",
-                  ].map((tag, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-white/30"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                {/* <IconLoop /> */}
+                <SerialShifting />
               </div>
             </div>
           </div>
         </div>
         <div className="relative mt-6 mb-6 md:hidden">
-          <img src="aboutus.svg" alt="AboutUs" />
+          <video className="w-full h-full" autoPlay loop muted playsInline>
+            <source src="aboutusvid.mp4" type="video/mp4" />
+          </video>
         </div>
 
         {/* Stats */}

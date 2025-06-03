@@ -52,6 +52,10 @@ const FAQ = () => {
     },
   ];
 
+  const mid = Math.ceil(faqs.length / 2);
+  const col1 = faqs.slice(0, mid);
+  const col2 = faqs.slice(mid);
+
   return (
     <section
       id="faq"
@@ -60,7 +64,7 @@ const FAQ = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <span className="py-[6px] px-[12px] rounded-full text-black bg-[color:var(--greenbackground)] md:text-[color:var(--greenyellow)] md:bg-[color:var(--blackbackground)]">
+            <span className="py-[6px] px-[12px] rounded-full text-black bg-[color:var(--greenbackground)] md:text-[color:var(--greenyellow)] md:bg-[color:var(--titlescolor)]">
               FAQs
             </span>
             <h2 className="text-3xl md:text-4xl font-bold my-4">
@@ -85,26 +89,68 @@ const FAQ = () => {
             </p>
           </div>
 
-          <Accordion
-            type="single"
-            collapsible
-            className="space-y-2 lg:grid lg:grid-cols-2"
-          >
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="border-b-[1px] border-[#F0F5DA] md:border-[#141414] rounded-lg md:bg-[#050505] px-6 overflow-hidden"
-              >
-                <AccordionTrigger className="text-left py-5 md:text-white hover:text-[#C6FF00] md:group-data-[state=open]:text-[#C6FF00] md:text-[#CCC] transition-colors justify-normal items-start">
-                  <span className="mr-[15px]">0{index + 1}</span>
-                  <span>{faq.question}</span>
-                </AccordionTrigger>
-                <AccordionContent className="md:text-white/70 pb-5 ml-[32px] md:w-[605px] w-[295px] lg:w-[340px]">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
+          <Accordion type="single" collapsible>
+            <div className="lg:hidden">
+              {faqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="border-b-[1px] border-[#F0F5DA] md:border-[#141414] rounded-lg md:bg-[#050505] px-6 overflow-hidden"
+                >
+                  <AccordionTrigger className="text-left py-5 md:text-white hover:text-[#C6FF00] md:group-data-[state=open]:text-[#C6FF00] md:text-[#CCC] transition-colors justify-normal items-start">
+                    <div className="flex">
+                      <span className="mr-[15px] h-full">0{index + 1}</span>
+                      <span>{faq.question}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="md:text-white/70 pb-5 ml-[32px] md:w-[605px] w-[295px] lg:w-[340px]">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </div>
+
+            <div className="max-lg:hidden lg:grid lg:grid-cols-2 gap-4">
+              <div>
+                {col1.map((faq, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
+                    className="border-b-[1px] border-[#F0F5DA] md:border-[#141414] rounded-lg md:bg-[#050505] px-6 overflow-hidden"
+                  >
+                    <AccordionTrigger className="text-left py-5 md:text-white hover:text-[#C6FF00] md:group-data-[state=open]:text-[#C6FF00] md:text-[#CCC] transition-colors justify-normal items-start">
+                      <div className="flex">
+                        <span className="mr-[15px] h-full">0{index + 1}</span>
+                        <span>{faq.question}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="md:text-white/70 pb-5 ml-[32px] md:w-[605px] w-[295px] lg:w-[340px]">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </div>
+
+              <div>
+                {col2.map((faq, index) => (
+                  <AccordionItem
+                    key={index + mid}
+                    value={`item-${index + mid}`}
+                    className="border-b-[1px] border-[#F0F5DA] md:border-[#141414] rounded-lg md:bg-[#050505] px-6 overflow-hidden"
+                  >
+                    <AccordionTrigger className="text-left py-5 md:text-white hover:text-[#C6FF00] md:group-data-[state=open]:text-[#C6FF00] md:text-[#CCC] transition-colors justify-normal items-start">
+                      <div className="flex">
+                        <span className="mr-[15px]">0{index + mid + 1}</span>
+                        <span>{faq.question}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="md:text-white/70 pb-5 ml-[32px] md:w-[605px] w-[295px] lg:w-[340px]">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </div>
+            </div>
           </Accordion>
         </div>
       </div>

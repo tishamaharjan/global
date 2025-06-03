@@ -4,11 +4,21 @@ import { Textarea } from "@workspace/ui/components/textarea";
 import { actions } from "astro:actions";
 import { useTransition } from "react";
 
+import LinkedIn from "@/assets/icons/LinkedIn";
+import Twiter from "@/assets/icons/Twitter";
+import Faceboook from "@/assets/icons/Facebook";
+import MainIcon from "@/assets/icons/MainIcon";
+import PhoneIcon from "@/assets/icons/PhoneIcon";
+import LocationIcon from "@/assets/icons/LocationIcon";
+import DotBackground from "@workspace/ui/components/dotbg";
+
 const Contact = () => {
   const [isPending, setIsPending] = useTransition();
   return (
-    <section id="contact" className="py-20 bg-[#0A0A0A]">
-      <div className="container mx-auto px-4 md:px-6">
+    // <DotBackground>
+    <section id="contact" className="bg-[#0A0A0A] rounded-2xl h-[391px] p-1">
+      <DotBackground>
+        {/* <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -104,8 +114,57 @@ const Contact = () => {
             </Button>
           </form>
         </div>
-      </div>
+      </div> */}
+        <div className="bg-[#0A0A0A] border-[#222] py-[36px] px-[32px] rounded-[24px]">
+          <div>
+            <h3 className="font-semibold text-white mb-4 text-2xl">
+              How to contact?
+            </h3>
+            <div className="space-y-4 pl-2 flex flex-col gap-4 my-[24px] font-medium text-lg">
+              <div className="flex items-start gap-4 ">
+                <MainIcon />
+                <span className="text-lg flex">info@globalsquareit.com</span>
+              </div>
+              <div className="flex items-start gap-4">
+                <PhoneIcon />{" "}
+                <a href="tel:+(977) 9763596355" className="text-lg">
+                  +(977)-9763596355
+                </a>
+              </div>
+              <div className="flex items-start gap-4">
+                <LocationIcon />{" "}
+                <span className="text-lg">Kathmandu, Nepal</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col mt-6 ">
+            <span className="text-[#ccc] text-[16px]">Our Socials</span>
+            <div className="flex mt-3">
+              <a
+                href="https://www.linkedin.com/company/global-square-i-t-company-pvt-ltd/about/"
+                target="_blank"
+                className="hover:text-[color:var(--green)]  transition-colors rounded-full px-2"
+              >
+                <LinkedIn />
+              </a>
+              <a
+                href="#"
+                className="hover:text-[color:var(--green)] transition-colors rounded-full px-2"
+              >
+                <Twiter />
+              </a>
+              <a
+                href="#"
+                className="hover:text-[color:var(--green)]  transition-colors rounded-full px-2"
+              >
+                <Faceboook />
+              </a>
+            </div>
+          </div>
+        </div>
+      </DotBackground>
     </section>
+    // </DotBackground>
   );
 };
 

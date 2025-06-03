@@ -96,15 +96,27 @@ const Testimonials = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto mb-16 md:text-center">
-          <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-[color:var(--greenyellow)] bg-[color:var(--blackbackground)]">
+          <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-[color:var(--greenyellow)] bg-[color:var(--titlescolor)]">
             Testimonials
           </span>
-          <h2 className="text-5xl md:text-4xl mb-4 mt-2 text-white/60 font-[Space_Grotesk]">
-            What our{" "}
-            <span className="bg-gradient-to-r from-[#62B904] to-[#EDFE8C] bg-clip-text text-transparent">
-              clients say about us
-            </span>
-          </h2>
+          <div>
+            <h2 className="md:hidden text-5xl md:text-4xl mb-4 mt-2 text-white/60 font-[Space_Grotesk]">
+              What our{" "}
+              <span className="text-[color:var(--greenbackground)]">
+                clients say <br /> about us
+              </span>
+            </h2>
+
+            <h2 className="hidden md:block text-5xl md:text-4xl mb-4 mt-2 text-white/60 font-[Space_Grotesk]">
+              What our{" "}
+              <span className="bg-gradient-to-r from-[#62B904] to-[#EDFE8C] bg-clip-text text-transparent">
+                clients say <br />
+              </span>
+              <span className="bg-gradient-to-r from-[#62B904] to-[#EDFE8C] bg-clip-text text-transparent">
+                about us
+              </span>
+            </h2>
+          </div>
           <p className="text-white/30">Hear from those who know us best.</p>
         </div>
 
