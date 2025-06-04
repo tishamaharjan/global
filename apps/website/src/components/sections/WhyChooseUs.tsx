@@ -74,10 +74,10 @@ const WhyChooseUs = () => {
           <span className="py-1 px-3  rounded-full text-black bg-[color:var(--greenbackground)]">
             About us
           </span>
-          <h1 className="text-4xl md:text-4xl font-bold mb-4 mt-5">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-5">
             Why choose us?
           </h1>
-          <p className="text-black">
+          <p className="text-[#000] text-[20px]">
             Discover the array of benefits that come with selecting GS,
             empowering your business with unparalleled web solutions.
           </p>

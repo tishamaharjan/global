@@ -1,6 +1,6 @@
 import React from "react";
 
-const MainIcon = () => {
+const MailIcon = () => {
   return (
     <div>
       <svg
@@ -22,4 +22,4 @@ const MainIcon = () => {
   );
 };
 
-export default MainIcon;
+export default MailIcon;

@@ -100,7 +100,7 @@ const Testimonials = () => {
             Testimonials
           </span>
           <div>
-            <h2 className="md:hidden text-5xl md:text-4xl mb-4 mt-2 text-white/60 font-[Space_Grotesk]">
+            <h2 className="md:hidden text-5xl font-bold mb-4 mt-2 text-white/60">
               What our{" "}
               <span className="text-[color:var(--greenbackground)]">
                 clients say <br /> about us
@@ -117,7 +117,7 @@ const Testimonials = () => {
               </span>
             </h2>
           </div>
-          <p className="text-white/30">Hear from those who know us best.</p>
+          <p className="text-[#eaeaea80]">Hear from those who know us best.</p>
         </div>
 
         <div className="flex md:grid-cols-2 gap-6 overflow-x-auto scrollbar-none">

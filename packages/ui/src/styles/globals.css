@@ -37,6 +37,7 @@
   --blackbackground: #2d2a2a;
   --darkinput: #050505;
   --lightblack: #1a1a1a;
+  --titlescolor: #0f0f0f;
 }
 
 .dark {
@@ -125,5 +126,14 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Space Grotesk", sans-serif;
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }

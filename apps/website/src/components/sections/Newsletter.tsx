@@ -4,7 +4,14 @@ import { Mail } from "lucide-react";
 
 const Newsletter = () => {
   return (
-    <section className="bg-[#0A0A0A] border-[#222] py-[80px] px-[36px] relative overflow-hidden items-start rounded-2xl">
+    <section
+      className="bg-[#0A0A0A] border-[#222] py-[80px] px-[36px] relative overflow-hidden items-start rounded-2xl"
+      style={{
+        backgroundImage: "url('ColoredVectorBg.svg')",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100%",
+      }}
+    >
       <div className=" text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 md:hidden">
           Join Our <br />
@@ -29,8 +36,12 @@ const Newsletter = () => {
               className=" bg-[#141414] mr-auto max-md:w-[160px] border-none md:w-[436px] text-[16px] font-normal placeholder:text-white/40 h-10 "
             />
             <Button
-              className="cursor-pointer bg-gradient-to-r from-[#62B904] to-[#EDFE8C] hover:bg-[#a8d900] text-black px-2 py-1 h-[52px] w-[111px] text-base rounded-[25px] animate-fade-in"
-              style={{ animationDelay: "0.3s" }}
+              className="cursor-pointer bg-gradient-to-r from-[#62B904] to-[#EDFE8C] hover:bg-[#a8d900] text-black px-4 py-[10px] h-[52px] w-[111px] text-[18px] rounded-[25px] animate-fade-in"
+              style={{
+                animationDelay: "0.3s",
+                borderRight: "2px solid var(--linear-2, #118E45)",
+                borderBottom: "4px solid var(--linear-2, #118E45)",
+              }}
             >
               Join
               <div className="bg-black rounded-full p-2 ml-1 w-[32px] h-[32px]">

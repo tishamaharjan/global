@@ -10,7 +10,7 @@ const Ideas = () => {
   return (
     <section className="bg-[#0A0A0A] border-[#222] max-md:border-gray-500 py-[36px] px-[32px] rounded-2xl h-[391px]">
       <div>
-        <span className="font-semibold text-white text-xl">Got Ideas?</span>
+        <span className="font-bold text-white text-2xl">Got Ideas?</span>
         <form
           action={async (formData) => {
             setIsPending(async () => {

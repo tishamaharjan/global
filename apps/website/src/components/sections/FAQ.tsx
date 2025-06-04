@@ -67,7 +67,7 @@ const FAQ = () => {
             <span className="py-[6px] px-[12px] rounded-full text-black bg-[color:var(--greenbackground)] md:text-[color:var(--greenyellow)] md:bg-[color:var(--titlescolor)]">
               FAQs
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold my-4">
+            <h2 className="text-3xl md:text-5xl font-bold my-4">
               Got Questions? <br />
               <span
                 className="max-md:hidden bg-clip-text text-transparent"

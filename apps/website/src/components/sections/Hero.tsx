@@ -34,42 +34,42 @@ const floatingIcons = [
     icon: <img src="arrowleft.svg" alt="Icon" />,
     title: "Innovation",
     delay: 0,
-    position: "left-[15%] top-[43%]",
+    position: "left-[25%] top-[30%]",
     side: "left",
   },
   {
     icon: <img src="arrowleft.svg" alt="Icon" />,
     title: "Quality Assurance",
     delay: 0,
-    position: "left-[8%] top-[59%]",
+    position: "left-[14%] top-[48%]",
     side: "left",
   },
   {
     icon: <img src="arrowleft.svg" alt="Icon" />,
     title: "AI Powered Assistant",
     delay: 0,
-    position: "left-[12%] bottom-[20%]",
+    position: "left-[20%] bottom-[21%]",
     side: "left",
   },
   {
     icon: <img src="arrowright.svg" alt="Icon" />,
     title: "Software Development",
     delay: 1,
-    position: "right-[10%] top-[43%]",
+    position: "right-[20%] top-[30%]",
     side: "right",
   },
   {
     icon: <img src="arrowright.svg" alt="Icon" />,
     title: "UI/UX Design",
     delay: 1,
-    position: "right-[8%] top-[59%]",
+    position: "right-[18%] top-[57%]",
     side: "right",
   },
   {
     icon: <img src="arrowright.svg" alt="Icon" />,
     title: "System Architecture",
     delay: 2,
-    position: "right-[12%] bottom-[20%]",
+    position: "right-[22%] bottom-[18%]",
     side: "right",
   },
 ];
@@ -89,125 +89,130 @@ const Hero: React.FC = () => {
   // };
 
   return (
-    <section className="relative pb-20 pt-[88px] md:pb-32 object-fit content-center overflow-hidden">
-      {/* Gradient Background */}
-      {/* <div className="absolute inset-0 bg-gradient-to-b from-black via-[#121212] to-[#121212] pointer-events-none"></div> */}
+    <>
+      <section className="relative bg-black mt-[90px] md:pb-32 object-fit content-center ">
+        {/* Gradient Background */}
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-black via-[#121212] to-[#121212] pointer-events-none"></div> */}
 
-      {/* Glow Effect */}
-      {/* <div className="absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-[color:var(--green)]/20 rounded-full blur-[100px] pointer-events-none"></div> */}
+        {/* Glow Effect */}
+        {/* <div className="absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-[color:var(--green)]/20 rounded-full blur-[100px] pointer-events-none"></div> */}
 
-      <video
-        className="absolute w-full h-[100%] object-cover z-0"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="background.mp4" type="video/mp4" />
-      </video>
+        <video
+          className="absolute w-full h-full z-0 max-lg:object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="background.mp4" type="video/mp4" />
+        </video>
 
-      {/* Floating Icons */}
-      <div className="max-lg:hidden">
-        {floatingIcons.map((item, index) => {
-          if (item.side == "left")
-            return (
-              <div
-                key={index}
-                className={`absolute ${item.position} left-5 md:flex flex-col items-center justify-center h-12 p-2  text-[#E6E6E6] animate-float `}
-                style={{ animationDelay: `${item.delay}s` }}
-              >
-                <span className="ml-auto">{item.icon}</span>
-                <span className="bg-[#1d1d1d] rounded-[10px] p-1 ">
-                  {item.title}
-                </span>
-              </div>
-            );
-          else
-            return (
-              <div
-                key={index}
-                className={`absolute ${item.position} md:flex flex-col items-center justify-center h-12 p-2 text-[#E6E6E6] animate-float`}
-                style={{ animationDelay: `${item.delay}s` }}
-              >
-                <span className="mr-auto">{item.icon}</span>
-                <span className="bg-[#1d1d1d] rounded-[10px] p-1">
-                  {item.title}
-                </span>
-              </div>
-            );
-        })}
-      </div>
+        {/* Floating Icons */}
+        <div className="max-lg:hidden">
+          {floatingIcons.map((item, index) => {
+            if (item.side == "left")
+              return (
+                <div
+                  key={index}
+                  className={`absolute ${item.position} left-5 md:flex flex-col items-center justify-center h-12 p-2  text-[#E6E6E6] animate-float `}
+                  style={{ animationDelay: `${item.delay}s` }}
+                >
+                  <span className="ml-auto">{item.icon}</span>
+                  <span className="bg-[#1d1d1d] rounded-[10px] p-1 ">
+                    {item.title}
+                  </span>
+                </div>
+              );
+            else
+              return (
+                <div
+                  key={index}
+                  className={`absolute ${item.position} md:flex flex-col items-center justify-center h-12 p-2 text-[#E6E6E6] animate-float`}
+                  style={{ animationDelay: `${item.delay}s` }}
+                >
+                  <span className="mr-auto">{item.icon}</span>
+                  <span className="bg-[#1d1d1d] rounded-[10px] p-1">
+                    {item.title}
+                  </span>
+                </div>
+              );
+          })}
+        </div>
 
-      <div className="container mt-22 mx-auto px-4 md:px-6 relative z-10 pt-45">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Small Subtitle */}
-          {/* <div className="inline-flex md:hidden items-center px-3 py-1 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-white/80 mb-6 max-sm:hidden">
+        <div className="container mt-22 mx-auto px-4 md:px-6 relative z-10 pt-45">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Small Subtitle */}
+            {/* <div className="inline-flex md:hidden items-center px-3 py-1 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-white/80 mb-6 max-sm:hidden">
             <span className="inline-block w-2 h-2 rounded-full bg-[color:var(--green)] mr-2"></span>
             <span>
               Quality Results • Professional Services • Digital Design
             </span>
           </div> */}
 
-          {/* Main Heading */}
-          <h1 className="text-4xl md:text-[58px] lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
-            Bringing Your{" "}
-            <span className="text-[#DCFC36]">
-              <HeroTextLoop />
-            </span>{" "}
-            to Life with <span className="text-[#7F7F7F]">Innovation</span> &{" "}
-            <span
-              className="bg-clip-text text-transparent"
-              style={{
-                backgroundImage:
-                  "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, #CFE93A 35.52%)",
-              }}
-            >
-              Precision
-            </span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl text-white/70 mb-8 max-w-3xl mx-auto animate-slide-up font-medium">
-            We turn ideas into impactful digital experiences. From strategy to
-            execution, our Japan-based team delivers tech solutions that drive
-            growth and inspire success.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex sm:flex-row justify-center items-center gap-4">
-            <a href="#services">
-              <Button
-                className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black  px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
-                style={{ animationDelay: "0.3s" }}
-              >
-                <span>
-                  Explore <span className="max-sm:hidden">More</span>
-                </span>
-                <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
-                  <img src="Component1.svg" alt="component" />
-                </div>
-              </Button>
-            </a>
-            <a href="#footer">
-              <Button
-                variant="outline"
-                className="cursor-pointer bg-black text-[color:var(--greenyellow)] hover:bg-gray/90 hover:text-[color:var(--green)] px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+            {/* Main Heading */}
+            <h1 className="text-4xl md:text-[58px] lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
+              Bringing Your{" "}
+              <span className="text-[#DCFC36]">
+                <HeroTextLoop />
+              </span>{" "}
+              to Life with <span className="text-[#7F7F7F]">Innovation</span> &{" "}
+              <span
+                className="bg-clip-text text-transparent"
                 style={{
-                  animationDelay: "0.5s",
-                  borderRight: "2px solid rgba(234, 234, 234, 0.50)",
-                  borderBottom: "4px solid rgba(234, 234, 234, 0.50)",
+                  backgroundImage:
+                    "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, #CFE93A 35.52%)",
                 }}
               >
-                Contact Us
-                <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
-                  <img src="Component1.svg" alt="component" />
-                </div>
-              </Button>
-            </a>
-          </div>
+                Precision
+              </span>
+            </h1>
 
-          {/* Brands or Trust Indicators */}
-          {/* <div
+            {/* Subtitle */}
+            <p className="text-lg md:text-xl text-white/70 mb-8 max-w-3xl mx-auto animate-slide-up font-medium">
+              We turn ideas into impactful digital experiences. From strategy to
+              execution, our Japan-based team delivers tech solutions that drive
+              growth and inspire success.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="hidden md:flex sm:flex-row justify-center items-center gap-4">
+              <a href="#services">
+                <Button
+                  className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+                  style={{
+                    animationDelay: "0.3s",
+                    borderRight: "2px solid var(--color-yellow-60, #DBFB36)",
+                    borderBottom: "4px solid var(--color-yellow-60, #DBFB36)",
+                  }}
+                >
+                  <span>
+                    Explore <span className="max-sm:hidden">More</span>
+                  </span>
+                  <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+                    <img src="Component1.svg" alt="component" />
+                  </div>
+                </Button>
+              </a>
+              <a href="#footer">
+                <Button
+                  variant="outline"
+                  className="cursor-pointer bg-black text-[color:var(--greenyellow)] hover:bg-gray/90 hover:text-[color:var(--green)] px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+                  style={{
+                    animationDelay: "0.5s",
+                    borderRight: "2px solid rgba(234, 234, 234, 0.50)",
+                    borderBottom: "4px solid rgba(234, 234, 234, 0.50)",
+                  }}
+                >
+                  Contact Us
+                  <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+                    <img src="Component1.svg" alt="component" />
+                  </div>
+                </Button>
+              </a>
+            </div>
+
+            {/* Brands or Trust Indicators */}
+            {/* <div
             className="mt-16 animate-fade-in"
             style={{ animationDelay: "0.7s" }}
           >
@@ -227,9 +232,54 @@ const Hero: React.FC = () => {
               )}
             </div>
           </div> */}
+          </div>
         </div>
+      </section>
+      {/* CTA Buttons in Mobile*/}
+      <div
+        className="flex md:hidden justify-center bg-black h-[150px] gap-4"
+        style={{
+          backgroundImage: "url('VectorBg.svg')",
+          backgroundSize: "100% 100%",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "top left",
+        }}
+      >
+        <a href="#services">
+          <Button
+            className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+            style={{
+              animationDelay: "0.3s",
+              borderRight: "2px solid var(--color-yellow-60, #DBFB36)",
+              borderBottom: "4px solid var(--color-yellow-60, #DBFB36)",
+            }}
+          >
+            <span>
+              Explore <span className="max-sm:hidden">More</span>
+            </span>
+            <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+              <img src="Component1.svg" alt="component" />
+            </div>
+          </Button>
+        </a>
+        <a href="#footer">
+          <Button
+            variant="outline"
+            className="cursor-pointer bg-black text-[color:var(--greenyellow)] hover:bg-gray/90 hover:text-[color:var(--green)] px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+            style={{
+              animationDelay: "0.5s",
+              borderRight: "2px solid rgba(234, 234, 234, 0.50)",
+              borderBottom: "4px solid rgba(234, 234, 234, 0.50)",
+            }}
+          >
+            Contact Us
+            <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+              <img src="Component1.svg" alt="component" />
+            </div>
+          </Button>
+        </a>
       </div>
-    </section>
+    </>
   );
 };
 

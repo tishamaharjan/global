@@ -64,7 +64,13 @@ const CompanyIdentity = () => {
                   <a href="#footer">
                     <Button
                       className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
-                      style={{ animationDelay: "0.3s" }}
+                      style={{
+                        animationDelay: "0.3s",
+                        borderRight:
+                          "2px solid var(--color-yellow-60, #DBFB36)",
+                        borderBottom:
+                          "4px solid var(--color-yellow-60, #DBFB36)",
+                      }}
                     >
                       Contact Us
                       <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
@@ -88,8 +94,9 @@ const CompanyIdentity = () => {
                   </Button>
                 </div>
 
-                {/* <IconLoop /> */}
-                <SerialShifting />
+                <div className="flex md:hidden lg:flex gap-4 my-8">
+                  <IconLoop />
+                </div>
               </div>
             </div>
           </div>
@@ -103,9 +110,11 @@ const CompanyIdentity = () => {
         {/* Stats */}
         <div className="w-full flex flex-wrap gap-2 justify-between">
           {stats.map((stat, index) => (
-            <div className="bg-[#191919] text-center p-3 flex flex-col w-[48%] md:w-[160px] lg:w-[260px] rounded-[15px]">
-              <p className="text-3xl font-bold text-white/50">{stat.stats}</p>
-              <p className="text-sm text-white/30">{stat.title}</p>
+            <div className="bg-[#191919] text-center p-3 flex flex-col justify-center h-[108px] w-[48%] md:w-[160px] lg:w-[260px] rounded-[15px]">
+              <p className="text-2xl font-bold text-[#E6E6E6]">{stat.stats}</p>
+              <p className="text-[18px] font-medium text-[#999]">
+                {stat.title}
+              </p>
             </div>
           ))}
         </div>
