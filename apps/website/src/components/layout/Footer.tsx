@@ -22,7 +22,7 @@ const Footer = () => {
 
             <div className="grid md:h-[390px] md:grid-cols-2 lg:grid-cols-1 lg:flex gap-4 ">
               {/* Column 2: How to contact */}
-              <div className="max-sm:w-[343px] lg:w-[40%] lg:h-full">
+              <div className="lg:w-[40%] lg:h-full overflow-hidden rounded-2xl">
                 <Contact />
               </div>
 

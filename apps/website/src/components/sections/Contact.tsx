@@ -24,7 +24,7 @@ const Contact = () => {
 
   //const [isPending, setIsPending] = useTransition();
   return (
-    <section id="contact" className="bg-[#0A0A0A] rounded-2xl h-[391px] p-1">
+    <section id="contact" className="bg-[#0A0A0A] rounded-2xl h-[391px]">
       <DotBackground>
         <div className="bg-[#0A0A0A] border-[#222] py-[36px] px-[32px] rounded-[24px]">
           <div>

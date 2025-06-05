@@ -31,7 +31,7 @@ const CompanyIdentity = () => {
             <div className="flex gap-[48px]">
               <div className="w-[49%] h-[368px] relative mt-6 mb-6 max-md:hidden">
                 <video
-                  className="w-full h-full"
+                  className="absolute top-0 left-0 h-full object-cover rounded-2xl"
                   autoPlay
                   loop
                   muted
@@ -102,7 +102,13 @@ const CompanyIdentity = () => {
           </div>
         </div>
         <div className="relative mt-6 mb-6 md:hidden">
-          <video className="w-full h-full" autoPlay loop muted playsInline>
+          <video
+            className="w-full h-full rounded-2xl"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
             <source src="aboutusvid.mp4" type="video/mp4" />
           </video>
         </div>
