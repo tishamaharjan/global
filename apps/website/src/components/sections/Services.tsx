@@ -61,16 +61,19 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className=" max-md:pb-20 bg-black">
+    <section
+      id="services"
+      className=" max-md:pb-20 bg-black flex justify-center"
+    >
       {/* Mobile and IPad view without dotted background */}
-      <div className="container px-4 md:px-[48px] lg:px-[156px]  lg:hidden">
+      <div className="container px-4 md:px-[48px] lg:px-[156px] lg:hidden">
         <div className="max-w-3xl text-center mb-16">
           <span className="py-1 px-3  rounded-full text-[color:var(--greenyellow)] bg-[color:var(--titlescolor)]">
             Services
           </span>
 
           {/* In one line */}
-          <h2 className="hidden md:flex lg:hidden text-3xl md:text-4xl font-bold mb-4 mt-5 text-white">
+          <h2 className="hidden md:flex lg:hidden text-3xl md:text-4xl font-bold mb-4 mt-5 text-white justify-center">
             <span className="text-white/60">Your Thoughts, </span>{" "}
             <span
               className="bg-clip-text text-transparent"

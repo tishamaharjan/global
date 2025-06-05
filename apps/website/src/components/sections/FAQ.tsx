@@ -68,19 +68,19 @@ const FAQ = () => {
               FAQs
             </span>
             <h2 className="text-3xl md:text-5xl font-bold my-4">
-              Got Questions? <br />
-              <span
-                className="max-md:hidden bg-clip-text text-transparent"
+              <p>Got Questions?</p>
+              <div
+                className="max-md:hidden bg-clip-text text-transparent font-bold"
                 style={{
                   backgroundImage:
                     "linear-gradient(18deg, #118E45 -2.03%, rgba(209, 232, 77, 0.70) 46.84%, #CFE93A 101.07%)",
                 }}
               >
                 We've Got Answers!
-              </span>
-              <span className="md:hidden text-3xl md:text-4xl font-bold my-4">
+              </div>
+              <div className="md:hidden text-3xl md:text-4xl font-bold my-4">
                 We've Got Answers!
-              </span>
+              </div>
             </h2>
             <p className="max-md:text-[#141414] text-[#B3B3B3]">
               If you have any additional questions or need further
@@ -97,13 +97,13 @@ const FAQ = () => {
                   value={`item-${index}`}
                   className="border-b-[1px] border-[#F0F5DA] md:border-[#141414] rounded-lg md:bg-[#050505] px-6 overflow-hidden"
                 >
-                  <AccordionTrigger className="text-left py-5 md:text-white hover:text-[#C6FF00] md:group-data-[state=open]:text-[#C6FF00] md:text-[#CCC] transition-colors justify-normal items-start">
+                  <AccordionTrigger className="text-left py-5 md:text-white hover:text-[#C6FF00] md:group-data-[state=open]:text-[#C6FF00] md:text-[#CCC] transition-colors justify-normal items-start cursor-pointer">
                     <div className="flex">
                       <span className="mr-[15px] h-full">0{index + 1}</span>
                       <span>{faq.question}</span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="md:text-white/70 pb-5 ml-[32px] md:w-[605px] w-[295px] lg:w-[340px]">
+                  <AccordionContent className="md:text-white/70 pb-5 ml-[36px] md:w-[605px] w-[295px] lg:w-[340px]">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
