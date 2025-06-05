@@ -2,7 +2,6 @@ import Service1 from "@/assets/icons/Service1";
 import Service2 from "@/assets/icons/Service2";
 import Service3 from "@/assets/icons/Service3";
 import Service4 from "@/assets/icons/Service4";
-import { Sparkles, Users, Scale, DollarSign } from "lucide-react";
 
 type FeatureProps = {
   icon: React.ReactNode;
@@ -12,13 +11,15 @@ type FeatureProps = {
 
 const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => {
   return (
-    <div className="flex flex-col space-x-4">
-      <div className="flex-shrink-0 w-12 h-12 mb-1 rounded-[12px] bg-[color:var(--greenbackground)]text-black flex items-center justify-center">
+    <div className="flex flex-col bg-red/500">
+      <div className="flex-shrink-0 w-[50px] h-[50px] mb-3 rounded-[12px] bg-[color:var(--greenbackground)]text-black flex items-center justify-center">
         {icon}
       </div>
       <div>
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-black text-sm leading-relaxed">{description}</p>
+        <h3 className="text-2xl font-bold mb-2 text-[#050505]">{title}</h3>
+        <p className="text-black text-lg font-medium text-[#191919cc] leading-relaxed">
+          {description}
+        </p>
       </div>
     </div>
   );
@@ -70,8 +71,8 @@ const WhyChooseUs = () => {
       className="py-20 md:px-12 lg:px-[156px] bg-[#FBFFE7] text-black"
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl max-lg:mx-auto mb-16">
-          <span className="py-1 px-3  rounded-full text-black bg-[color:var(--greenbackground)]">
+        <div className="max-w-3xl max-lg:mx-auto mb-9">
+          <span className="py-[6px] px-3 rounded-full text-black text-[16px] font-medium bg-[color:var(--greenbackground)]">
             About us
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-5">
@@ -83,9 +84,9 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[18px]">
           {features.map((feature, index) => (
-            <div className="bg-[#F4FFBE] p-5 rounded-[12px]">
+            <div className="bg-[#F4FFBE] py-9 px-6 rounded-[12px]">
               <Feature
                 key={index}
                 icon={feature.icon}

@@ -13,11 +13,11 @@ const Newsletter = () => {
       }}
     >
       <div className=" text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 md:hidden">
+        <h2 className="text-[38px] font-bold mb-6 md:hidden text-[#FFF]">
           Join Our <br />
           Newsletter
         </h2>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 hidden md:block">
+        <h2 className="text-5xl font-bold mb-6 hidden md:block text-[#FFF]">
           Join Our Newsletter
         </h2>
         <p className="text-white/60 mb-8 text-[18px]">

@@ -57,20 +57,22 @@ const FAQ = () => {
   const col2 = faqs.slice(mid);
 
   return (
+    // className="bg-[#FBFFE7] text-black md:bg-black md:text-[#E6E6E6]": for white bg
     <section
       id="faq"
-      className="py-20 md:px-12 lg:px-[156px] bg-[#FBFFE7] text-black md:bg-black md:text-[#E6E6E6]"
+      className="py-20 md:px-12 lg:px-[156px]  bg-black text-[#E6E6E6]"
     >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-4xl mx-auto">
+      <div className="container mx-auto px-4 md:px-6 ">
+        <div className="lg:w-full max-lg:mx-auto">
           <div className="text-center mb-12">
-            <span className="py-[6px] px-[12px] rounded-full text-black bg-[color:var(--greenbackground)] md:text-[color:var(--greenyellow)] md:bg-[color:var(--titlescolor)]">
+            <span className="py-[6px] px-[12px] rounded-full text-[16px] font-medium bg-[color:var(--titlescolor)] text-[color:var(--greenyellow)] md:bg-[color:var(--titlescolor)]">
               FAQs
             </span>
             <h2 className="text-3xl md:text-5xl font-bold my-4">
-              <p>Got Questions?</p>
+              Got Questions?
+              <br />
               <div
-                className="max-md:hidden bg-clip-text text-transparent font-bold"
+                className=" bg-clip-text text-transparent font-bold"
                 style={{
                   backgroundImage:
                     "linear-gradient(18deg, #118E45 -2.03%, rgba(209, 232, 77, 0.70) 46.84%, #CFE93A 101.07%)",
@@ -78,11 +80,13 @@ const FAQ = () => {
               >
                 We've Got Answers!
               </div>
-              <div className="md:hidden text-3xl md:text-4xl font-bold my-4">
+              {/* Mobile light view */}
+              {/* <div className="md:hidden text-3xl md:text-4xl font-bold my-4">
                 We've Got Answers!
-              </div>
+              </div> */}
             </h2>
-            <p className="max-md:text-[#141414] text-[#B3B3B3]">
+            {/* className= "max-md:text-[#141414] text-[#B3B3B3]*/}
+            <p className=" text-[#B3B3B3]">
               If you have any additional questions or need further
               clarification, don't hesitate to get in touch with our team
               directly.
@@ -90,35 +94,39 @@ const FAQ = () => {
           </div>
 
           <Accordion type="single" collapsible>
+            {/* Mobile and IPad */}
+            {/* className: "border-[#F0F5DA]" md:border-[#141414] md:bg-[#050505]"*/}
             <div className="lg:hidden">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border-b-[1px] border-[#F0F5DA] md:border-[#141414] rounded-lg md:bg-[#050505] px-6 overflow-hidden"
+                  className="border-b-[1px] border-[#141414] px-6 overflow-hidden"
                 >
-                  <AccordionTrigger className="text-left py-5 md:text-white hover:text-[#C6FF00] md:group-data-[state=open]:text-[#C6FF00] md:text-[#CCC] transition-colors justify-normal items-start cursor-pointer">
+                  <AccordionTrigger className="text-left py-5  text-[#CCC] hover:text-[#C6FF00] group-data-[state=open]:text-[#C6FF00]  transition-colors justify-normal items-start cursor-pointer">
                     <div className="flex">
                       <span className="mr-[15px] h-full">0{index + 1}</span>
                       <span>{faq.question}</span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="md:text-white/70 pb-5 ml-[36px] md:w-[605px] w-[295px] lg:w-[340px]">
+                  {/* className: "md:text-white/70 pb-5 ml-[36px] md:w-[605px] w-[295px] lg:w-[340px]"*/}
+                  <AccordionContent className="text-white/70 pb-5 ml-[36px] md:w-[605px] w-[295px] lg:w-[340px]">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
               ))}
             </div>
 
-            <div className="max-lg:hidden lg:grid lg:grid-cols-2 gap-4">
+            {/* Desktop */}
+            <div className="max-lg:hidden lg:grid lg:grid-cols-2 gap-[30px] border-[1px] border-[#141414]">
               <div>
                 {col1.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`item-${index}`}
-                    className="border-b-[1px] border-[#F0F5DA] md:border-[#141414] rounded-lg md:bg-[#050505] px-6 overflow-hidden"
+                    className="rounded-lg  px-6 "
                   >
-                    <AccordionTrigger className="text-left py-5 md:text-white hover:text-[#C6FF00] md:group-data-[state=open]:text-[#C6FF00] md:text-[#CCC] transition-colors justify-normal items-start">
+                    <AccordionTrigger className="text-left py-5 text-[#CCC] hover:text-[#C6FF00] group-data-[state=open]:text-[#C6FF00]  transition-colors justify-normal items-start cursor-pointer">
                       <div className="flex">
                         <span className="mr-[15px] h-full">0{index + 1}</span>
                         <span>{faq.question}</span>
@@ -138,7 +146,7 @@ const FAQ = () => {
                     value={`item-${index + mid}`}
                     className="border-b-[1px] border-[#F0F5DA] md:border-[#141414] rounded-lg md:bg-[#050505] px-6 overflow-hidden"
                   >
-                    <AccordionTrigger className="text-left py-5 md:text-white hover:text-[#C6FF00] md:group-data-[state=open]:text-[#C6FF00] md:text-[#CCC] transition-colors justify-normal items-start">
+                    <AccordionTrigger className="text-left py-5 md:text-white text-[#CCC] hover:text-[#C6FF00] group-data-[state=open]:text-[#C6FF00]  transition-colors justify-normal items-start">
                       <div className="flex">
                         <span className="mr-[15px]">0{index + mid + 1}</span>
                         <span>{faq.question}</span>

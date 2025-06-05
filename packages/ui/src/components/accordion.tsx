@@ -36,16 +36,17 @@ const AccordionTrigger = React.forwardRef<
     >
       <span className="min-w-[230px] mr-[5px]">{children}</span>
 
-      <div className="md:hidden ml-auto">
+      {/* Mobile light view */}
+      {/* <div className="md:hidden ml-auto">
         <span className="group-data-[state=open]:hidden">
           <PlusIcon />
         </span>
         <span className="hidden group-data-[state=open]:block">
           <Minus />
         </span>
-      </div>
+      </div> */}
 
-      <div className="max-md:hidden ml-auto">
+      <div className="ml-auto">
         <span className="group-data-[state=open]:hidden">
           <PlusDarkIcon />
         </span>
