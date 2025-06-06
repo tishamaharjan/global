@@ -8,7 +8,7 @@ import { Textarea } from "@workspace/ui/components/textarea";
 const Ideas = () => {
   const [isPending, setIsPending] = useTransition();
   return (
-    <section className="bg-[#0A0A0A] border-[#222] max-md:border-gray-500 py-[36px] px-[32px] rounded-2xl h-[391px]">
+    <section className="bg-[#0A0A0A] border-[#222] max-md:border-gray-500 py-[36px] px-[32px] rounded-2xl">
       <div>
         <span className="font-bold text-white text-2xl">Got Ideas?</span>
         <form
@@ -52,7 +52,7 @@ const Ideas = () => {
 
           <Button
             type="submit"
-            className="cursor-pointer w-full h-[51px] text-[color:var(--darkergreen)] hover:bg-[color:var(--darkergreen)] px-[16px] py-[12px] gap-[10px]"
+            className="cursor-pointer w-full h-[51px] text-[color:var(--darkergreen)] hover:bg-[color:var(--darkergreen)] px-[16px] py-[12px] mt-10"
             style={{
               background: "rgba(25, 25, 25, 0.80)",
               borderRight:

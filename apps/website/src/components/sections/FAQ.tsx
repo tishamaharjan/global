@@ -118,13 +118,13 @@ const FAQ = () => {
             </div>
 
             {/* Desktop */}
-            <div className="max-lg:hidden lg:grid lg:grid-cols-2 gap-[30px] border-[1px] border-[#141414]">
-              <div>
+            <div className="max-lg:hidden lg:grid lg:grid-cols-2 gap-[30px]">
+              <div className="border-[1px] border-[#141414] rounded-xl">
                 {col1.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`item-${index}`}
-                    className="rounded-lg  px-6 "
+                    className="px-6"
                   >
                     <AccordionTrigger className="text-left py-5 text-[#CCC] hover:text-[#C6FF00] group-data-[state=open]:text-[#C6FF00]  transition-colors justify-normal items-start cursor-pointer">
                       <div className="flex">
@@ -139,14 +139,14 @@ const FAQ = () => {
                 ))}
               </div>
 
-              <div>
+              <div className="border-[1px] border-[#141414] rounded-xl">
                 {col2.map((faq, index) => (
                   <AccordionItem
                     key={index + mid}
                     value={`item-${index + mid}`}
-                    className="border-b-[1px] border-[#F0F5DA] md:border-[#141414] rounded-lg md:bg-[#050505] px-6 overflow-hidden"
+                    className=" px-6 overflow-hidden"
                   >
-                    <AccordionTrigger className="text-left py-5 md:text-white text-[#CCC] hover:text-[#C6FF00] group-data-[state=open]:text-[#C6FF00]  transition-colors justify-normal items-start">
+                    <AccordionTrigger className="text-left py-5 text-[#CCC] hover:text-[#C6FF00] group-data-[state=open]:text-[#C6FF00]  transition-colors justify-normal items-start">
                       <div className="flex">
                         <span className="mr-[15px]">0{index + mid + 1}</span>
                         <span>{faq.question}</span>

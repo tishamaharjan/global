@@ -20,14 +20,14 @@ const Footer = () => {
               <Newsletter />
             </div>
 
-            <div className="grid md:h-[390px] md:grid-cols-2 lg:grid-cols-1 lg:flex gap-4 ">
+            <div className="grid md:grid-cols-2 lg:grid-cols-1 lg:flex gap-4 overflow-hidden">
               {/* Column 2: How to contact */}
-              <div className="lg:w-[40%] lg:h-full overflow-hidden rounded-2xl">
+              <div className="lg:w-[40%] overflow-hidden rounded-2xl">
                 <Contact />
               </div>
 
               {/* Column 3: Got Ideas?*/}
-              <div className="lg:w-[60%] lg:h-full">
+              <div className="lg:w-[60%]">
                 <Ideas />
               </div>
             </div>

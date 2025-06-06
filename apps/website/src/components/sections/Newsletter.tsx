@@ -36,11 +36,11 @@ const Newsletter = () => {
               className=" bg-[#141414] mr-auto max-md:w-[160px] border-none md:w-[436px] text-[16px] font-normal placeholder:text-white/40 h-10 "
             />
             <Button
-              className="cursor-pointer bg-gradient-to-r from-[#62B904] to-[#EDFE8C] hover:bg-[#a8d900] text-black px-4 py-[10px] h-[52px] w-[111px] text-[18px] rounded-[25px] animate-fade-in"
+              className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-4 py-[10px] h-[52px] w-[111px] text-[18px] rounded-[25px] animate-fade-in"
               style={{
                 animationDelay: "0.3s",
-                borderRight: "2px solid var(--linear-2, #118E45)",
-                borderBottom: "4px solid var(--linear-2, #118E45)",
+                borderRight: "2px solid var(--color-yellow-60, #DBFB36)",
+                borderBottom: "4px solid var(--color-yellow-60, #DBFB36)",
               }}
             >
               Join

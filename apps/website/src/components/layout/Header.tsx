@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById("footer");
+    const contactSection = document.getElementById("contact");
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" });
       if (isMenuOpen) {
@@ -84,11 +84,11 @@ const Header = () => {
           {/* CTA Button */}
           <Button
             onClick={scrollToContact}
-            className="cursor-pointer text-lg hidden h-12 lg:flex bg-gradient-to-r from-[#62B904] to-[#EDFE8C] text-black hover:bg-[color:var(--darkergreen)] transition-colors rounded-full mr-[156px] font-medium"
+            className="cursor-pointer text-lg hidden h-12 lg:flex bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black transition-colors rounded-full mr-[156px] font-medium"
             style={{
               animationDelay: "0.3s",
-              borderRight: "2px solid var(--linear-2, #118E45)",
-              borderBottom: "4px solid var(--linear-2, #118E45)",
+              borderRight: "2px solid var(--color-yellow-60, #DBFB36)",
+              borderBottom: "4px solid var(--color-yellow-60, #DBFB36)",
             }}
           >
             Contact Us{" "}

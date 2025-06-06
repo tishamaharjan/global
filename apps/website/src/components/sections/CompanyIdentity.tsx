@@ -24,7 +24,7 @@ const CompanyIdentity = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:px-12 lg:px-[156px] bg-black">
+    <section id="about" className="py-[116px] md:px-12 lg:px-[156px] bg-black">
       <div className="container mx-auto px-4 md:px-6 min-h-[400px] gap-12">
         <div className="md:grid-cols-2 gap-12 items-center">
           <div>
@@ -61,7 +61,7 @@ const CompanyIdentity = () => {
                   experiences.
                 </p>
                 <div className="flex sm:flex-row max-lg:hidden gap-4 lg:my-8">
-                  <a href="#footer">
+                  <a href="#contact">
                     <Button
                       className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
                       style={{
@@ -116,7 +116,7 @@ const CompanyIdentity = () => {
         {/* Stats */}
         <div className="w-full flex flex-wrap gap-2 justify-between">
           {stats.map((stat, index) => (
-            <div className="bg-[#191919] font-medium text-[18px] text-center p-3 flex flex-col justify-center h-[108px] w-[48%] md:w-[160px] lg:w-[260px] rounded-[15px]">
+            <div className="bg-[#191919] font-medium text-[18px] text-center p-3 flex flex-col justify-center h-[108px] w-[48%] md:w-[160px] lg:w-[265px] rounded-[15px]">
               <p className="text-2xl font-bold text-[#E6E6E6]">{stat.stats}</p>
               <p className="text-[18px] font-medium text-[#999]">
                 {stat.title}

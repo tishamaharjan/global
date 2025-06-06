@@ -24,9 +24,9 @@ const Contact = () => {
 
   //const [isPending, setIsPending] = useTransition();
   return (
-    <section id="contact" className="bg-[#0A0A0A] rounded-2xl h-[391px]">
+    <section id="contact" className="bg-[#0A0A0A] rounded-2xl h-full">
       <DotBackground>
-        <div className="bg-[#0A0A0A] border-[#222] py-[36px] px-[32px] rounded-[24px]">
+        <div className="border-[#222] py-[36px] px-[32px] rounded-[24px]">
           <div>
             <h3 className="font-bold text-white mb-4 text-2xl">
               How to contact?
