@@ -33,7 +33,7 @@ const Newsletter = () => {
             <Input
               type="email"
               placeholder="example@gs.com"
-              className=" bg-[#141414] mr-auto max-md:w-[160px] border-none md:w-[436px] text-[16px] font-normal placeholder:text-white/40 h-10 "
+              className=" bg-[#141414] mr-auto max-md:w-[160px] border-none md:w-[436px] text-[16px] font-normal placeholder:text-white/40 h-10 focus-visible:ring-0 focus-visible:ring-offset-0"
             />
             <Button
               className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-4 py-[10px] h-[52px] w-[111px] text-[18px] rounded-[25px] animate-fade-in"

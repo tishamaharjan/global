@@ -110,7 +110,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden h-screen fixed inset-0 top-[64px] bg-black">
+        <div className="lg:hidden h-screen fixed inset-0 top-[64px] bg-black lg:pl-[156px]">
           <nav className="flex flex-col p-6 space-y-6 font-medium">
             <a
               href="#services"
