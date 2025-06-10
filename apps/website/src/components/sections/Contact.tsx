@@ -22,7 +22,6 @@ const Contact = () => {
     { icon: <Faceboook />, href: "#" },
   ];
 
-  //const [isPending, setIsPending] = useTransition();
   return (
     <section id="contact" className="bg-[#0A0A0A] rounded-2xl h-full">
       <DotBackground>

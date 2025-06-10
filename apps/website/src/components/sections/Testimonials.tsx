@@ -18,19 +18,6 @@ const Testimonial: React.FC<TestimonialProps> = ({
 }) => {
   return (
     <div className="bg-[#1A1A1A] flex-shrink-0 overflow-y-hidden border border-white/5 rounded-xl p-6 hover:border-[#C6FF00]/30 transition-all w-[300px] font-[Space_Grotesk]">
-      {/* Rating */}
-      {/* <div className="flex mb-4">
-        {[...Array(5)].map((_, i) => (
-          <Star
-            key={i}
-            className={`h-4 w-4 ${
-              i < rating ? "text-[#C6FF00] fill-[#C6FF00]" : "text-white/20"
-            }`}
-          />
-        ))}
-      </div> */}
-
-      {/* Author Info */}
       <div className="flex items-center mb-3">
         <div className="w-10 h-10 bg-gradient-to-br from-[color:var(--green)]/80 to-[#C6FF00]/30 rounded-full flex items-center justify-center text-black font-bold">
           {name.charAt(0)}
@@ -43,7 +30,6 @@ const Testimonial: React.FC<TestimonialProps> = ({
         </div>
       </div>
 
-      {/* Testimonial Text */}
       <p className="text-white/60 mb-6 text-base leading-relaxed">
         "{testimonial}"
       </p>

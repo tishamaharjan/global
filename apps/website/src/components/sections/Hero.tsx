@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Button } from "@workspace/ui/components/button";
-import { ArrowRight, Code, Zap, BarChart3 } from "lucide-react";
 
 const HeroTextLoop = () => {
   const words = ["Vision", "Ideas", "Solutions", "Dreams"];
@@ -74,29 +73,10 @@ const floatingIcons = [
   },
 ];
 
-declare global {
-  interface Window {
-    Calendly?: any;
-  }
-}
-
 const Hero: React.FC = () => {
-  // const scrollToContact = () => {
-  //   window.Calendly?.initPopupWidget({
-  //     url: "https://calendly.com/gs-developer01/30min",
-  //   });
-  //   return false;
-  // };
-
   return (
     <>
       <section className="relative bg-black mt-[90px] md:pb-32 object-fit content-center ">
-        {/* Gradient Background */}
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-black via-[#121212] to-[#121212] pointer-events-none"></div> */}
-
-        {/* Glow Effect */}
-        {/* <div className="absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-[color:var(--green)]/20 rounded-full blur-[100px] pointer-events-none"></div> */}
-
         <video
           className="absolute w-full h-full z-0 max-lg:object-cover"
           autoPlay
@@ -107,7 +87,6 @@ const Hero: React.FC = () => {
           <source src="background.mp4" type="video/mp4" />
         </video>
 
-        {/* Floating Icons */}
         <div className="max-lg:hidden">
           {floatingIcons.map((item, index) => {
             if (item.side == "left")
@@ -141,15 +120,6 @@ const Hero: React.FC = () => {
 
         <div className="container mt-22 mx-auto px-4 md:px-6 relative z-10 pt-45">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Small Subtitle */}
-            {/* <div className="inline-flex md:hidden items-center px-3 py-1 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-white/80 mb-6 max-sm:hidden">
-            <span className="inline-block w-2 h-2 rounded-full bg-[color:var(--green)] mr-2"></span>
-            <span>
-              Quality Results • Professional Services • Digital Design
-            </span>
-          </div> */}
-
-            {/* Main Heading */}
             <h1 className="text-4xl md:text-[58px] lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
               Bringing Your{" "}
               <span className="text-[#DCFC36]">
@@ -167,14 +137,12 @@ const Hero: React.FC = () => {
               </span>
             </h1>
 
-            {/* Subtitle */}
             <p className="text-lg md:text-xl text-white/70 mb-8 max-w-3xl mx-auto animate-slide-up font-medium">
               We turn ideas into impactful digital experiences. From strategy to
               execution, our Japan-based team delivers tech solutions that drive
               growth and inspire success.
             </p>
 
-            {/* CTA Buttons */}
             <div className="hidden md:flex sm:flex-row justify-center items-center gap-4">
               <a href="#services">
                 <Button
@@ -210,32 +178,9 @@ const Hero: React.FC = () => {
                 </Button>
               </a>
             </div>
-
-            {/* Brands or Trust Indicators */}
-            {/* <div
-            className="mt-16 animate-fade-in"
-            style={{ animationDelay: "0.7s" }}
-          >
-            <p className="text-sm uppercase text-white/50 mb-4">
-              Trusted by innovative brands
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
-              {["Microsoft", "Google", "Amazon", "Adobe", "IBM"].map(
-                (brand, index) => (
-                  <div
-                    key={index}
-                    className="text-white/30 font-semibold text-lg"
-                  >
-                    {brand}
-                  </div>
-                )
-              )}
-            </div>
-          </div> */}
           </div>
         </div>
       </section>
-      {/* CTA Buttons in Mobile*/}
       <div
         className="flex md:hidden justify-center bg-black h-[150px] gap-4"
         style={{

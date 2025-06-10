@@ -57,7 +57,6 @@ const FAQ = () => {
   const col2 = faqs.slice(mid);
 
   return (
-    // className="bg-[#FBFFE7] text-black md:bg-black md:text-[#E6E6E6]": for white bg
     <section
       id="faq"
       className="py-20 md:px-12 lg:px-[156px]  bg-black text-[#E6E6E6]"
@@ -80,12 +79,7 @@ const FAQ = () => {
               >
                 We've Got Answers!
               </div>
-              {/* Mobile light view */}
-              {/* <div className="md:hidden text-3xl md:text-4xl font-bold my-4">
-                We've Got Answers!
-              </div> */}
             </h2>
-            {/* className= "max-md:text-[#141414] text-[#B3B3B3]*/}
             <p className=" text-[#B3B3B3]">
               If you have any additional questions or need further
               clarification, don't hesitate to get in touch with our team
@@ -94,8 +88,6 @@ const FAQ = () => {
           </div>
 
           <Accordion type="single" collapsible>
-            {/* Mobile and IPad */}
-            {/* className: "border-[#F0F5DA]" md:border-[#141414] md:bg-[#050505]"*/}
             <div className="lg:hidden">
               {faqs.map((faq, index) => (
                 <AccordionItem
@@ -109,7 +101,6 @@ const FAQ = () => {
                       <span>{faq.question}</span>
                     </div>
                   </AccordionTrigger>
-                  {/* className: "md:text-white/70 pb-5 ml-[36px] md:w-[605px] w-[295px] lg:w-[340px]"*/}
                   <AccordionContent className="text-white/70 pb-5 ml-[36px] md:w-[605px] w-[295px] lg:w-[340px]">
                     {faq.answer}
                   </AccordionContent>
@@ -117,7 +108,6 @@ const FAQ = () => {
               ))}
             </div>
 
-            {/* Desktop */}
             <div className="max-lg:hidden lg:grid lg:grid-cols-2 gap-[30px]">
               <div className="border-[1px] border-[#141414] rounded-xl">
                 {col1.map((faq, index) => (

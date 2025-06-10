@@ -41,16 +41,6 @@ const SerialShifting = () => {
             return (
               <div
                 key={item.id}
-                // className={`
-                //   absolute
-                //   ${item.color}
-                //   w-12 h-12
-                //   rounded-lg
-                //   flex items-center justify-center
-                //   text-white text-lg font-bold
-                //   shadow-lg
-                //   transition-transform duration-1000 ease-in-out
-                // `}
                 style={{
                   position: "absolute",
                   backgroundColor: "#ef4444",

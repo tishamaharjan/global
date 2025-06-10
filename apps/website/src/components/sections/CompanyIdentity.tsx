@@ -1,7 +1,5 @@
 import { Button } from "@workspace/ui/components/button";
 import IconLoop from "@workspace/ui/components/iconloop";
-import ShuffleUI from "../ShuffleCard";
-import SerialShifting from "../ShuffleCard";
 
 const CompanyIdentity = () => {
   const stats = [
@@ -94,9 +92,11 @@ const CompanyIdentity = () => {
                   </Button>
                 </div>
 
-                <div className="flex md:hidden lg:flex gap-4 my-8">
-                  <IconLoop />
-                </div>
+                <span className="flex md:hidden lg:flex overflow-hidden">
+                  <span>
+                    <IconLoop />
+                  </span>
+                </span>
               </div>
             </div>
           </div>
@@ -113,7 +113,6 @@ const CompanyIdentity = () => {
           </video>
         </div>
 
-        {/* Stats */}
         <div className="w-full flex flex-wrap gap-2 justify-between">
           {stats.map((stat, index) => (
             <div className="bg-[#191919] font-medium text-[18px] text-center p-3 flex flex-col justify-center h-[108px] w-[48%] md:w-[160px] lg:w-[265px] rounded-[15px]">

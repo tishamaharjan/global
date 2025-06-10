@@ -46,14 +46,12 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between lg:pl-[156px]">
-          {/* Logo */}
           <a href="#">
             <div className="flex items-center gap-2">
               <img src="logo.svg" alt="Logo" />
             </div>
           </a>
 
-          {/* Desktop Navigation */}
           <nav className="hidden font-medium text-lg lg:flex  items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-[#0F0F0F] lg:border lg:border-[#1E1E1E] text-[#CCC]">
             <a
               href="#services"
@@ -73,15 +71,8 @@ const Header = () => {
             >
               About
             </a>
-            {/* <a
-              href="#testimonials"
-              className="text-lg hover:text-[color:var(--green)] transition-colors"
-            >
-              Testimonials
-            </a> */}
           </nav>
 
-          {/* CTA Button */}
           <Button
             onClick={scrollToContact}
             className="cursor-pointer text-lg hidden h-12 lg:flex bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black transition-colors rounded-full mr-[156px] font-medium"
@@ -97,7 +88,6 @@ const Header = () => {
             </div>
           </Button>
 
-          {/* Mobile Menu Button */}
           <button
             className="cursor-pointer lg:hidden text-white"
             onClick={toggleMenu}
@@ -108,7 +98,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="lg:hidden h-screen fixed inset-0 top-[64px] bg-black lg:pl-[156px]">
           <nav className="flex flex-col p-6 space-y-6 font-medium">
@@ -133,13 +122,7 @@ const Header = () => {
             >
               About
             </a>
-            {/* <a
-              href="#testimonials"
-              className="text-lg font-medium"
-              onClick={toggleMenu}
-            >
-              Testimonials
-            </a> */}
+
             <Button
               onClick={scrollToContact}
               className="cursor-pointer text-lg bg-[color:var(--greenyellow)] text-black hover:bg-[color:var(--darkergreen)] w-full md:w-[50%]"

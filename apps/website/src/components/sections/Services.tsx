@@ -3,31 +3,6 @@ import { Layers, Code, Palette, BarChart } from "lucide-react";
 import service1Img from "../../../public/srv2.png";
 import Overlay from "@workspace/ui/components/Overlay";
 
-// type ServiceCardProps = {
-//   title: string;
-//   description: string;
-//   number: string;
-//   className?: string;
-// };
-
-// const ServiceCard: React.FC<ServiceCardProps> = ({
-//   title,
-//   description,
-//   number,
-//   className,
-// }) => {
-//   return (
-//     <div className={`w-full`}>
-//       <div className="absolute top-3 right-3 text-5xl font-bold text-white/5 group-hover:text-[#C6FF00]/10 transition-colors">
-//         {number}
-//       </div>
-
-//       <h3 className="text-xl font-semibold mb-3">{title}</h3>
-//       <p className="text-white/60 text-sm leading-relaxed">{description}</p>
-//     </div>
-//   );
-// };
-
 const Services = () => {
   const services = [
     {
@@ -67,14 +42,12 @@ const Services = () => {
       id="services"
       className=" max-md:pb-20 bg-black flex justify-center"
     >
-      {/* Mobile and IPad view without dotted background */}
       <div className="container px-4 md:px-[48px] lg:px-[156px] lg:hidden relative">
         <div className="max-w-3xl text-center mb-16">
           <span className="py-1 px-3  rounded-full text-[color:var(--greenyellow)] bg-[color:var(--titlescolor)]">
             Services
           </span>
 
-          {/* In one line */}
           <h2 className="hidden md:flex lg:hidden text-3xl md:text-4xl font-bold mb-4 mt-5 text-white justify-center">
             <span className="text-white/60">Your Thoughts, </span>{" "}
             <span
@@ -88,7 +61,6 @@ const Services = () => {
             </span>
           </h2>
 
-          {/*In two line */}
           <h2 className="flex md:hidden max-lg:flex flex-col text-3xl md:text-4xl font-bold mb-4 mt-5 text-white">
             <span className="text-white/60">Your Thoughts, </span>
             <span
@@ -108,7 +80,6 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Mobile View */}
         <div className="flex flex-col md:grid-cols-2 gap-6 content-center w-[100%]">
           <div className="md:hidden flex flex-col gap-6">
             {services.map((service) => (
@@ -147,7 +118,6 @@ const Services = () => {
             ))}
           </div>
 
-          {/* IPad View */}
           <div className="max-md:hidden">
             <div className="flex gap-4">
               <div className="w-[50%] p-8 border border-gray-600 rounded-lg bg-[#131A25]">
@@ -237,10 +207,8 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Desktop view with dotted background */}
       <span className="bg-black hidden lg:block   ">
         <Overlay />
-        {/* <Overlay /> */}
 
         <section id="services" className="py-20 md:px-[48px] lg:px-[156px]">
           <div className="container mx-auto px-4 md:px-6">
@@ -248,7 +216,6 @@ const Services = () => {
               <span className="py-1 px-3  rounded-full text-[color:var(--greenyellow)] bg-[color:var(--titlescolor)]">
                 Services
               </span>
-              {/*In two line */}
               <h2 className="flex flex-col text-3xl md:text-4xl font-bold mb-4 mt-5 text-white">
                 <span className="text-white/60">Your Thoughts, </span>
                 <span
@@ -269,7 +236,6 @@ const Services = () => {
               </p>
             </div>
 
-            {/* Desktop View */}
             <div className="max-md:hidden">
               <div className="flex gap-4 ">
                 <div className="w-[50%] p-8 border  border-gray-600 rounded-lg bg-[#131A25]">

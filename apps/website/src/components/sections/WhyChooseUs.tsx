@@ -45,12 +45,7 @@ const WhyChooseUs = () => {
       description:
         "With years of industry experience, we bring the knowledge and skills needed to deliver impactful and reliable results.",
     },
-    // {`
-    //   icon: <Service4 />,
-    //   title: "Scalability and Flexibility",
-    //   description:
-    //     "Our solutions are designed to grow with your business, adapting seamlessly to changing requirements and evolving needs.",
-    // },
+
     {
       icon: <Service4 />,
       title: "Cost-Effective Services",

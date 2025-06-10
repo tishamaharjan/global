@@ -16,17 +16,14 @@ const Footer = () => {
         <div className="container mx-auto px-6 ">
           <div className="grid grid-cols-1 md:w-full gap-4 mb-6">
             <div className="lg:mb-[24px]">
-              {/* Column 1: Newsletter */}
               <Newsletter />
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-1 lg:flex gap-4 overflow-hidden">
-              {/* Column 2: How to contact */}
               <div className="lg:w-[40%] overflow-hidden rounded-2xl">
                 <Contact />
               </div>
 
-              {/* Column 3: Got Ideas?*/}
               <div className="lg:w-[60%]">
                 <Ideas />
               </div>
@@ -34,10 +31,8 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      {/* Footer bottom: Copyright */}
       <div className="py-5 w-full md:px-[156px] border-t border-white/10 text-sm text-center lg:bg-gradient-to-br from-[#CFE93A] to-[#0000001a]">
         <p>© 2023 GlobalSquare. All rights reserved.</p>
-        {/* <p className="mt-1 text-xs text-white/50">Designed by GlobalSquare</p> */}
       </div>
     </>
   );
