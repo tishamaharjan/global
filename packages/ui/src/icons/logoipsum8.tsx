@@ -1,5 +1,3 @@
-import React from "react";
-
 const logoipsum8 = () => {
   return (
     <div>

@@ -5,7 +5,7 @@ const DotBackground = ({ children }: { children: React.ReactNode }) => {
     <div
       className=" overflow-hidden h-full max-lg:rounded-2xl"
       style={{
-        backgroundImage: "url('/dot.svg')",
+        backgroundImage: "url('/Dot.svg')",
         backgroundRepeat: "repeat",
         backgroundSize: "18px 18px",
         backgroundPosition: "center",

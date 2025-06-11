@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Button } from "@workspace/ui/components/button";
-import { Menu, X } from "lucide-react";
+import { Button } from "@workspace/ui/components/Button";
+import { X } from "lucide-react";
 import { cn } from "@workspace/ui/lib/utils";
 import HamMenu from "@/assets/icons/Menu";
 
@@ -48,11 +48,11 @@ const Header = () => {
         <div className="flex items-center justify-between lg:pl-[156px]">
           <a href="#">
             <div className="flex items-center gap-2">
-              <img src="logo.svg" alt="Logo" />
+              <img src="Logo.svg" alt="Logo" />
             </div>
           </a>
 
-          <nav className="hidden font-medium text-lg lg:flex  items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-[#0F0F0F] lg:border lg:border-[#1E1E1E] text-[#CCC]">
+          <nav className="hidden font-medium text-lg lg:flex  items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-[var(--titlescolor)] lg:border lg:border-[var(--border)] text-[var(--whitetext)]">
             <a
               href="#services"
               className="text-lg hover:text-[color:var(--green)] transition-colors"
@@ -78,8 +78,10 @@ const Header = () => {
             className="cursor-pointer text-lg hidden h-12 lg:flex bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black transition-colors rounded-full mr-[156px] font-medium"
             style={{
               animationDelay: "0.3s",
-              borderRight: "2px solid var(--color-yellow-60, #DBFB36)",
-              borderBottom: "4px solid var(--color-yellow-60, #DBFB36)",
+              borderRight:
+                "2px solid var(--color-yellow-60, var(--greenbackground))",
+              borderBottom:
+                "4px solid var(--color-yellow-60, var(--greenbackground))",
             }}
           >
             Contact Us{" "}

@@ -1,5 +1,3 @@
-import React from "react";
-
 const HamMenu = () => {
   return (
     <div className="p-3 border-[#7F7F7F] border-2 rounded-lg">

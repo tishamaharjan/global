@@ -38,6 +38,33 @@
   --darkinput: #050505;
   --lightblack: #1a1a1a;
   --titlescolor: #0f0f0f;
+  --footerblack: #0000001a;
+  --border: #1e1e1e;
+  --whitegraytext: #ccc;
+  --darkgreen: #118e45;
+  --lightgreen: #cfe93a;
+  --statbg: #191919;
+  --stattext: #e6e6e6;
+  --stattextgray: #999;
+  --contactbg: #0a0a0a;
+  --contactborder: #222;
+  --iconborder: #141414;
+  --graytext: #b3b3b3;
+  --floatbg: #1d1d1d;
+  --herotext: #dcfc36;
+  --whitegraytext: #ccc;
+  --whitetext: #fff;
+  --servicetitlebg1: #131a25;
+  --servicetitlebg2: #161616;
+  --semititletext: #ffffffcc;
+  --gradientlight: #edfe8c;
+  --gradientdark: #62b904;
+  --semititlegray: #eaeaea80;
+  --semititlegray: #eaeaea80;
+  --desc: #191919cc;
+  --lightbg: #fbffe7;
+  --aboutdesc: #000;
+  --featurebg: #f4ffbe;
 }
 
 .dark {
@@ -135,5 +162,18 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@theme {
+  --animate-marquee: marquee 15s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }

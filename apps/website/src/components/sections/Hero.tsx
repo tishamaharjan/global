@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@workspace/ui/components/Button";
 
 const HeroTextLoop = () => {
   const words = ["Vision", "Ideas", "Solutions", "Dreams"];
@@ -20,7 +20,7 @@ const HeroTextLoop = () => {
 
   return (
     <span
-      className="text-[#DCFC36] relative inline-block min-w-[120px] transition-opacity duration-500"
+      className="text-[var(--herotext)] relative inline-block min-w-[120px] transition-opacity duration-500"
       style={{ opacity: isVisible ? 1 : 0 }}
     >
       {words[currentIndex]}
@@ -30,42 +30,42 @@ const HeroTextLoop = () => {
 
 const floatingIcons = [
   {
-    icon: <img src="arrowleft.svg" alt="Icon" />,
+    icon: <img src="Arrowleft.svg" alt="Icon" />,
     title: "Innovation",
     delay: 0,
     position: "left-[25%] top-[30%]",
     side: "left",
   },
   {
-    icon: <img src="arrowleft.svg" alt="Icon" />,
+    icon: <img src="Arrowleft.svg" alt="Icon" />,
     title: "Quality Assurance",
     delay: 0,
     position: "left-[14%] top-[48%]",
     side: "left",
   },
   {
-    icon: <img src="arrowleft.svg" alt="Icon" />,
+    icon: <img src="Arrowleft.svg" alt="Icon" />,
     title: "AI Powered Assistant",
     delay: 0,
     position: "left-[20%] bottom-[21%]",
     side: "left",
   },
   {
-    icon: <img src="arrowright.svg" alt="Icon" />,
+    icon: <img src="Arrowright.svg" alt="Icon" />,
     title: "Software Development",
     delay: 1,
     position: "right-[20%] top-[30%]",
     side: "right",
   },
   {
-    icon: <img src="arrowright.svg" alt="Icon" />,
+    icon: <img src="Arrowright.svg" alt="Icon" />,
     title: "UI/UX Design",
     delay: 1,
     position: "right-[18%] top-[57%]",
     side: "right",
   },
   {
-    icon: <img src="arrowright.svg" alt="Icon" />,
+    icon: <img src="Arrowright.svg" alt="Icon" />,
     title: "System Architecture",
     delay: 2,
     position: "right-[22%] bottom-[18%]",
@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
           muted
           playsInline
         >
-          <source src="background.mp4" type="video/mp4" />
+          <source src="Background.mp4" type="video/mp4" />
         </video>
 
         <div className="max-lg:hidden">
@@ -93,11 +93,11 @@ const Hero: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className={`absolute ${item.position} left-5 md:flex flex-col items-center justify-center h-12 p-2  text-[#E6E6E6] animate-float `}
+                  className={`absolute ${item.position} left-5 md:flex flex-col items-center justify-center h-12 p-2  text-[var(--stattext)] animate-float `}
                   style={{ animationDelay: `${item.delay}s` }}
                 >
                   <span className="ml-auto">{item.icon}</span>
-                  <span className="bg-[#1d1d1d] rounded-[10px] p-1 ">
+                  <span className="bg-[var(--floatbg)] rounded-[10px] p-1 ">
                     {item.title}
                   </span>
                 </div>
@@ -106,11 +106,11 @@ const Hero: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className={`absolute ${item.position} md:flex flex-col items-center justify-center h-12 p-2 text-[#E6E6E6] animate-float`}
+                  className={`absolute ${item.position} md:flex flex-col items-center justify-center h-12 p-2 text-[var(--stattext)] animate-float`}
                   style={{ animationDelay: `${item.delay}s` }}
                 >
                   <span className="mr-auto">{item.icon}</span>
-                  <span className="bg-[#1d1d1d] rounded-[10px] p-1">
+                  <span className="bg-[var(--floatbg)] rounded-[10px] p-1">
                     {item.title}
                   </span>
                 </div>
@@ -122,15 +122,16 @@ const Hero: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-[58px] lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
               Bringing Your{" "}
-              <span className="text-[#DCFC36]">
+              <span className="text-[var(--herotext)]">
                 <HeroTextLoop />
               </span>{" "}
-              to Life with <span className="text-[#7F7F7F]">Innovation</span> &{" "}
+              to Life with{" "}
+              <span className="text-[var(--herotextgray)]">Innovation</span> &{" "}
               <span
                 className="bg-clip-text text-transparent"
                 style={{
                   backgroundImage:
-                    "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, #CFE93A 35.52%)",
+                    "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, var(--lightgreen) 35.52%)",
                 }}
               >
                 Precision
@@ -146,11 +147,13 @@ const Hero: React.FC = () => {
             <div className="hidden md:flex sm:flex-row justify-center items-center gap-4">
               <a href="#services">
                 <Button
-                  className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+                  className="cursor-pointer bg-[var(--greenyellow)] hover:bg-[var(--darkergreen)] text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
                   style={{
                     animationDelay: "0.3s",
-                    borderRight: "2px solid var(--color-yellow-60, #DBFB36)",
-                    borderBottom: "4px solid var(--color-yellow-60, #DBFB36)",
+                    borderRight:
+                      "2px solid var(--color-yellow-60, var(--greenbackground))",
+                    borderBottom:
+                      "4px solid var(--color-yellow-60, var(--greenbackground)",
                   }}
                 >
                   <span>
@@ -164,7 +167,7 @@ const Hero: React.FC = () => {
               <a href="#footer">
                 <Button
                   variant="outline"
-                  className="cursor-pointer bg-black text-[color:var(--greenyellow)] hover:bg-gray/90 hover:text-[color:var(--green)] px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+                  className="cursor-pointer bg-black text-[var(--greenyellow)] hover:bg-gray/90 hover:text-[var(--green)] px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
                   style={{
                     animationDelay: "0.5s",
                     borderRight: "2px solid rgba(234, 234, 234, 0.50)",
@@ -192,11 +195,13 @@ const Hero: React.FC = () => {
       >
         <a href="#services">
           <Button
-            className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+            className="cursor-pointer bg-[var(--greenyellow)] hover:bg-[var(--darkergreen)] text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
             style={{
               animationDelay: "0.3s",
-              borderRight: "2px solid var(--color-yellow-60, #DBFB36)",
-              borderBottom: "4px solid var(--color-yellow-60, #DBFB36)",
+              borderRight:
+                "2px solid var(--color-yellow-60, var(--greenbackground))",
+              borderBottom:
+                "4px solid var(--color-yellow-60, var(--greenbackground))",
             }}
           >
             <span>
@@ -210,7 +215,7 @@ const Hero: React.FC = () => {
         <a href="#footer">
           <Button
             variant="outline"
-            className="cursor-pointer bg-black text-[color:var(--greenyellow)] hover:bg-gray/90 hover:text-[color:var(--green)] px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+            className="cursor-pointer bg-black text-[var(--greenyellow)] hover:bg-gray/90 hover:text-[var(--green)] px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
             style={{
               animationDelay: "0.5s",
               borderRight: "2px solid rgba(234, 234, 234, 0.50)",

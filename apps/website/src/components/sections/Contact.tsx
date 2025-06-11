@@ -1,16 +1,10 @@
-import { Button } from "@workspace/ui/components/button";
-import { Input } from "@workspace/ui/components/input";
-import { Textarea } from "@workspace/ui/components/textarea";
-import { actions } from "astro:actions";
-import { useTransition } from "react";
-
 import LinkedIn from "@/assets/icons/LinkedIn";
 import Twiter from "@/assets/icons/Twitter";
 import Faceboook from "@/assets/icons/Facebook";
 import MailIcon from "@/assets/icons/MailIcon";
 import PhoneIcon from "@/assets/icons/PhoneIcon";
 import LocationIcon from "@/assets/icons/LocationIcon";
-import DotBackground from "@workspace/ui/components/dotbg";
+import DotBackground from "@workspace/ui/components/Dotbg";
 
 const Contact = () => {
   const socials = [
@@ -23,16 +17,16 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="bg-[#0A0A0A] rounded-2xl h-full">
+    <section id="contact" className="bg-[var(--contactbg)] rounded-2xl h-full">
       <DotBackground>
-        <div className="border-[#222] py-[36px] px-[32px] rounded-[24px]">
+        <div className="border-[var(--contactborder)] py-[36px] px-[32px] rounded-[24px]">
           <div>
             <h3 className="font-bold text-white mb-4 text-2xl">
               How to contact?
             </h3>
             <div className="space-y-4 flex flex-col my-[24px] font-medium text-lg">
               <div className="flex items-start gap-4">
-                <span className="border border-[#141414] rounded-[10px] p-[10px]">
+                <span className="border border-[var(--iconborder)] rounded-[10px] p-[10px]">
                   <MailIcon />
                 </span>
                 <span className="text-lg flex py-[10px]">
@@ -40,7 +34,7 @@ const Contact = () => {
                 </span>
               </div>
               <div className="flex items-start gap-4">
-                <span className="border border-[#141414] rounded-[10px] p-[10px]">
+                <span className="border border-[var(--iconborder)] rounded-[10px] p-[10px]">
                   <PhoneIcon />
                 </span>
                 <a href="tel:+(977) 9763596355" className="text-lg py-[10px]">
@@ -48,7 +42,7 @@ const Contact = () => {
                 </a>
               </div>
               <div className="flex items-start gap-4">
-                <span className="border border-[#141414] rounded-[10px] p-[10px]">
+                <span className="border border-[var(--iconborder)] rounded-[10px] p-[10px]">
                   <LocationIcon />
                 </span>
                 <span className="text-lg py-[10px]">Kathmandu, Nepal</span>
@@ -56,7 +50,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex flex-col mt-6 ">
-            <span className="text-[#ccc] text-[16px] font-semibold">
+            <span className="text-[var(--whitetext)] text-[16px] font-semibold">
               Our Socials
             </span>
             <div className="flex mt-3">
@@ -65,7 +59,7 @@ const Contact = () => {
                   <a
                     key={index}
                     href={social.href}
-                    className="hover:text-[color:var(--green)] transition-colors border border-[#141414] rounded-[10px]"
+                    className="hover:text-[var(--green)] transition-colors border border-[var(--iconborder)] rounded-[10px]"
                   >
                     {social.icon}
                   </a>

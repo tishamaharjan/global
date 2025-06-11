@@ -1,6 +1,3 @@
-import DotBackground from "@workspace/ui/components/dotbg";
-import { Layers, Code, Palette, BarChart } from "lucide-react";
-import service1Img from "../../../public/srv2.png";
 import Overlay from "@workspace/ui/components/Overlay";
 
 const Services = () => {
@@ -11,7 +8,7 @@ const Services = () => {
         "We turn ideas into actionable plans, collaborating to explore concepts and develop strategies for a successful launch",
 
       number: "01",
-      img: "service1.svg",
+      img: "Service1.svg",
     },
     {
       title: "Design & Development",
@@ -19,21 +16,21 @@ const Services = () => {
         "Turning visions into action. We collaborate to uncover insights and build strategies for lasting success.",
 
       number: "02",
-      img: "service2.svg",
+      img: "Service2.svg",
     },
     {
       title: "Launch Execution",
       description:
         "We implement targeted marketing strategies to create buzz and engage your audience effectively during the launch.",
       number: "03",
-      img: "service3.svg",
+      img: "Service3.svg",
     },
     {
       title: "Performance Metrics & Optimization",
       description:
         "We measure success through key performance indicators (KPIs), analyzing user engagement and feedback to assess impact. This data-driven approach helps us identify improvement areas and continuously optimize your product and marketing strategies for sustained growth.",
       number: "04",
-      img: "service4.svg",
+      img: "Service4.svg",
     },
   ];
 
@@ -44,7 +41,7 @@ const Services = () => {
     >
       <div className="container px-4 md:px-[48px] lg:px-[156px] lg:hidden relative">
         <div className="max-w-3xl text-center mb-16">
-          <span className="py-1 px-3  rounded-full text-[color:var(--greenyellow)] bg-[color:var(--titlescolor)]">
+          <span className="py-1 px-3  rounded-full text-[var(--greenyellow)] bg-[var(--titlescolor)]">
             Services
           </span>
 
@@ -54,7 +51,7 @@ const Services = () => {
               className="bg-clip-text text-transparent"
               style={{
                 backgroundImage:
-                  "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, #CFE93A 35.52%)",
+                  "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, var(--lightgreen) 35.52%)",
               }}
             >
               Our Launch
@@ -67,7 +64,7 @@ const Services = () => {
               className="bg-clip-text text-transparent"
               style={{
                 backgroundImage:
-                  "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, #CFE93A 35.52%)",
+                  "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, var(--lightgreen) 35.52%)",
               }}
             >
               Our Launch
@@ -87,15 +84,15 @@ const Services = () => {
                 className="p-8 border border-gray-600 rounded-lg"
                 {...(service.title === "Ideation & Planning" && {
                   className:
-                    "bg-[#131A25] p-8 border border-gray-600 rounded-lg",
+                    "bg-[var(--servicetitlebg1)] p-8 border border-gray-600 rounded-lg",
                 })}
                 {...(service.title === "Performance Metrics & Optimization" && {
                   className:
-                    "bg-[#161616] p-8 border border-gray-600 rounded-lg",
+                    "bg-[var(--servicetitlebg1)] p-8 border border-gray-600 rounded-lg",
                 })}
               >
                 <div className="flex">
-                  <span className="text-[color:var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                  <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
                     {service.title}
                   </span>
                   <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -103,7 +100,7 @@ const Services = () => {
                   </span>
                 </div>
                 {service.title === "Launch Execution" ? (
-                  <p className="text-[#ffffffcc] text-[16px] mb-3">
+                  <p className="text-[var(--semititletext)] text-[16px] mb-3">
                     Journey to Success !
                   </p>
                 ) : null}
@@ -120,9 +117,9 @@ const Services = () => {
 
           <div className="max-md:hidden">
             <div className="flex gap-4">
-              <div className="w-[50%] p-8 border border-gray-600 rounded-lg bg-[#131A25]">
+              <div className="w-[50%] p-8 border border-gray-600 rounded-lg bg-[var(--servicetitlebg1]">
                 <div className="flex">
-                  <span className="text-[color:var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                  <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
                     Ideation & Planning
                   </span>
                   <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -135,13 +132,13 @@ const Services = () => {
                 </p>
 
                 <div className="flex justify-center">
-                  <img src="service1.svg" alt="01" />
+                  <img src="Service1.svg" alt="01" />
                 </div>
               </div>
 
               <div className="w-[50%] p-8 border border-gray-600 rounded-lg ">
                 <div className="flex">
-                  <span className="text-[color:var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                  <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
                     Design & Development
                   </span>
                   <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -154,7 +151,7 @@ const Services = () => {
                 </p>
 
                 <div className="flex justify-center">
-                  <img src="service2.svg" alt="01" />
+                  <img src="Service2.svg" alt="01" />
                 </div>
               </div>
             </div>
@@ -162,14 +159,14 @@ const Services = () => {
             <div className="flex gap-4 mt-4">
               <div className="w-[45%] p-8 border border-gray-600 rounded-lg ">
                 <div className="flex">
-                  <span className="text-[color:var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                  <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
                     Launch Execution
                   </span>
                   <span className="ml-auto text-gray-200 text-[20px] font-semibold">
                     03
                   </span>
                 </div>
-                <p className="text-[#ffffffcc] text-[16px]  mb-3">
+                <p className="text-[var(--semititletext)] text-[16px]  mb-3">
                   Journey to Success !
                 </p>
                 <p className="text-white/50 text-[16px]">
@@ -178,13 +175,13 @@ const Services = () => {
                 </p>
 
                 <div className="flex justify-center">
-                  <img src="service3.svg" alt="01" />
+                  <img src="Service3.svg" alt="01" />
                 </div>
               </div>
 
-              <div className="w-[55%] p-8 border border-gray-600 rounded-lg bg-[#161616]">
+              <div className="w-[55%] p-8 border border-gray-600 rounded-lg bg-[var(--servicetitlebg2)]">
                 <div className="flex">
-                  <span className="text-[color:var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                  <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
                     Performance Metrics & Optimization
                   </span>
                   <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -199,7 +196,7 @@ const Services = () => {
                   for sustained growth.
                 </p>
                 <div className="flex justify-center">
-                  <img src="service4.svg" alt="01" />
+                  <img src="Service4.svg" alt="01" />
                 </div>
               </div>
             </div>
@@ -213,7 +210,7 @@ const Services = () => {
         <section id="services" className="py-20 md:px-[48px] lg:px-[156px]">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <span className="py-1 px-3  rounded-full text-[color:var(--greenyellow)] bg-[color:var(--titlescolor)]">
+              <span className="py-1 px-3  rounded-full text-[var(--greenyellow)] bg-[var(--titlescolor)]">
                 Services
               </span>
               <h2 className="flex flex-col text-3xl md:text-4xl font-bold mb-4 mt-5 text-white">
@@ -222,7 +219,7 @@ const Services = () => {
                   className="bg-clip-text text-transparent"
                   style={{
                     backgroundImage:
-                      "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, #CFE93A 35.52%)",
+                      "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, var(--lightgreen) 35.52%)",
                   }}
                 >
                   Our Launch
@@ -238,9 +235,9 @@ const Services = () => {
 
             <div className="max-md:hidden">
               <div className="flex gap-4 ">
-                <div className="w-[50%] p-8 border  border-gray-600 rounded-lg bg-[#131A25]">
+                <div className="w-[50%] p-8 border  border-gray-600 rounded-lg bg-[var(--servicetitlebg1)]">
                   <div className="flex">
-                    <span className="text-[color:var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                    <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
                       Ideation & Planning
                     </span>
                     <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -254,13 +251,13 @@ const Services = () => {
                   </p>
 
                   <div className="flex justify-center">
-                    <img src="service1.svg" alt="01" />
+                    <img src="Service1.svg" alt="01" />
                   </div>
                 </div>
 
                 <div className="w-[50%] p-8 border border-gray-600 rounded-lg ">
                   <div className="flex">
-                    <span className="text-[color:var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                    <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
                       Design & Development
                     </span>
                     <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -273,7 +270,7 @@ const Services = () => {
                   </p>
 
                   <div className="flex justify-center">
-                    <img src="service2.svg" alt="01" />
+                    <img src="Service2.svg" alt="01" />
                   </div>
                 </div>
               </div>
@@ -281,14 +278,14 @@ const Services = () => {
               <div className="flex gap-4 mt-4">
                 <div className="w-[30%] p-8 border border-gray-600 rounded-lg ">
                   <div className="flex">
-                    <span className="text-[color:var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                    <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
                       Launch Execution
                     </span>
                     <span className="ml-auto text-gray-200 text-[20px] font-semibold">
                       03
                     </span>
                   </div>
-                  <p className="text-[#ffffffcc] text-[16px]  mb-3">
+                  <p className="text-[var(--semititletext)] text-[16px]  mb-3">
                     Journey to Success !
                   </p>
                   <p className="text-white/50 text-[16px]">
@@ -297,13 +294,13 @@ const Services = () => {
                   </p>
 
                   <div className="flex justify-center">
-                    <img src="service3.svg" alt="01" />
+                    <img src="Service3.svg" alt="01" />
                   </div>
                 </div>
 
-                <div className="w-[70%] p-8 border border-gray-600 rounded-lg bg-[#161616]">
+                <div className="w-[70%] p-8 border border-gray-600 rounded-lg bg-[var(--servicetitlebg2)]">
                   <div className="flex">
-                    <span className="text-[color:var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                    <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
                       Performance Metrics & Optimization
                     </span>
                     <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -318,7 +315,7 @@ const Services = () => {
                     marketing strategies for sustained growth.
                   </p>
                   <div className="flex justify-center">
-                    <img src="service4.svg" alt="01" />
+                    <img src="Service4.svg" alt="01" />
                   </div>
                 </div>
               </div>

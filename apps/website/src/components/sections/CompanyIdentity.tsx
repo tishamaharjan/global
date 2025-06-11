@@ -1,5 +1,5 @@
-import { Button } from "@workspace/ui/components/button";
-import IconLoop from "@workspace/ui/components/iconloop";
+import { Button } from "@workspace/ui/components/Button";
+import IconLoop from "@workspace/ui/components/Iconloop";
 
 const CompanyIdentity = () => {
   const stats = [
@@ -35,11 +35,11 @@ const CompanyIdentity = () => {
                   muted
                   playsInline
                 >
-                  <source src="aboutusvid.mp4" type="video/mp4" />
+                  <source src="Aboutusvid.mp4" type="video/mp4" />
                 </video>
               </div>
               <div className="w-full md:w-[49%]">
-                <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-[color:var(--greenbackground)] bg-[color:var(--titlescolor)]">
+                <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-[var(--greenbackground)] bg-[var(--titlescolor)]">
                   About Us
                 </span>
                 <h2 className="text-3xl md:text-[48px] font-bold mb-5 mt-5">
@@ -47,7 +47,7 @@ const CompanyIdentity = () => {
                   <span className="md:hidden lg:flex text-[var(--greenbackground)]">
                     Identity
                   </span>
-                  <span className="hidden md:flex lg:hidden bg-gradient-to-t from-[#118E45] to-[#CFE93A] bg-clip-text text-transparent">
+                  <span className="hidden md:flex lg:hidden bg-gradient-to-t from-[var(--darkgreen)] to-[var(--lightgreen)] bg-clip-text text-transparent">
                     Identity
                   </span>
                 </h2>
@@ -61,13 +61,13 @@ const CompanyIdentity = () => {
                 <div className="flex sm:flex-row max-lg:hidden gap-4 lg:my-8">
                   <a href="#contact">
                     <Button
-                      className="cursor-pointer bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+                      className="cursor-pointer bg-[var(--greenyellow)] hover:bg-[var(--darkergreen)] text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
                       style={{
                         animationDelay: "0.3s",
                         borderRight:
-                          "2px solid var(--color-yellow-60, #DBFB36)",
+                          "2px solid var(--color-yellow-60, var(--greenbackground))",
                         borderBottom:
-                          "4px solid var(--color-yellow-60, #DBFB36)",
+                          "4px solid var(--color-yellow-60, var(--greenbackground))",
                       }}
                     >
                       Contact Us
@@ -78,7 +78,7 @@ const CompanyIdentity = () => {
                   </a>
                   <Button
                     variant="outline"
-                    className="cursor-pointer bg-black text-[color:var(--greenyellow)] hover:bg-gray/90 hover:text-[color:var(--green)] px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+                    className="cursor-pointer bg-black text-[var(--greenyellow)] hover:bg-gray/90 hover:text-[var(--green)] px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
                     style={{
                       animationDelay: "0.5s",
                       borderRight: "2px solid rgba(234, 234, 234, 0.50)",
@@ -93,9 +93,7 @@ const CompanyIdentity = () => {
                 </div>
 
                 <span className="flex md:hidden lg:flex overflow-hidden">
-                  <span>
-                    <IconLoop />
-                  </span>
+                  <IconLoop />
                 </span>
               </div>
             </div>
@@ -109,15 +107,17 @@ const CompanyIdentity = () => {
             muted
             playsInline
           >
-            <source src="aboutusvid.mp4" type="video/mp4" />
+            <source src="Aboutusvid.mp4" type="video/mp4" />
           </video>
         </div>
 
         <div className="w-full flex flex-wrap gap-2 justify-between">
-          {stats.map((stat, index) => (
-            <div className="bg-[#191919] font-medium text-[18px] text-center p-3 flex flex-col justify-center h-[108px] w-[48%] md:w-[160px] lg:w-[265px] rounded-[15px]">
-              <p className="text-2xl font-bold text-[#E6E6E6]">{stat.stats}</p>
-              <p className="text-[18px] font-medium text-[#999]">
+          {stats.map((stat) => (
+            <div className="bg-[var(--statbg)] font-medium text-[18px] text-center p-3 flex flex-col justify-center h-[108px] w-[48%] md:w-[160px] lg:w-[265px] rounded-[15px]">
+              <p className="text-2xl font-bold text-[var(--stattext)]">
+                {stat.stats}
+              </p>
+              <p className="text-[18px] font-medium text-[var(--stattextgray)]">
                 {stat.title}
               </p>
             </div>

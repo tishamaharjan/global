@@ -12,12 +12,14 @@ type FeatureProps = {
 const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => {
   return (
     <div className="flex flex-col bg-red/500">
-      <div className="flex-shrink-0 w-[50px] h-[50px] mb-3 rounded-[12px] bg-[color:var(--greenbackground)]text-black flex items-center justify-center">
+      <div className="flex-shrink-0 w-[50px] h-[50px] mb-3 rounded-[12px] bg-[var(--greenbackground)]text-black flex items-center justify-center">
         {icon}
       </div>
       <div>
-        <h3 className="text-2xl font-bold mb-2 text-[#050505]">{title}</h3>
-        <p className="text-black text-lg font-medium text-[#191919cc] leading-relaxed">
+        <h3 className="text-2xl font-bold mb-2 text-[var(--darkinput)]">
+          {title}
+        </h3>
+        <p className="text-black text-lg font-medium text-[var(--desc)] leading-relaxed">
           {description}
         </p>
       </div>
@@ -63,17 +65,17 @@ const WhyChooseUs = () => {
   return (
     <section
       id="features"
-      className="py-20 md:px-12 lg:px-[156px] bg-[#FBFFE7] text-black"
+      className="py-20 md:px-12 lg:px-[156px] bg-[var(--lightbg)] text-black"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl max-lg:mx-auto mb-9">
-          <span className="py-[6px] px-3 rounded-full text-black text-[16px] font-medium bg-[color:var(--greenbackground)]">
+          <span className="py-[6px] px-3 rounded-full text-black text-[16px] font-medium bg-[var(--greenbackground)]">
             About us
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-5">
             Why choose us?
           </h1>
-          <p className="text-[#000] text-[20px]">
+          <p className="text-[var(--aboutdesc) ] text-[20px]">
             Discover the array of benefits that come with selecting GS,
             empowering your business with unparalleled web solutions.
           </p>
@@ -81,7 +83,7 @@ const WhyChooseUs = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[18px]">
           {features.map((feature, index) => (
-            <div className="bg-[#F4FFBE] py-9 px-6 rounded-[12px]">
+            <div className="bg-[var(--featurebg)] py-9 px-6 rounded-[12px]">
               <Feature
                 key={index}
                 icon={feature.icon}

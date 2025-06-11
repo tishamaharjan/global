@@ -1,5 +1,4 @@
-import { Star } from "lucide-react";
-import { Button } from "@workspace/ui/components/button";
+import { Button } from "@workspace/ui/components/Button";
 
 type TestimonialProps = {
   name: string;
@@ -14,12 +13,11 @@ const Testimonial: React.FC<TestimonialProps> = ({
   position,
   company,
   testimonial,
-  rating,
 }) => {
   return (
-    <div className="bg-[#1A1A1A] flex-shrink-0 overflow-y-hidden border border-white/5 rounded-xl p-6 hover:border-[#C6FF00]/30 transition-all w-[300px] font-[Space_Grotesk]">
+    <div className="bg-[var(--lightblack)] flex-shrink-0 overflow-y-hidden border border-white/5 rounded-xl p-6 hover:border-[var(--green)]/30 transition-all w-[300px] font-[Space_Grotesk]">
       <div className="flex items-center mb-3">
-        <div className="w-10 h-10 bg-gradient-to-br from-[color:var(--green)]/80 to-[#C6FF00]/30 rounded-full flex items-center justify-center text-black font-bold">
+        <div className="w-10 h-10 bg-gradient-to-br from-[var(--green)]/80 to-[var(--green)]/30 rounded-full flex items-center justify-center text-black font-bold">
           {name.charAt(0)}
         </div>
         <div className="ml-3">
@@ -82,28 +80,30 @@ const Testimonials = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto mb-16 md:text-center">
-          <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-[color:var(--greenyellow)] bg-[color:var(--titlescolor)]">
+          <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-[var(--greenyellow)] bg-[var(--titlescolor)]">
             Testimonials
           </span>
           <div>
             <h2 className="md:hidden text-5xl font-bold mb-4 mt-2 text-white/60">
               What our{" "}
-              <span className="text-[color:var(--greenbackground)]">
+              <span className="text-[var(--greenbackground)]">
                 clients say <br /> about us
               </span>
             </h2>
 
             <h2 className="hidden md:block text-5xl md:text-4xl mb-4 mt-2 text-white/60 font-[Space_Grotesk]">
               What our{" "}
-              <span className="bg-gradient-to-r from-[#62B904] to-[#EDFE8C] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--gradientdark)] to-[var(--gradientlight)] bg-clip-text text-transparent">
                 clients say <br />
               </span>
-              <span className="bg-gradient-to-r from-[#62B904] to-[#EDFE8C] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--gradientdark)] to-[var(--gradientlight)] bg-clip-text text-transparent">
                 about us
               </span>
             </h2>
           </div>
-          <p className="text-[#eaeaea80]">Hear from those who know us best.</p>
+          <p className="text-[var(--semititlegray)]">
+            Hear from those who know us best.
+          </p>
         </div>
 
         <div className="flex md:grid-cols-2 gap-6 overflow-x-auto scrollbar-none">
@@ -122,7 +122,7 @@ const Testimonials = () => {
         <div className="mt-12 flex justify-center">
           <a href="#footer">
             <Button
-              className="cursor-pointer bg-[#191919] hover:bg-[color:var(--darkergreen)] text-[color:var(--greenbackground)] px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+              className="cursor-pointer bg-[var(--statbg)] hover:bg-[var(--darkergreen)] text-[var(--greenbackground)] px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
               Join Us

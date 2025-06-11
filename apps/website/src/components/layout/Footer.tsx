@@ -1,5 +1,3 @@
-import { Mail, Phone, MapPin } from "lucide-react";
-
 import Newsletter from "../sections/Newsletter";
 import Contact from "../sections/Contact";
 import Ideas from "../sections/Ideas";
@@ -31,7 +29,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="py-5 w-full md:px-[156px] border-t border-white/10 text-sm text-center lg:bg-gradient-to-br from-[#CFE93A] to-[#0000001a]">
+      <div className="py-5 w-full md:px-[156px] border-t border-white/10 text-sm text-center lg:bg-gradient-to-br from-[var(--greenyellow)] to-[var(--footerblack)]">
         <p>© 2023 GlobalSquare. All rights reserved.</p>
       </div>
     </>
