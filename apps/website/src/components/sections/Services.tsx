@@ -8,7 +8,7 @@ const Services = () => {
         "We turn ideas into actionable plans, collaborating to explore concepts and develop strategies for a successful launch",
 
       number: "01",
-      img: "Service1.svg",
+      img: "Service1.png",
     },
     {
       title: "Design & Development",
@@ -16,21 +16,21 @@ const Services = () => {
         "Turning visions into action. We collaborate to uncover insights and build strategies for lasting success.",
 
       number: "02",
-      img: "Service2.svg",
+      img: "Service2.png",
     },
     {
       title: "Launch Execution",
       description:
         "We implement targeted marketing strategies to create buzz and engage your audience effectively during the launch.",
       number: "03",
-      img: "Service3.svg",
+      img: "Service3.png",
     },
     {
       title: "Performance Metrics & Optimization",
       description:
         "We measure success through key performance indicators (KPIs), analyzing user engagement and feedback to assess impact. This data-driven approach helps us identify improvement areas and continuously optimize your product and marketing strategies for sustained growth.",
       number: "04",
-      img: "Service4.svg",
+      img: "Service4.png",
     },
   ];
 
@@ -85,7 +85,7 @@ const Services = () => {
                 })}
                 {...(service.title === "Performance Metrics & Optimization" && {
                   className:
-                    "bg-[var(--servicetitlebg1)] p-8 border border-gray-600 rounded-lg",
+                    "bg-[var(--servicetitlebg2)] p-8 border border-gray-600 rounded-lg",
                 })}
               >
                 <div className="flex">
@@ -114,7 +114,7 @@ const Services = () => {
 
           <div className="max-md:hidden">
             <div className="flex gap-4">
-              <div className="w-[50%] p-8 border border-gray-600 rounded-lg bg-[var(--servicetitlebg1]">
+              <div className="w-[50%] p-8 border border-gray-600 rounded-lg bg-[var(--servicetitlebg1)]">
                 <div className="flex">
                   <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
                     Ideation & Planning
@@ -129,7 +129,7 @@ const Services = () => {
                 </p>
 
                 <div className="flex justify-center">
-                  <img src="Service1.svg" alt="01" />
+                  <img src="Service1.png" alt="01" />
                 </div>
               </div>
 
@@ -148,7 +148,7 @@ const Services = () => {
                 </p>
 
                 <div className="flex justify-center">
-                  <img src="Service2.svg" alt="01" />
+                  <img src="Service2.png" alt="01" />
                 </div>
               </div>
             </div>
@@ -172,7 +172,7 @@ const Services = () => {
                 </p>
 
                 <div className="flex justify-center">
-                  <img src="Service3.svg" alt="01" />
+                  <img src="Service3.png" alt="01" />
                 </div>
               </div>
 
@@ -193,7 +193,7 @@ const Services = () => {
                   for sustained growth.
                 </p>
                 <div className="flex justify-center">
-                  <img src="Service4.svg" alt="01" />
+                  <img src="Service4.png" alt="01" />
                 </div>
               </div>
             </div>
@@ -248,7 +248,7 @@ const Services = () => {
                   </p>
 
                   <div className="flex justify-center">
-                    <img src="Service1.svg" alt="01" />
+                    <img src="Service1.png" alt="01" />
                   </div>
                 </div>
 
@@ -267,7 +267,7 @@ const Services = () => {
                   </p>
 
                   <div className="flex justify-center">
-                    <img src="Service2.svg" alt="01" />
+                    <img src="Service2.png" alt="01" />
                   </div>
                 </div>
               </div>
@@ -291,7 +291,7 @@ const Services = () => {
                   </p>
 
                   <div className="flex justify-center">
-                    <img src="Service3.svg" alt="01" />
+                    <img src="Service3.png" alt="01" />
                   </div>
                 </div>
 
@@ -312,7 +312,7 @@ const Services = () => {
                     marketing strategies for sustained growth.
                   </p>
                   <div className="flex justify-center">
-                    <img src="Service4.svg" alt="01" />
+                    <img src="Service4.png" alt="01" />
                   </div>
                 </div>
               </div>

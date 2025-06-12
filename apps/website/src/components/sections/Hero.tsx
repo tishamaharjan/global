@@ -3,6 +3,7 @@ import { Button } from "../Button";
 import Arrowleft from "@/assets/icons/Arrowleft";
 import Arrowright from "@/assets/icons/Arrowright";
 import Component1 from "@/assets/icons/Component1";
+import VectorBg from "@/assets/icons/VectorBg";
 
 const HeroTextLoop = () => {
   const words = ["Vision", "Ideas", "Solutions", "Dreams"];
