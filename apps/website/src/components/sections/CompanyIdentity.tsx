@@ -1,5 +1,4 @@
 import { Button } from "@workspace/ui/components/Button";
-import IconLoop from "@workspace/ui/components/Iconloop";
 
 const CompanyIdentity = () => {
   const stats = [
@@ -28,15 +27,13 @@ const CompanyIdentity = () => {
           <div>
             <div className="flex gap-[48px]">
               <div className="w-[49%] h-[368px] relative mt-6 mb-6 max-md:hidden">
-                <video
-                  className="absolute top-0 left-0 h-full object-cover rounded-2xl"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src="Aboutusvid.mp4" type="video/mp4" />
-                </video>
+                <div className="absolute top-0 left-0 h-full rounded-2xl">
+                  <img
+                    src="Aboutusvid.gif"
+                    alt=""
+                    className="h-full rounded-2xl object-cover"
+                  />
+                </div>
               </div>
               <div className="w-full md:w-[49%]">
                 <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-[var(--greenbackground)] bg-[var(--titlescolor)]">
@@ -92,23 +89,19 @@ const CompanyIdentity = () => {
                   </Button>
                 </div>
 
-                <span className="flex md:hidden lg:flex overflow-hidden">
+                {/* <span className="flex md:hidden lg:flex overflow-hidden">
                   <IconLoop />
-                </span>
+                </span> */}
               </div>
             </div>
           </div>
         </div>
         <div className="relative mt-6 mb-6 md:hidden">
-          <video
+          <img
+            src="Aboutusvid.gif"
+            alt=""
             className="w-full h-full rounded-2xl"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="Aboutusvid.mp4" type="video/mp4" />
-          </video>
+          />
         </div>
 
         <div className="w-full flex flex-wrap gap-2 justify-between">

@@ -76,16 +76,14 @@ const floatingIcons = [
 const Hero: React.FC = () => {
   return (
     <>
-      <section className="relative bg-black mt-[90px] md:pb-32 object-fit content-center ">
-        <video
-          className="absolute w-full h-full z-0 max-lg:object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src="Background.mp4" type="video/mp4" />
-        </video>
+      <section className="relative bg-black mt-[90px] md:pb-32 object-fit content-center lg:mt-0 lg:min-h-[898px]">
+        <span className="w-full">
+          <img
+            src="Earth.gif"
+            alt=""
+            className="absolute w-full h-full z-0 object-cover"
+          />
+        </span>
 
         <div className="max-lg:hidden">
           {floatingIcons.map((item, index) => {
