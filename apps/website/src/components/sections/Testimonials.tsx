@@ -1,4 +1,4 @@
-import { Button } from "@workspace/ui/components/Button";
+import { Button } from "../Button";
 
 type TestimonialProps = {
   name: string;

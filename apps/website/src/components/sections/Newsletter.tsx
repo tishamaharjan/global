@@ -1,5 +1,6 @@
-import { Button } from "@workspace/ui/components/Button";
-import { Input } from "@workspace/ui/components/Input";
+import Component1 from "@/assets/icons/Component1";
+import { Button } from "../Button";
+import { Input } from "../Input";
 
 const Newsletter = () => {
   return (
@@ -46,7 +47,7 @@ const Newsletter = () => {
             >
               Join
               <div className="bg-black rounded-full p-2 ml-1 w-[32px] h-[32px]">
-                <img src="Component1.svg" alt="component" />
+                <Component1 />
               </div>
             </Button>
           </div>

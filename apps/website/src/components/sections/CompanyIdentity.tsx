@@ -1,3 +1,4 @@
+import Component1 from "@/assets/icons/Component1";
 import { Button } from "@workspace/ui/components/Button";
 
 const CompanyIdentity = () => {
@@ -69,7 +70,7 @@ const CompanyIdentity = () => {
                     >
                       Contact Us
                       <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
-                        <img src="Component1.svg" alt="component" />
+                        <Component1 />
                       </div>
                     </Button>
                   </a>
@@ -84,7 +85,7 @@ const CompanyIdentity = () => {
                   >
                     View Projects
                     <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
-                      <img src="Component1.svg" alt="component" />
+                      <Component1 />
                     </div>
                   </Button>
                 </div>

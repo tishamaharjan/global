@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import { Button } from "@workspace/ui/components/Button";
+import { Button } from "../Button";
 import { X } from "lucide-react";
-import { cn } from "@workspace/ui/lib/utils";
-import HamMenu from "@/assets/icons/Menu";
+import { cn } from "../lib/utils";
+import HamMenu from "../../assets/icons/Menu";
+import Logo from "../../assets/icons/Logo";
+import Component1 from "@/assets/icons/Component1";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,7 +50,7 @@ const Header = () => {
         <div className="flex items-center justify-between lg:pl-[156px]">
           <a href="#">
             <div className="flex items-center gap-2">
-              <img src="Logo.svg" alt="Logo" />
+              <Logo />
             </div>
           </a>
 
@@ -86,7 +88,7 @@ const Header = () => {
           >
             Contact Us{" "}
             <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
-              <img src="Component1.svg" alt="component" />
+              <Component1 />
             </div>
           </Button>
 

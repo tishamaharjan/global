@@ -1,7 +1,7 @@
-import Service1 from "@/assets/icons/Service1";
-import Service2 from "@/assets/icons/Service2";
-import Service3 from "@/assets/icons/Service3";
-import Service4 from "@/assets/icons/Service4";
+import Icon1 from "@/assets/icons/Icon1";
+import Icon2 from "@/assets/icons/Icon2";
+import Icon3 from "@/assets/icons/Icon3";
+import Icon4 from "@/assets/icons/Icon4";
 
 type FeatureProps = {
   icon: React.ReactNode;
@@ -30,32 +30,32 @@ const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => {
 const WhyChooseUs = () => {
   const features = [
     {
-      icon: <Service1 />,
+      icon: <Icon1 />,
       title: "Innovative Solutions",
       description:
         "We specialize in delivering cutting-edge IT solutions tailored to address your unique challenges and drive measurable results.",
     },
     {
-      icon: <Service2 />,
+      icon: <Icon2 />,
       title: "Customer-First Approach",
       description:
         "Your success is our priority. We collaborate closely to understand your needs and  create solutions that exceed expectations.",
     },
     {
-      icon: <Service3 />,
+      icon: <Icon3 />,
       title: "Proven Expertise",
       description:
         "With years of industry experience, we bring the knowledge and skills needed to deliver impactful and reliable results.",
     },
 
     {
-      icon: <Service4 />,
+      icon: <Icon4 />,
       title: "Cost-Effective Services",
       description:
         "We deliver premium-quality solutions at competitive prices, making innovation accessible for businesses of all sizes.",
     },
     {
-      icon: <Service4 />,
+      icon: <Icon4 />,
       title: "Global Reach, Local Touch",
       description:
         "While we cater to a global audience, we offer personalized attention to every client, making you feel valued every step of the way.",

@@ -4,7 +4,7 @@ import Faceboook from "@/assets/icons/Facebook";
 import MailIcon from "@/assets/icons/MailIcon";
 import PhoneIcon from "@/assets/icons/PhoneIcon";
 import LocationIcon from "@/assets/icons/LocationIcon";
-import DotBackground from "@workspace/ui/components/Dotbg";
+import DotBackground from "../Dotbg";
 
 const Contact = () => {
   const socials = [

@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import { Button } from "@workspace/ui/components/Button";
+import { Button } from "../Button";
+import Arrowleft from "@/assets/icons/Arrowleft";
+import Arrowright from "@/assets/icons/Arrowright";
+import Component1 from "@/assets/icons/Component1";
 
 const HeroTextLoop = () => {
   const words = ["Vision", "Ideas", "Solutions", "Dreams"];
@@ -30,42 +33,42 @@ const HeroTextLoop = () => {
 
 const floatingIcons = [
   {
-    icon: <img src="Arrowleft.svg" alt="Icon" />,
+    icon: <Arrowleft />,
     title: "Innovation",
     delay: 0,
     position: "left-[25%] top-[30%]",
     side: "left",
   },
   {
-    icon: <img src="Arrowleft.svg" alt="Icon" />,
+    icon: <Arrowleft />,
     title: "Quality Assurance",
     delay: 0,
     position: "left-[14%] top-[48%]",
     side: "left",
   },
   {
-    icon: <img src="Arrowleft.svg" alt="Icon" />,
+    icon: <Arrowleft />,
     title: "AI Powered Assistant",
     delay: 0,
     position: "left-[20%] bottom-[21%]",
     side: "left",
   },
   {
-    icon: <img src="Arrowright.svg" alt="Icon" />,
+    icon: <Arrowright />,
     title: "Software Development",
     delay: 1,
     position: "right-[20%] top-[30%]",
     side: "right",
   },
   {
-    icon: <img src="Arrowright.svg" alt="Icon" />,
+    icon: <Arrowright />,
     title: "UI/UX Design",
     delay: 1,
     position: "right-[18%] top-[57%]",
     side: "right",
   },
   {
-    icon: <img src="Arrowright.svg" alt="Icon" />,
+    icon: <Arrowright />,
     title: "System Architecture",
     delay: 2,
     position: "right-[22%] bottom-[18%]",
@@ -158,7 +161,7 @@ const Hero: React.FC = () => {
                     Explore <span className="max-sm:hidden">More</span>
                   </span>
                   <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
-                    <img src="Component1.svg" alt="component" />
+                    <Component1 />
                   </div>
                 </Button>
               </a>
@@ -174,7 +177,7 @@ const Hero: React.FC = () => {
                 >
                   Contact Us
                   <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
-                    <img src="Component1.svg" alt="component" />
+                    <Component1 />
                   </div>
                 </Button>
               </a>
@@ -206,11 +209,11 @@ const Hero: React.FC = () => {
               Explore <span className="max-sm:hidden">More</span>
             </span>
             <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
-              <img src="Component1.svg" alt="component" />
+              <Component1 />
             </div>
           </Button>
         </a>
-        <a href="#footer">
+        <a href="#contact">
           <Button
             variant="outline"
             className="cursor-pointer bg-black text-[var(--greenyellow)] hover:bg-gray/90 hover:text-[var(--green)] px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
@@ -222,7 +225,7 @@ const Hero: React.FC = () => {
           >
             Contact Us
             <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
-              <img src="Component1.svg" alt="component" />
+              <Component1 />
             </div>
           </Button>
         </a>

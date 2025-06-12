@@ -1,8 +1,8 @@
 import { actions } from "astro:actions";
 import { useTransition } from "react";
-import { Button } from "@workspace/ui/components/Button";
-import { Input } from "@workspace/ui/components/Input";
-import { Textarea } from "@workspace/ui/components/Textarea";
+import { Button } from "../Button";
+import { Input } from "../Input";
+import { Textarea } from "../Textarea";
 
 const Ideas = () => {
   const [isPending, setIsPending] = useTransition();

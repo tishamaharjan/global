@@ -1,4 +1,4 @@
-import Overlay from "@workspace/ui/components/Overlay";
+import Overlay from "../Overlay";
 
 const Services = () => {
   const services = [
