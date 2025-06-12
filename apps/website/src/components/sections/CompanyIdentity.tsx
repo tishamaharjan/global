@@ -89,10 +89,6 @@ const CompanyIdentity = () => {
                     </div>
                   </Button>
                 </div>
-
-                {/* <span className="flex md:hidden lg:flex overflow-hidden">
-                  <IconLoop />
-                </span> */}
               </div>
             </div>
           </div>

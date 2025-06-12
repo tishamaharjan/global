@@ -1,15 +1,14 @@
 import Component1 from "@/assets/icons/Component1";
 import { Button } from "../Button";
 import { Input } from "../Input";
-import ColoredVectorImg from "../../../public/ColoredVectorBg.svg";
+import ColoredVector from "../../../public/ColoredVectorBg.svg";
 
 const Newsletter = () => {
   return (
     <section
       className="bg-[var(--contactbg)] border-[var(--contactborder)] py-[80px] px-[36px] relative overflow-hidden items-start rounded-2xl"
       style={{
-        // backgroundImage: `url(${ColoredVectorImg})`,
-        backgroundImage: "url('ColoredVectorBg.svg')",
+        backgroundImage: `url(${ColoredVector.src})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "100%",
       }}

@@ -3,7 +3,7 @@ import { Button } from "../Button";
 import Arrowleft from "@/assets/icons/Arrowleft";
 import Arrowright from "@/assets/icons/Arrowright";
 import Component1 from "@/assets/icons/Component1";
-import VectorBg from "@/assets/icons/VectorBg";
+import VectorBg from "../../../public/VectorBg.svg";
 
 const HeroTextLoop = () => {
   const words = ["Vision", "Ideas", "Solutions", "Dreams"];
@@ -189,7 +189,7 @@ const Hero: React.FC = () => {
       <div
         className="flex md:hidden justify-center bg-black h-[150px] gap-4"
         style={{
-          backgroundImage: "url('VectorBg.svg')",
+          backgroundImage: `url(${VectorBg.src})`,
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "top left",
