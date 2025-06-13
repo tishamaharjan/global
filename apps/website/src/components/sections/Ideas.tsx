@@ -51,7 +51,7 @@ const Ideas = () => {
 
           <Button
             type="submit"
-            className="cursor-pointer w-full h-[51px] text-[var(--darkergreen)] hover:bg-[var(--darkergreen)] px-[16px] py-[12px] mt-10"
+            className="cursor-pointer w-full h-[51px] text-[var(--greenbackground)] hover:bg-[var(--darkergreen)] px-[16px] py-[12px] mt-10"
             style={{
               background: "rgba(25, 25, 25, 0.80)",
               borderRight:
