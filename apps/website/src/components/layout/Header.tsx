@@ -41,13 +41,13 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full h-[90px] z-50 transition-all duration-300 pt-[14px]",
+        "fixed top-0 left-0 w-full h-[90px] z-50 transition-all duration-300 pt-[14px] px-4 md:px-12 lg:px-[156px]",
         scrolled ? "backdrop-blur-md" : "bg-black",
         isMenuOpen ? "bg-black" : "backdrop-blur-md"
       )}
     >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between lg:pl-[156px]">
+      <div className="container mx-auto md:px-6">
+        <div className="flex items-center justify-between">
           <a href="#">
             <div className="flex items-center gap-2">
               <Logo />
@@ -77,7 +77,7 @@ const Header = () => {
 
           <Button
             onClick={scrollToContact}
-            className="cursor-pointer text-lg hidden h-12 lg:flex bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black transition-colors rounded-full mr-[156px] font-medium"
+            className="cursor-pointer text-lg hidden h-12 lg:flex bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black transition-colors rounded-full font-medium"
             style={{
               animationDelay: "0.3s",
               borderRight:

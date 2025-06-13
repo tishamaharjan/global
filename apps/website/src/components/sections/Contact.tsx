@@ -38,7 +38,7 @@ const Contact = () => {
                   <PhoneIcon />
                 </span>
                 <a href="tel:+(977) 9763596355" className="text-lg py-[10px]">
-                  +(977)-9763596355
+                  +977 9763596355
                 </a>
               </div>
               <div className="flex items-start gap-4">
