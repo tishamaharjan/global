@@ -78,6 +78,7 @@ const Services = () => {
           <div className="md:hidden flex flex-col gap-6">
             {services.map((service) => (
               <div
+                key={service.title}
                 className="p-8 border border-gray-600 rounded-lg"
                 {...(service.title === "Ideation & Planning" && {
                   className:
@@ -204,7 +205,7 @@ const Services = () => {
       <span className="bg-black hidden lg:block">
         <Overlay />
 
-        <section id="services" className="py-20 md:px-[48px] lg:px-[156px]">
+        <section id="services" className="pt-20 md:px-[48px] lg:px-[156px]">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <span className="py-1 px-3  rounded-full text-[var(--greenyellow)] bg-[var(--titlescolor)]">

@@ -8,7 +8,7 @@ const logoipsum8 = () => {
         viewBox="0 0 75 18"
         fill="none"
       >
-        <g clip-path="url(#clip0_429_72210)">
+        <g clipPath="url(#clip0_429_72210)">
           <path
             d="M21.8301 12.7107H27.0946V11.1302H23.7012V5.177H21.8301V12.7107Z"
             fill="#999999"

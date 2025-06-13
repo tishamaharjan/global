@@ -90,11 +90,11 @@ const Hero: React.FC = () => {
         </span>
 
         <div className="max-lg:hidden">
-          {floatingIcons.map((item, index) => {
+          {floatingIcons.map((item) => {
             if (item.side == "left")
               return (
                 <div
-                  key={index}
+                  key={item.title}
                   className={`absolute ${item.position} left-5 md:flex flex-col items-center justify-center h-12 p-2  text-[var(--stattext)] animate-float `}
                   style={{ animationDelay: `${item.delay}s` }}
                 >
@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
             else
               return (
                 <div
-                  key={index}
+                  key={item.title}
                   className={`absolute ${item.position} md:flex flex-col items-center justify-center h-12 p-2 text-[var(--stattext)] animate-float`}
                   style={{ animationDelay: `${item.delay}s` }}
                 >

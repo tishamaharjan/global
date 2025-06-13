@@ -2,8 +2,6 @@ import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 
 import { cn } from "@workspace/ui/lib/utils";
-import PlusIcon from "../../../../apps/website/src/assets/icons/PlusIcon.tsx";
-import Minus from "../../../../apps/website/src/assets/icons/MinusIcon.tsx";
 import PlusDarkIcon from "../../../../apps/website/src/assets/icons/PlusDarkIcon.tsx";
 import MinusDarkIcon from "../../../../apps/website/src/assets/icons/MinusDarkIcon.tsx";
 

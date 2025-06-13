@@ -8,7 +8,7 @@ const Favicon = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_11_3145)">
+        <g clipPath="url(#clip0_11_3145)">
           <rect width="500" height="500" fill="#CFE93A" />
           <rect width="500" height="500" rx="8" fill="#CFE93A" />
           <path

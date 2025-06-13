@@ -10,7 +10,6 @@ const Arrowright = () => {
       >
         <mask
           id="mask0_944_8724"
-          mask-type="luminance"
           maskUnits="userSpaceOnUse"
           x="0"
           y="0"

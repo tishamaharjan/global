@@ -107,9 +107,9 @@ const Testimonials = () => {
         </div>
 
         <div className="flex md:grid-cols-2 gap-6 overflow-x-auto scrollbar-none">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial) => (
             <Testimonial
-              key={index}
+              key={testimonial.company}
               name={testimonial.name}
               position={testimonial.position}
               company={testimonial.company}

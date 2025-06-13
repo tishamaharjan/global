@@ -10,7 +10,6 @@ const Arrowleft = () => {
       >
         <mask
           id="mask0_944_1455"
-          mask-type="luminance"
           maskUnits="userSpaceOnUse"
           x="0"
           y="0"

@@ -10,7 +10,6 @@ const LinkedIn = () => {
       >
         <mask
           id="mask0_1006_9236"
-          mask-type="luminance"
           maskUnits="userSpaceOnUse"
           x="0"
           y="0"
@@ -30,8 +29,8 @@ const LinkedIn = () => {
           <path
             d="M1.1658 40.6823V-4.45605M7.38802 40.6823V-4.45605M13.6102 40.6823V-4.45605M19.8325 40.6823V-4.45605M26.0547 40.6823V-4.45605M32.2769 40.6823V-4.45605M-5.44531 2.16828H39.693M-5.44531 8.3905H39.693M-5.44531 14.6127H39.693M-5.44531 20.8349H39.693M-5.44531 27.0572H39.693M-5.44531 33.2794H39.693"
             stroke="#DCFC36"
-            stroke-opacity="0.2"
-            stroke-width="0.777778"
+            strokeOpacity="0.2"
+            strokeWidth="0.777778"
           />
           <path
             d="M0 0.988281H34.2222V35.2105H0V0.988281Z"
@@ -40,7 +39,6 @@ const LinkedIn = () => {
           <g filter="url(#filter0_d_1006_9236)">
             <mask
               id="mask1_1006_9236"
-              mask-type="luminance"
               maskUnits="userSpaceOnUse"
               x="9"
               y="10"
@@ -58,8 +56,8 @@ const LinkedIn = () => {
                 fill="#DCFC36"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M15.6167 16.3645H17.5098V17.3351H17.537C17.8015 16.8622 18.4462 16.3645 19.4076 16.3645C21.4065 16.3645 21.7767 17.6089 21.7767 19.2267V22.6497H19.8019V19.6016C19.8019 18.9047 19.7871 18.0079 18.7752 18.0079C17.747 18.0079 17.5891 18.7662 17.5891 19.551V22.6497H15.6167V16.3645ZM14.4967 14.4589C14.4967 14.7312 14.3885 14.9923 14.196 15.1849C14.0035 15.3774 13.7423 15.4856 13.47 15.4856C13.1977 15.4856 12.9366 15.3774 12.7441 15.1849C12.5515 14.9923 12.4434 14.7312 12.4434 14.4589C12.4435 14.1866 12.5517 13.9255 12.7443 13.733C12.9369 13.5406 13.1981 13.4325 13.4704 13.4326C13.7427 13.4327 14.0038 13.541 14.1963 13.7336C14.3887 13.9262 14.4968 14.1866 14.4967 14.4589ZM12.4434 16.3645H14.4967V22.6497H12.4434V16.3645Z"
                 fill="#050505"
               />
@@ -74,9 +72,9 @@ const LinkedIn = () => {
             width="34.2936"
             height="34.2223"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -110,8 +108,8 @@ const LinkedIn = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(17.1111 18.0994) rotate(90) scale(17.1111)"
           >
-            <stop stop-color="#0A0A0B" stop-opacity="0" />
-            <stop offset="0.949" stop-color="#0A0A0B" />
+            <stop stopColor="#0A0A0B" stopOpacity="0" />
+            <stop offset="0.949" stopColor="#0A0A0B" />
           </radialGradient>
         </defs>
       </svg>

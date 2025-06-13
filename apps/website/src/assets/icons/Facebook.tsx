@@ -29,8 +29,8 @@ const Facebook = () => {
           <path
             d="M3.86959 37.6414V-1.41992M9.25421 37.6414V-1.41992M14.6388 37.6414V-1.41992M20.0234 37.6414V-1.41992M25.4081 37.6414V-1.41992M30.7927 37.6414V-1.41992M-1.85156 4.31267H37.2105M-1.85156 9.69729H37.2105M-1.85156 15.0819H37.2105M-1.85156 20.4665H37.2105M-1.85156 25.8511H37.2105M-1.85156 31.2358H37.2105"
             stroke="#DCFC36"
-            stroke-opacity="0.2"
-            stroke-width="0.673077"
+            strokeOpacity="0.2"
+            strokeWidth="0.673077"
           />
           <path
             d="M0 0.599609H35V35.5996H0V0.599609Z"
@@ -70,9 +70,9 @@ const Facebook = () => {
             width="32.3081"
             height="32.3081"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -106,8 +106,8 @@ const Facebook = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(17.5 18.0996) rotate(90) scale(17.5)"
           >
-            <stop stop-color="#0A0A0B" stop-opacity="0" />
-            <stop offset="0.949" stop-color="#0A0A0B" />
+            <stop stopColor="#0A0A0B" stopOpacity="0" />
+            <stop offset="0.949" stopColor="#0A0A0B" />
           </radialGradient>
         </defs>
       </svg>

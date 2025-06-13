@@ -103,7 +103,10 @@ const CompanyIdentity = () => {
 
         <div className="w-full flex flex-wrap gap-2 justify-between">
           {stats.map((stat) => (
-            <div className="bg-[var(--statbg)] font-medium text-[18px] text-center p-3 flex flex-col justify-center h-[108px] w-[48%] md:w-[160px] lg:w-[265px] rounded-[15px]">
+            <div
+              key={stat.title}
+              className="bg-[var(--statbg)] font-medium text-[18px] text-center p-3 flex flex-col justify-center h-[108px] w-[48%] md:w-[160px] lg:w-[265px] rounded-[15px]"
+            >
               <p className="text-2xl font-bold text-[var(--stattext)]">
                 {stat.stats}
               </p>

@@ -82,10 +82,10 @@ const WhyChooseUs = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[18px]">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <div className="bg-[var(--featurebg)] py-9 px-6 rounded-[12px]">
               <Feature
-                key={index}
+                key={feature.title}
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}

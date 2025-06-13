@@ -11,9 +11,9 @@ const Component1 = () => {
         <path
           d="M6.1432 4.88989H11.8002M11.8002 4.88989V10.5469M11.8002 4.88989L5.2002 11.4899"
           stroke="#CFE93A"
-          stroke-width="1.4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </div>
