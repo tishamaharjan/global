@@ -24,7 +24,7 @@ const HeroTextLoop = () => {
 
   return (
     <span
-      className="text-[var(--herotext)] relative inline-block min-w-[120px] transition-opacity duration-500"
+      className="text-herotext relative inline-block min-w-[120px] transition-opacity duration-500"
       style={{ opacity: isVisible ? 1 : 0 }}
     >
       {words[currentIndex]}
@@ -95,11 +95,11 @@ const Hero: React.FC = () => {
               return (
                 <div
                   key={item.title}
-                  className={`absolute ${item.position} left-5 md:flex flex-col items-center justify-center h-12 p-2  text-[var(--stattext)] animate-float `}
+                  className={`absolute ${item.position} left-5 md:flex flex-col items-center justify-center h-12 p-2  text-stattext animate-float `}
                   style={{ animationDelay: `${item.delay}s` }}
                 >
                   <span className="ml-auto">{item.icon}</span>
-                  <span className="bg-[var(--floatbg)] rounded-[10px] p-1 ">
+                  <span className="bg-floatbg rounded-[10px] p-1 ">
                     {item.title}
                   </span>
                 </div>
@@ -108,11 +108,11 @@ const Hero: React.FC = () => {
               return (
                 <div
                   key={item.title}
-                  className={`absolute ${item.position} md:flex flex-col items-center justify-center h-12 p-2 text-[var(--stattext)] animate-float`}
+                  className={`absolute ${item.position} md:flex flex-col items-center justify-center h-12 p-2 text-stattext animate-float`}
                   style={{ animationDelay: `${item.delay}s` }}
                 >
                   <span className="mr-auto">{item.icon}</span>
-                  <span className="bg-[var(--floatbg)] rounded-[10px] p-1">
+                  <span className="bg-floatbg rounded-[10px] p-1">
                     {item.title}
                   </span>
                 </div>
@@ -124,16 +124,16 @@ const Hero: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-[58px] lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
               Bringing Your{" "}
-              <span className="text-[var(--herotext)]">
+              <span className="text-herotext">
                 <HeroTextLoop />
               </span>{" "}
-              to Life with{" "}
-              <span className="text-[var(--herotextgray)]">Innovation</span> &{" "}
+              to Life with <span className="text-herotextgray">Innovation</span>{" "}
+              &{" "}
               <span
                 className="bg-clip-text text-transparent"
                 style={{
                   backgroundImage:
-                    "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, var(--lightgreen) 35.52%)",
+                    "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, yellowgreen 35.52%);",
                 }}
               >
                 Precision
@@ -149,13 +149,9 @@ const Hero: React.FC = () => {
             <div className="hidden md:flex sm:flex-row justify-center items-center gap-4">
               <a href="#services">
                 <Button
-                  className="cursor-pointer bg-[var(--greenyellow)] hover:bg-[var(--darkergreen)] text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+                  className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground bg-yellowgreen hover:bg-darkergreen text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
                   style={{
                     animationDelay: "0.3s",
-                    borderRight:
-                      "2px solid var(--color-yellow-60, var(--greenbackground))",
-                    borderBottom:
-                      "4px solid var(--color-yellow-60, var(--greenbackground)",
                   }}
                 >
                   <span>
@@ -169,7 +165,7 @@ const Hero: React.FC = () => {
               <a href="#footer">
                 <Button
                   variant="outline"
-                  className="cursor-pointer bg-black text-[var(--greenyellow)] hover:bg-gray/90 hover:text-[var(--green)] px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+                  className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-green px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
                   style={{
                     animationDelay: "0.5s",
                     borderRight: "2px solid rgba(234, 234, 234, 0.50)",
@@ -197,13 +193,9 @@ const Hero: React.FC = () => {
       >
         <a href="#services">
           <Button
-            className="cursor-pointer bg-[var(--greenyellow)] hover:bg-[var(--darkergreen)] text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+            className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground bg-yellowgreen hover:bg-darkergreen text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
             style={{
               animationDelay: "0.3s",
-              borderRight:
-                "2px solid var(--color-yellow-60, var(--greenbackground))",
-              borderBottom:
-                "4px solid var(--color-yellow-60, var(--greenbackground))",
             }}
           >
             <span>
@@ -217,7 +209,7 @@ const Hero: React.FC = () => {
         <a href="#contact">
           <Button
             variant="outline"
-            className="cursor-pointer bg-black text-[var(--greenyellow)] hover:bg-gray/90 hover:text-[var(--green)] px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+            className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-green px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
             style={{
               animationDelay: "0.5s",
               borderRight: "2px solid rgba(234, 234, 234, 0.50)",

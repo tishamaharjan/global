@@ -30,41 +30,43 @@
   --input: oklch(0.15 0 0);
   --ring: oklch(0.85 0.2 110);
   --radius: 0.5rem;
-  --green: #c6ff00;
-  --darkergreen: #a8d900;
-  --greenyellow: #cfe93a;
-  --greenbackground: #dbfb36;
-  --blackbackground: #2d2a2a;
-  --darkinput: #050505;
-  --lightblack: #1a1a1a;
-  --titlescolor: #0f0f0f;
-  --footerblack: #0000001a;
-  --border: #1e1e1e;
-  --whitegraytext: #ccc;
-  --darkgreen: #118e45;
-  --lightgreen: #cfe93a;
-  --statbg: #191919;
-  --stattext: #e6e6e6;
-  --stattextgray: #999;
-  --contactbg: #0a0a0a;
-  --contactborder: #222;
-  --iconborder: #141414;
-  --graytext: #b3b3b3;
-  --floatbg: #1d1d1d;
-  --herotext: #dcfc36;
-  --whitegraytext: #ccc;
-  --whitetext: #fff;
-  --servicetitlebg1: #131a25;
-  --servicetitlebg2: #161616;
-  --semititletext: #ffffffcc;
-  --gradientlight: #edfe8c;
-  --gradientdark: #62b904;
-  --semititlegray: #eaeaea80;
-  --semititlegray: #eaeaea80;
-  --desc: #191919cc;
-  --lightbg: #fbffe7;
-  --aboutdesc: #000;
-  --featurebg: #f4ffbe;
+}
+
+@theme {
+  --color-green: #c6ff00;
+  --color-darkergreen: #a8d900;
+  --color-yellowgreen: #cfe93a;
+  --color-greenbackground: #dbfb36;
+  --color-blackbackground: #2d2a2a;
+  --color-darkinput: #050505;
+  --color-lightblack: #1a1a1a;
+  --color-titlescolor: #0f0f0f;
+  --color-footerblack: #0000001a;
+  --color-border: #1e1e1e;
+  --color-whitegraytext: #ccc;
+  --color-darkgreen: #118e45;
+  --color-statbg: #191919;
+  --color-stattext: #e6e6e6;
+  --color-stattextgray: #999;
+  --color-contactbg: #0a0a0a;
+  --color-contactborder: #222;
+  --color-iconborder: #141414;
+  --color-graytext: #b3b3b3;
+  --color-floatbg: #1d1d1d;
+  --color-herotext: #dcfc36;
+  --color-whitegraytext: #ccc;
+  --color-whitetext: #fff;
+  --color-servicetitlebg1: #131a25;
+  --color-servicetitlebg2: #161616;
+  --color-semititletext: #ffffffcc;
+  --color-gradientlight: #edfe8c;
+  --color-gradientdark: #62b904;
+  --color-semititlegray: #eaeaea80;
+  --color-semititlegray: #eaeaea80;
+  --color-desc: #191919cc;
+  --color-lightbg: #fbffe7;
+  --color-aboutdesc: #000;
+  --color-featurebg: #f4ffbe;
 }
 
 .dark {

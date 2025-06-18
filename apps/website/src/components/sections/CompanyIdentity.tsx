@@ -26,7 +26,7 @@ const CompanyIdentity = () => {
       id="about"
       className="max-sm:pb-20 md:py-20 lg:py-[116px] md:px-12 lg:px-[156px] bg-black"
     >
-      <div className="container mx-auto px-4 md:px-6 min-h-[400px] gap-12">
+      <div className="container mx-auto max-sm:px-4 min-h-[400px] gap-12">
         <div className="md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="flex gap-[48px]">
@@ -40,15 +40,15 @@ const CompanyIdentity = () => {
                 </div>
               </div>
               <div className="w-full md:w-[49%]">
-                <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-[var(--greenbackground)] bg-[var(--titlescolor)]">
+                <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-greenbackground bg-[titlescolor]">
                   About Us
                 </span>
                 <h2 className="text-3xl md:text-[48px] font-bold mb-5 mt-5">
                   <span className="text-white/50">Discover Our </span>
-                  <span className="md:hidden lg:flex text-[var(--greenbackground)]">
+                  <span className="md:hidden lg:flex text-greenbackground">
                     Identity
                   </span>
-                  <span className="hidden md:flex lg:hidden bg-gradient-to-t from-[var(--darkgreen)] to-[var(--lightgreen)] bg-clip-text text-transparent">
+                  <span className="hidden md:flex lg:hidden bg-gradient-to-t from-darkgreen to-yellowgreen bg-clip-text text-transparent">
                     Identity
                   </span>
                 </h2>
@@ -62,13 +62,9 @@ const CompanyIdentity = () => {
                 <div className="flex sm:flex-row max-lg:hidden gap-4 lg:my-8">
                   <a href="#contact">
                     <Button
-                      className="cursor-pointer bg-[var(--greenyellow)] hover:bg-[var(--darkergreen)] text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+                      className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground bg-yellowgreen hover:bg-darkergreen text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
                       style={{
                         animationDelay: "0.3s",
-                        borderRight:
-                          "2px solid var(--color-yellow-60, var(--greenbackground))",
-                        borderBottom:
-                          "4px solid var(--color-yellow-60, var(--greenbackground))",
                       }}
                     >
                       Contact Us
@@ -79,7 +75,7 @@ const CompanyIdentity = () => {
                   </a>
                   <Button
                     variant="outline"
-                    className="cursor-pointer bg-black text-[var(--greenyellow)] hover:bg-gray/90 hover:text-[var(--green)] px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+                    className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-green px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
                     style={{
                       animationDelay: "0.5s",
                       borderRight: "2px solid rgba(234, 234, 234, 0.50)",
@@ -104,16 +100,14 @@ const CompanyIdentity = () => {
           />
         </div>
 
-        <div className="w-full flex flex-wrap gap-2 justify-between">
+        <div className="w-full flex flex-wrap gap-2 md:gap-5 justify-between">
           {stats.map((stat) => (
             <div
               key={stat.title}
-              className="bg-[var(--statbg)] font-medium text-[18px] text-center p-3 flex flex-col justify-center h-[108px] w-[48%] md:w-[160px] lg:w-[265px] rounded-[15px]"
+              className="bg-statbg font-medium text-[18px] text-center p-3 flex flex-col justify-center h-[108px] w-[48%] md:w-[160px] lg:w-[265px] rounded-[15px]"
             >
-              <p className="text-2xl font-bold text-[var(--stattext)]">
-                {stat.stats}
-              </p>
-              <p className="text-[18px] font-medium text-[var(--stattextgray)]">
+              <p className="text-2xl font-bold text-stattext">{stat.stats}</p>
+              <p className="text-[18px] font-medium text-stattextgray">
                 {stat.title}
               </p>
             </div>

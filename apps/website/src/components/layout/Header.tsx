@@ -41,12 +41,12 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full h-[90px] z-50 transition-all duration-300 pt-[14px] px-4 md:px-12 lg:px-[156px]",
+        "fixed top-0 left-0 w-full h-[90px] z-50 transition-all duration-300 pt-[14px] px-6 md:px-12 lg:px-[156px]",
         scrolled ? "backdrop-blur-md" : "bg-black",
         isMenuOpen ? "bg-black" : "backdrop-blur-md"
       )}
     >
-      <div className="container mx-auto md:px-6">
+      <div className="container mx-auto ">
         <div className="flex items-center justify-between">
           <a href="#">
             <div className="flex items-center gap-2">
@@ -54,22 +54,22 @@ const Header = () => {
             </div>
           </a>
 
-          <nav className="hidden font-medium text-lg lg:flex  items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-[var(--titlescolor)] lg:border lg:border-[var(--border)] text-[var(--whitetext)]">
+          <nav className="hidden font-medium text-lg lg:flex  items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-titlescolor lg:border lg:border-border text-whitetext">
             <a
               href="#services"
-              className="text-lg hover:text-[color:var(--green)] transition-colors"
+              className="text-lg hover:text-green transition-colors"
             >
               Services
             </a>
             <a
               href="#features"
-              className="text-lg hover:text-[color:var(--green)] transition-colors"
+              className="text-lg hover:text-green transition-colors"
             >
               Features
             </a>
             <a
               href="#about"
-              className="text-lg hover:text-[color:var(--green)] transition-colors"
+              className="text-lg hover:text-green transition-colors"
             >
               About
             </a>
@@ -77,13 +77,9 @@ const Header = () => {
 
           <Button
             onClick={scrollToContact}
-            className="cursor-pointer text-lg hidden h-12 lg:flex bg-[color:var(--greenyellow)] hover:bg-[color:var(--darkergreen)] text-black transition-colors rounded-full font-medium"
+            className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground text-lg hidden h-12 lg:flex bg-yellowgreen hover:bg-darkergreen text-black transition-colors rounded-full font-medium"
             style={{
               animationDelay: "0.3s",
-              borderRight:
-                "2px solid var(--color-yellow-60, var(--greenbackground))",
-              borderBottom:
-                "4px solid var(--color-yellow-60, var(--greenbackground))",
             }}
           >
             Contact Us{" "}
@@ -129,7 +125,7 @@ const Header = () => {
 
             <Button
               onClick={scrollToContact}
-              className="cursor-pointer text-lg bg-[color:var(--greenyellow)] text-black hover:bg-[color:var(--darkergreen)] w-full md:w-[50%]"
+              className="cursor-pointer text-lg bg-yellowgreen border-r-[2px] border-b-[4px] border-greenbackground text-black hover:bg-darkergreen w-full md:w-[50%]"
             >
               Contact Us
             </Button>

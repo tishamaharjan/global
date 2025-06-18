@@ -39,9 +39,9 @@ const Services = () => {
       id="services"
       className="py-[56px] md:py-20 bg-black flex justify-center"
     >
-      <div className="container px-4 md:px-[48px] lg:hidden relative">
+      <div className="container max-sm:px-4 lg:hidden relative">
         <div className="max-w-3xl text-center mb-12">
-          <span className="py-1 px-3  rounded-full text-[var(--greenyellow)] bg-[var(--titlescolor)]">
+          <span className="py-1 px-3  rounded-full text-yellowgreen bg-titlescolor">
             Services
           </span>
 
@@ -51,7 +51,7 @@ const Services = () => {
               className="bg-clip-text text-transparent"
               style={{
                 backgroundImage:
-                  "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, var(--lightgreen) 35.52%)",
+                  "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, yellowgreen 35.52%)",
               }}
             >
               Our Launch
@@ -64,7 +64,7 @@ const Services = () => {
               className="bg-clip-text text-transparent"
               style={{
                 backgroundImage:
-                  "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, var(--lightgreen) 35.52%)",
+                  "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, yellowgreen 35.52%)",
               }}
             >
               Our Launch
@@ -85,15 +85,15 @@ const Services = () => {
                 className="p-8 border border-gray-600 rounded-lg"
                 {...(service.title === "Ideation & Planning" && {
                   className:
-                    "bg-[var(--servicetitlebg1)] p-8 border border-gray-600 rounded-lg",
+                    "bg-servicetitlebg1 p-8 border border-gray-600 rounded-lg",
                 })}
                 {...(service.title === "Performance Metrics & Optimization" && {
                   className:
-                    "bg-[var(--servicetitlebg2)] p-8 border border-gray-600 rounded-lg",
+                    "bg-servicetitlebg2 p-8 border border-gray-600 rounded-lg",
                 })}
               >
                 <div className="flex">
-                  <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                  <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
                     {service.title}
                   </span>
                   <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -101,7 +101,7 @@ const Services = () => {
                   </span>
                 </div>
                 {service.title === "Launch Execution" ? (
-                  <p className="text-[var(--semititletext)] text-[16px] mb-3">
+                  <p className="text-semititletext text-[16px] mb-3">
                     Journey to Success !
                   </p>
                 ) : null}
@@ -118,9 +118,9 @@ const Services = () => {
 
           <div className="max-md:hidden lg:px-[156px]">
             <div className="flex gap-4">
-              <div className="w-[50%] p-8 border border-gray-600 rounded-lg bg-[var(--servicetitlebg1)]">
+              <div className="w-[50%] p-8 border border-gray-600 rounded-lg bg-servicetitlebg1">
                 <div className="flex">
-                  <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                  <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
                     Ideation & Planning
                   </span>
                   <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -139,7 +139,7 @@ const Services = () => {
 
               <div className="w-[50%] p-8 border border-gray-600 rounded-lg ">
                 <div className="flex">
-                  <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                  <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
                     Design & Development
                   </span>
                   <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -160,14 +160,14 @@ const Services = () => {
             <div className="flex gap-4 mt-4">
               <div className="w-[45%] p-8 border border-gray-600 rounded-lg ">
                 <div className="flex">
-                  <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                  <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
                     Launch Execution
                   </span>
                   <span className="ml-auto text-gray-200 text-[20px] font-semibold">
                     03
                   </span>
                 </div>
-                <p className="text-[var(--semititletext)] text-[16px]  mb-3">
+                <p className="text-semititletext text-[16px]  mb-3">
                   Journey to Success !
                 </p>
                 <p className="text-white/50 text-[16px]">
@@ -180,9 +180,9 @@ const Services = () => {
                 </div>
               </div>
 
-              <div className="w-[55%] p-8 border border-gray-600 rounded-lg bg-[var(--servicetitlebg2)]">
+              <div className="w-[55%] p-8 border border-gray-600 rounded-lg bg-servicetitlebg2">
                 <div className="flex">
-                  <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                  <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
                     Performance Metrics & Optimization
                   </span>
                   <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -208,10 +208,10 @@ const Services = () => {
       <span className="bg-black hidden lg:block">
         <Overlay />
 
-        <section id="services" className="pt-20 md:px-[48px] lg:px-[156px]">
-          <div className="container mx-auto px-4 md:px-6">
+        <section id="services" className="pt-20 px-[156px]">
+          <div className="container mx-auto max-sm:px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <span className="py-1 px-3  rounded-full text-[var(--greenyellow)] bg-[var(--titlescolor)]">
+              <span className="py-1 px-3  rounded-full text-yellowgreen bg-titlescolor">
                 Services
               </span>
               <h2 className="flex flex-col text-3xl md:text-4xl font-bold mb-4 mt-5 text-white">
@@ -220,7 +220,7 @@ const Services = () => {
                   className="bg-clip-text text-transparent"
                   style={{
                     backgroundImage:
-                      "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, var(--lightgreen) 35.52%)",
+                      "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, yellowgreen 35.52%)",
                   }}
                 >
                   Our Launch
@@ -236,9 +236,9 @@ const Services = () => {
 
             <div className="max-md:hidden">
               <div className="flex gap-4 ">
-                <div className="w-[50%] p-8 border  border-gray-600 rounded-lg bg-[var(--servicetitlebg1)]">
+                <div className="w-[50%] p-8 border  border-gray-600 rounded-lg bg-servicetitlebg1">
                   <div className="flex">
-                    <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                    <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
                       Ideation & Planning
                     </span>
                     <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -258,7 +258,7 @@ const Services = () => {
 
                 <div className="w-[50%] p-8 border border-gray-600 rounded-lg ">
                   <div className="flex">
-                    <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                    <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
                       Design & Development
                     </span>
                     <span className="ml-auto text-gray-200 text-[20px] font-semibold">
@@ -279,14 +279,14 @@ const Services = () => {
               <div className="flex gap-4 mt-4">
                 <div className="w-[30%] p-8 border border-gray-600 rounded-lg ">
                   <div className="flex">
-                    <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                    <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
                       Launch Execution
                     </span>
                     <span className="ml-auto text-gray-200 text-[20px] font-semibold">
                       03
                     </span>
                   </div>
-                  <p className="text-[var(--semititletext)] text-[16px]  mb-3">
+                  <p className="text-semititletext text-[16px]  mb-3">
                     Journey to Success !
                   </p>
                   <p className="text-white/50 text-[16px]">
@@ -299,9 +299,9 @@ const Services = () => {
                   </div>
                 </div>
 
-                <div className="w-[70%] p-8 border border-gray-600 rounded-lg bg-[var(--servicetitlebg2)]">
+                <div className="w-[70%] p-8 border border-gray-600 rounded-lg bg-servicetitlebg2">
                   <div className="flex">
-                    <span className="text-[var(--greenyellow)] mb-2 text-[20px] font-semibold">
+                    <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
                       Performance Metrics & Optimization
                     </span>
                     <span className="ml-auto text-gray-200 text-[20px] font-semibold">
