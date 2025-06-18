@@ -1,4 +1,4 @@
-const Gotservice = () => {
+const Dotservice = () => {
   return (
     <div>
       <svg
@@ -29933,4 +29933,4 @@ const Gotservice = () => {
   );
 };
 
-export default Gotservice;
+export default Dotservice;

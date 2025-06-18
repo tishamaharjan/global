@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "../Button";
 import { X } from "lucide-react";
 import { cn } from "../lib/utils";
-import HamMenu from "../../assets/icons/Menu";
-import Logo from "../../assets/icons/Logo";
+import HamMenu from "@/assets/icons/Menu";
+import Logo from "@/assets/icons/Logo";
 import Component1 from "@/assets/icons/Component1";
 
 const Header = () => {

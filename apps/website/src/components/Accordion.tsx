@@ -2,8 +2,8 @@ import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 
 import { cn } from "@workspace/ui/lib/utils";
-import PlusDarkIcon from "../../../../apps/website/src/assets/icons/PlusDarkIcon.tsx";
-import MinusDarkIcon from "../../../../apps/website/src/assets/icons/MinusDarkIcon.tsx";
+import PlusDarkIcon from "@/assets/icons/PlusDarkIcon.tsx";
+import MinusDarkIcon from "@/assets/icons/MinusDarkIcon.tsx";
 
 const Accordion = AccordionPrimitive.Root;
 
