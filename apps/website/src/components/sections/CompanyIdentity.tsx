@@ -22,7 +22,10 @@ const CompanyIdentity = () => {
   ];
 
   return (
-    <section id="about" className="py-[116px] md:px-12 lg:px-[156px] bg-black">
+    <section
+      id="about"
+      className="max-sm:pb-20 md:py-20 lg:py-[116px] md:px-12 lg:px-[156px] bg-black"
+    >
       <div className="container mx-auto px-4 md:px-6 min-h-[400px] gap-12">
         <div className="md:grid-cols-2 gap-12 items-center">
           <div>

@@ -35,9 +35,12 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-black flex justify-center">
+    <section
+      id="services"
+      className="py-[56px] md:py-20 bg-black flex justify-center"
+    >
       <div className="container px-4 md:px-[48px] lg:hidden relative">
-        <div className="max-w-3xl text-center mb-16">
+        <div className="max-w-3xl text-center mb-12">
           <span className="py-1 px-3  rounded-full text-[var(--greenyellow)] bg-[var(--titlescolor)]">
             Services
           </span>

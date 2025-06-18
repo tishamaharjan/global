@@ -155,25 +155,3 @@
     font-family: "Space Grotesk", sans-serif;
   }
 }
-
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@theme {
-  --animate-marquee: marquee 15s linear infinite;
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-}

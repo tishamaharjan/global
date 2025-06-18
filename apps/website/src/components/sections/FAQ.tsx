@@ -61,7 +61,7 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="py-20 md:px-12 lg:px-[156px]  bg-black text-[var(--stattext)]"
+      className="py-[69px] lg:py-20 md:px-12 lg:px-[156px]  bg-black text-[var(--stattext)]"
     >
       <div className="container mx-auto px-4 md:px-6 ">
         <div className="lg:w-full max-lg:mx-auto">
