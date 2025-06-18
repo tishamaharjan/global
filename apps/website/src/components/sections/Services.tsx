@@ -132,7 +132,7 @@ const Services = () => {
                   concepts and develop strategies for a successful launch
                 </p>
 
-                <div className="flex justify-center">
+                <div className="flex mt-4 justify-center">
                   <img src="Service1.png" alt="01" />
                 </div>
               </div>
@@ -151,7 +151,7 @@ const Services = () => {
                   insights and build strategies for lasting success.
                 </p>
 
-                <div className="flex justify-center">
+                <div className="flex mt-4 justify-center">
                   <img src="Service2.png" alt="01" />
                 </div>
               </div>
@@ -175,7 +175,7 @@ const Services = () => {
                   engage your audience effectively during the launch.
                 </p>
 
-                <div className="flex justify-center">
+                <div className="flex mt-4 justify-center">
                   <img src="Service3.png" alt="01" />
                 </div>
               </div>
@@ -196,7 +196,7 @@ const Services = () => {
                   continuously optimize your product and marketing strategies
                   for sustained growth.
                 </p>
-                <div className="flex justify-center">
+                <div className="flex mt-4 justify-center">
                   <img src="Service4.png" alt="01" />
                 </div>
               </div>
@@ -251,7 +251,7 @@ const Services = () => {
                     launch
                   </p>
 
-                  <div className="flex justify-center">
+                  <div className="flex mt-4 justify-center">
                     <img src="Service1.png" alt="01" />
                   </div>
                 </div>
@@ -270,7 +270,7 @@ const Services = () => {
                     insights and build strategies for lasting success.
                   </p>
 
-                  <div className="flex justify-center">
+                  <div className="flex mt-4 justify-center">
                     <img src="Service2.png" alt="01" />
                   </div>
                 </div>
@@ -294,7 +294,7 @@ const Services = () => {
                     and engage your audience effectively during the launch.
                   </p>
 
-                  <div className="flex justify-center">
+                  <div className="flex mt-4 justify-center">
                     <img src="Service3.png" alt="01" />
                   </div>
                 </div>
@@ -315,7 +315,7 @@ const Services = () => {
                     improvement areas and continuously optimize your product and
                     marketing strategies for sustained growth.
                   </p>
-                  <div className="flex justify-center">
+                  <div className="flex mt-4 justify-center">
                     <img src="Service4.png" alt="01" />
                   </div>
                 </div>
