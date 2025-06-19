@@ -1,115 +1,76 @@
-import { Button } from "@workspace/ui/components/button";
-import { Input } from "@workspace/ui/components/input";
-import { Textarea } from "@workspace/ui/components/textarea";
-import { actions } from "astro:actions";
-import { useTransition } from "react";
-
+import LinkedIn from "@/assets/icons/LinkedIn";
+import Twiter from "@/assets/icons/Twitter";
+import Faceboook from "@/assets/icons/Facebook";
+import MailIcon from "@/assets/icons/MailIcon";
+import PhoneIcon from "@/assets/icons/PhoneIcon";
+import LocationIcon from "@/assets/icons/LocationIcon";
+import DotBackground from "../Dotbg";
 
 const Contact = () => {
+  const socials = [
+    {
+      icon: <LinkedIn />,
+      href: "https://www.linkedin.com/company/global-square-i-t-company-pvt-ltd/about/",
+    },
+    { icon: <Twiter />, href: "#" },
+    { icon: <Faceboook />, href: "#" },
+  ];
 
-  const [isPending, setIsPending] = useTransition()
   return (
-    <section id="contact" className="py-20 bg-[#0A0A0A]">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Let's Start Your <span className="text-[#C6FF00]">Project</span>
-            </h2>
-            <p className="text-white/60">
-              Ready to transform your ideas into reality? Get in touch with us
-              today and let's create something amazing together.
-            </p>
+    <section id="contact" className="bg-contactbg rounded-2xl h-full">
+      <DotBackground>
+        <div className="border-contactborder py-[36px] px-[32px] rounded-[24px]">
+          <div>
+            <h3 className="font-bold text-white mb-4 text-2xl">
+              How to contact?
+            </h3>
+            <div className="space-y-4 flex flex-col my-[24px] font-medium text-lg">
+              <div className="flex items-start gap-4">
+                <span className="border border-iconborder rounded-[10px] p-[10px]">
+                  <MailIcon />
+                </span>
+                <span className="text-lg flex py-[10px]">
+                  info@globalsquareit.com
+                </span>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="border border-iconborder rounded-[10px] p-[10px]">
+                  <PhoneIcon />
+                </span>
+                <a href="tel:+(977) 9763596355" className="text-lg py-[10px]">
+                  +977 9763596355
+                </a>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="border border-iconborder rounded-[10px] p-[10px]">
+                  <LocationIcon />
+                </span>
+                <span className="text-lg py-[10px]">Kathmandu, Nepal</span>
+              </div>
+            </div>
           </div>
-
-          <form
-            action={async (formData) => {
-              setIsPending(async () => {
-                await actions.send(formData);
-              })
-            }}
-            className="space-y-6"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label
-                  htmlFor="name"
-                  className="text-sm font-medium text-white"
-                >
-                  Name
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  placeholder="John Doe"
-                  required
-                  className="bg-white/5 border-white/10 text-white placeholder:text-white/40"
-                />
-              </div>
-              <div className="space-y-2">
-                <label
-                  htmlFor="email"
-                  className="text-sm font-medium text-white"
-                >
-                  Email
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="john@example.com"
-                  required
-                  className="bg-white/5 border-white/10 text-white placeholder:text-white/40"
-                />
-              </div>
+          <div className="flex flex-col mt-6 ">
+            <span className="text-whitetext text-[16px] font-semibold">
+              Our Socials
+            </span>
+            <div className="flex mt-3">
+              <span className="flex gap-4">
+                {socials.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className="hover:text-green transition-colors border border-iconborder rounded-[10px]"
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </span>
             </div>
-
-            <div className="space-y-2">
-              <label
-                htmlFor="subject"
-                className="text-sm font-medium text-white"
-              >
-                Subject
-              </label>
-              <Input
-                id="subject"
-                name="subject"
-                placeholder="Project Inquiry"
-                required
-                className="bg-white/5 border-white/10 text-white placeholder:text-white/40"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label
-                htmlFor="message"
-                className="text-sm font-medium text-white"
-              >
-                Message
-              </label>
-              <Textarea
-                id="message"
-                name="message"
-                placeholder="Tell us about your project..."
-                required
-                className="min-h-[150px] bg-white/5 border-white/10 text-white placeholder:text-white/40"
-              />
-            </div>
-
-            <Button
-              type="submit"
-              className="w-full bg-[#C6FF00] text-black hover:bg-[#a8d900] h-12"
-              disabled={isPending}
-            >
-              {isPending ? 'Sending...' : "Send Message"}
-            </Button>
-          </form>
+          </div>
         </div>
-      </div>
+      </DotBackground>
     </section>
   );
 };
 
 export default Contact;
-
-
