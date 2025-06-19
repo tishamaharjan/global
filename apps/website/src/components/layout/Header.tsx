@@ -46,11 +46,11 @@ const Header = () => {
         isMenuOpen ? "bg-black" : "backdrop-blur-md"
       )}
     >
-      <div className="container mx-auto ">
+      <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <a href="#">
-            <div className="flex items-center gap-2">
-              <Logo />
+            <div className="flex items-center gap-2 ">
+              <Logo className="w-[90px] h-9 sm:w-[136px] sm:h-[56px]" />
             </div>
           </a>
 
@@ -93,7 +93,11 @@ const Header = () => {
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <HamMenu />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <HamMenu className="w-9 h-9 sm:w-12 sm:h-12" />
+            )}
           </button>
         </div>
       </div>
