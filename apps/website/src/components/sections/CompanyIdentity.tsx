@@ -1,5 +1,5 @@
 import Component1 from "@/assets/icons/Component1";
-import { Button } from "@workspace/ui/components/Button";
+import { Button } from "../Button";
 
 const CompanyIdentity = () => {
   const stats = [
@@ -100,7 +100,7 @@ const CompanyIdentity = () => {
           />
         </div>
 
-        <div className="w-full flex flex-wrap gap-2 md:gap-5 justify-between">
+        <div className="w-full flex flex-wrap gap-2 md:gap-5 lg:gap-5 justify-between">
           {stats.map((stat) => (
             <div
               key={stat.title}
