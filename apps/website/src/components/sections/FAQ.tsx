@@ -98,8 +98,8 @@ const FAQ = () => {
                   className="border-b-[1px] border-iconborder px-6 overflow-hidden"
                 >
                   <AccordionTrigger className="text-left py-5  text-whitetext hover:text-green group-data-[state=open]:text-green  transition-colors justify-normal items-start cursor-pointer">
-                    <div className="flex">
-                      <span className="mr-[15px] h-full">0{index + 1}</span>
+                    <div className="flex text-whitegraytext">
+                      <span className="mr-[15px] h-full ">0{index + 1}</span>
                       <span>{faq.question}</span>
                     </div>
                   </AccordionTrigger>
@@ -119,7 +119,7 @@ const FAQ = () => {
                     className="px-6"
                   >
                     <AccordionTrigger className="text-left py-5 text-whitetext hover:text-green group-data-[state=open]:text-green  transition-colors justify-normal items-start cursor-pointer">
-                      <div className="flex">
+                      <div className="flex text-whitegraytext">
                         <span className="mr-[15px] h-full">0{index + 1}</span>
                         <span>{faq.question}</span>
                       </div>
@@ -139,7 +139,7 @@ const FAQ = () => {
                     className=" px-6 overflow-hidden"
                   >
                     <AccordionTrigger className="text-left py-5 text-whitetext hover:text-green group-data-[state=open]:text-green  transition-colors justify-normal items-start">
-                      <div className="flex">
+                      <div className="flex text-whitegraytext">
                         <span className="mr-[15px]">0{index + mid + 1}</span>
                         <span>{faq.question}</span>
                       </div>

@@ -37,7 +37,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="py-[56px] md:py-20 bg-black flex justify-center"
+      className="py-[56px] md:py-20 max-lg:px-12 bg-black flex justify-center"
     >
       <div className="container max-sm:px-4 lg:hidden relative">
         <div className="max-w-3xl text-center mb-12">
@@ -116,7 +116,7 @@ const Services = () => {
             ))}
           </div>
 
-          <div className="max-md:hidden lg:px-[156px]">
+          <div className="max-md:hidden">
             <div className="flex gap-4">
               <div className="w-[50%] p-8 border border-gray-600 rounded-lg bg-servicetitlebg1">
                 <div className="flex">

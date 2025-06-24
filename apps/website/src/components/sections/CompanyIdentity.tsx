@@ -40,7 +40,7 @@ const CompanyIdentity = () => {
                 </div>
               </div>
               <div className="w-full md:w-[49%]">
-                <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-greenbackground bg-[titlescolor]">
+                <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-greenbackground bg-titlescolor">
                   About Us
                 </span>
                 <h2 className="text-3xl md:text-[48px] font-bold mb-5 mt-5">
