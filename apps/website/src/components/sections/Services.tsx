@@ -42,7 +42,7 @@ const Services = () => {
       >
         <div className="container max-sm:px-4 lg:hidden relative">
           <div className="max-w-3xl text-center mb-12">
-            <span className="py-1 px-3 border border-statbg rounded-full text-yellowgreen bg-titlescolor">
+            <span className="py-[6px] px-3 border border-statbg rounded-full text-yellowgreen bg-titlescolor">
               Services
             </span>
 
@@ -71,7 +71,7 @@ const Services = () => {
                 Our Launch
               </span>
             </h2>
-            <p className="text-white/50">
+            <p className="text-servicedesc text-[16px] font-semibold">
               We believe in breakthroughs where others see boundaries. If you're
               looking for sharper insights, streamlined processes, or a fresh
               perspective, let's connect—coffee's on us.
@@ -108,7 +108,7 @@ const Services = () => {
                     </p>
                   ) : null}
 
-                  <p className="text-white/50 mb-2 text-[16px]">
+                  <p className="text-servicedesc text-[16px] font-medium mb-2">
                     {service.description}
                   </p>
                   <div className="flex justify-center">
@@ -129,7 +129,7 @@ const Services = () => {
                       01
                     </span>
                   </div>
-                  <p className="text-white/50 text-[16px]">
+                  <p className="text-servicedesc text-[16px] font-medium">
                     We turn ideas into actionable plans, collaborating to
                     explore concepts and develop strategies for a successful
                     launch
@@ -149,7 +149,7 @@ const Services = () => {
                       02
                     </span>
                   </div>
-                  <p className="text-white/50 text-[16px]">
+                  <p className="text-servicedesc text-[16px] font-medium">
                     Turning visions into action. We collaborate to uncover
                     insights and build strategies for lasting success.
                   </p>
@@ -173,7 +173,7 @@ const Services = () => {
                   <p className="text-semititletext text-[16px]  mb-3">
                     Journey to Success !
                   </p>
-                  <p className="text-white/50 text-[16px]">
+                  <p className="text-servicedesc text-[16px] font-medium">
                     We implement targeted marketing strategies to create buzz
                     and engage your audience effectively during the launch.
                   </p>
@@ -192,7 +192,7 @@ const Services = () => {
                       04
                     </span>
                   </div>
-                  <p className="text-white/50 text-[16px]">
+                  <p className="text-servicedesc text-[16px] font-medium">
                     We measure success through key performance indicators
                     (KPIs), analyzing user engagement and feedback to assess
                     impact. This data-driven approach helps us identify
@@ -230,7 +230,7 @@ const Services = () => {
                 </span>
               </h2>
 
-              <p className="text-white/50 text-[16px] lg:text-[20px] font-medium lg:font-normal">
+              <p className="text-servicedesc lg:text-[20px] font-medium lg:font-normal">
                 We believe in breakthroughs where others see boundaries. If
                 you're looking for sharper insights, streamlined processes, or a
                 fresh perspective, let's connect—coffee's on us.
@@ -248,7 +248,7 @@ const Services = () => {
                       01
                     </span>
                   </div>
-                  <p className="text-white/50 text-[16px]">
+                  <p className="text-servicedesc text-[16px] font-medium ">
                     We turn ideas into actionable plans, collaborating to
                     explore concepts and develop strategies for a successful
                     launch
@@ -268,7 +268,7 @@ const Services = () => {
                       02
                     </span>
                   </div>
-                  <p className="text-white/50 text-[16px]">
+                  <p className="text-servicedesc text-[16px] font-medium">
                     Turning visions into action. We collaborate to uncover
                     insights and build strategies for lasting success.
                   </p>
@@ -292,7 +292,7 @@ const Services = () => {
                   <p className="text-semititletext text-[16px]  mb-3">
                     Journey to Success !
                   </p>
-                  <p className="text-white/50 text-[16px]">
+                  <p className="text-servicedesc text-[16px] font-medium ">
                     We implement targeted marketing strategies to create buzz
                     and engage your audience effectively during the launch.
                   </p>
@@ -311,7 +311,7 @@ const Services = () => {
                       04
                     </span>
                   </div>
-                  <p className="text-white/50 text-[16px]">
+                  <p className="text-servicedesc text-[16px] font-medium">
                     We measure success through key performance indicators
                     (KPIs), analyzing user engagement and feedback to assess
                     impact. This data-driven approach helps us identify

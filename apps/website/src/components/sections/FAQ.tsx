@@ -82,7 +82,7 @@ const FAQ = () => {
                 We've Got Answers!
               </div>
             </h2>
-            <p className=" text-graytext">
+            <p className="text-[15px] font-normal text-graytext">
               If you have any additional questions or need further
               clarification, don't hesitate to get in touch with our team
               directly.

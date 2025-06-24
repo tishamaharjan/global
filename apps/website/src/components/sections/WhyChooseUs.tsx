@@ -2,6 +2,7 @@ import Icon1 from "@/assets/icons/Icon1";
 import Icon2 from "@/assets/icons/Icon2";
 import Icon3 from "@/assets/icons/Icon3";
 import Icon4 from "@/assets/icons/Icon4";
+import Icon5 from "@/assets/icons/Icon5";
 
 type FeatureProps = {
   icon: React.ReactNode;
@@ -47,7 +48,7 @@ const WhyChooseUs = () => {
     },
 
     {
-      icon: <Icon4 />,
+      icon: <Icon5 />,
       title: "Cost-Effective Services",
       description:
         "We deliver premium-quality solutions at competitive prices, making innovation accessible for businesses of all sizes.",
