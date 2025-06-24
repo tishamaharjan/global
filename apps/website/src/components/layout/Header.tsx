@@ -54,7 +54,7 @@ const Header = () => {
             </div>
           </a>
 
-          <nav className="hidden font-medium text-lg lg:flex  items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-titlescolor lg:border lg:border-border text-whitetext">
+          <nav className="hidden font-medium text-lg lg:flex items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-titlescolor lg:border lg:border-border text-whitetext">
             <a
               href="#services"
               className="text-lg hover:text-green transition-colors"
