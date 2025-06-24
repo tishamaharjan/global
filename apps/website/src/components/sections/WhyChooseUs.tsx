@@ -63,14 +63,11 @@ const WhyChooseUs = () => {
   return (
     <section
       id="features"
-      className="py-20 md:px-12 lg:px-[156px] bg-lightbg text-black"
+      className="py-10 md:px-12 lg:px-[156px] bg-lightbg text-black"
     >
       <div className="container mx-auto max-sm:px-4">
         <div className="max-w-3xl max-lg:mx-auto mb-9">
-          <span className="py-[6px] px-3 rounded-full text-black text-[16px] font-medium bg-greenbackground">
-            About us
-          </span>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-5">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Why choose us?
           </h1>
           <p className="text-aboutdesc) ] text-[20px]">

@@ -7,7 +7,7 @@ import { Textarea } from "../Textarea";
 const Ideas = () => {
   const [isPending, setIsPending] = useTransition();
   return (
-    <section className="bg-contactbg border-contactborder max-md:border-gray-500 py-[36px] px-[32px] rounded-2xl">
+    <section className="bg-contactbg border border-statbg py-[36px] px-[32px] rounded-2xl">
       <div>
         <span className="font-bold text-white text-2xl">Got Ideas?</span>
         <form

@@ -33,7 +33,7 @@
 }
 
 @theme {
-  --color-green: #c6ff00;
+  --color-globalgreen: #c6ff00;
   --color-darkergreen: #a8d900;
   --color-yellowgreen: #cfe93a;
   --color-greenbackground: #dbfb36;
@@ -61,7 +61,6 @@
   --color-semititletext: #ffffffcc;
   --color-gradientlight: #edfe8c;
   --color-gradientdark: #62b904;
-  --color-semititlegray: #eaeaea80;
   --color-semititlegray: #eaeaea80;
   --color-desc: #191919cc;
   --color-lightbg: #fbffe7;

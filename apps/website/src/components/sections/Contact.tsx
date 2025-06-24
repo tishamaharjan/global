@@ -17,7 +17,10 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="bg-contactbg rounded-2xl h-full">
+    <section
+      id="contact"
+      className="bg-contactbg border border-statbg rounded-2xl h-full"
+    >
       <DotBackground>
         <div className="border-contactborder py-[36px] px-[32px] rounded-[24px]">
           <div>
@@ -59,7 +62,7 @@ const Contact = () => {
                   <a
                     key={index}
                     href={social.href}
-                    className="hover:text-green transition-colors border border-iconborder rounded-[10px]"
+                    className="hover:text-globalgreen transition-colors border border-iconborder rounded-[10px]"
                   >
                     {social.icon}
                   </a>

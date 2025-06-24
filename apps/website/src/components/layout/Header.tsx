@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full h-[90px] z-50 transition-all duration-300 pt-[14px] px-6 md:px-12 lg:px-[156px]",
+        "fixed top-0 left-0 w-full max-sm:h-16 h-[90px] z-50 transition-all duration-300 pt-[14px] px-6 md:px-12 lg:px-[156px]",
         scrolled ? "backdrop-blur-md" : "bg-black",
         isMenuOpen ? "bg-black" : "backdrop-blur-md"
       )}
@@ -61,17 +61,18 @@ const Header = () => {
             >
               Services
             </a>
-            <a
-              href="#features"
-              className="text-lg hover:text-green transition-colors"
-            >
-              Features
-            </a>
+
             <a
               href="#about"
               className="text-lg hover:text-green transition-colors"
             >
               About
+            </a>
+            <a
+              href="#faq"
+              className="text-lg hover:text-green transition-colors"
+            >
+              FAQ's
             </a>
           </nav>
 
@@ -83,7 +84,7 @@ const Header = () => {
             }}
           >
             Contact Us{" "}
-            <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+            <div className="ml-3 w-[32px] h-[32px]">
               <Component1 />
             </div>
           </Button>

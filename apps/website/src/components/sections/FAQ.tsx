@@ -66,14 +66,14 @@ const FAQ = () => {
       <div className="container mx-auto max-sm:px-4">
         <div className="lg:w-full max-lg:mx-auto">
           <div className="text-center mb-12">
-            <span className="py-[6px] px-[12px] rounded-full text-[16px] font-medium bg-titlescolor text-yellowgreen md:bg-titlescolor">
+            <span className="py-[6px] px-[12px] border border-statbg rounded-full text-[16px] font-medium bg-titlescolor text-yellowgreen md:bg-titlescolor">
               FAQs
             </span>
             <h2 className="text-3xl md:text-5xl font-bold my-4">
               Got Questions?
               <br />
               <div
-                className=" bg-clip-text text-transparent font-bold"
+                className="mt-3 bg-clip-text text-transparent font-bold"
                 style={{
                   backgroundImage:
                     "linear-gradient(18deg, darkgreen -2.03%, rgba(209, 232, 77, 0.70) 46.84%, yellowgreen 101.07%)",
@@ -95,10 +95,10 @@ const FAQ = () => {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border-b-[1px] border-iconborder px-6 overflow-hidden"
+                  className=" border-b-[1px] border-iconborder px-6 overflow-hidden"
                 >
-                  <AccordionTrigger className="text-left py-5  text-whitetext hover:text-green group-data-[state=open]:text-green  transition-colors justify-normal items-start cursor-pointer">
-                    <div className="flex text-whitegraytext">
+                  <AccordionTrigger className="text-left py-5 text-whitegraytext group-data-[state=open]:text-globalgreen  transition-colors justify-normal items-start cursor-pointer">
+                    <div className="flex">
                       <span className="mr-[15px] h-full ">0{index + 1}</span>
                       <span>{faq.question}</span>
                     </div>
@@ -118,8 +118,8 @@ const FAQ = () => {
                     value={`item-${index}`}
                     className="px-6"
                   >
-                    <AccordionTrigger className="text-left py-5 text-whitetext hover:text-green group-data-[state=open]:text-green  transition-colors justify-normal items-start cursor-pointer">
-                      <div className="flex text-whitegraytext">
+                    <AccordionTrigger className="text-left py-5 text-whitegraytext group-data-[state=open]:text-globalgreen  transition-colors justify-normal items-start cursor-pointer">
+                      <div className="flex">
                         <span className="mr-[15px] h-full">0{index + 1}</span>
                         <span>{faq.question}</span>
                       </div>
@@ -138,8 +138,8 @@ const FAQ = () => {
                     value={`item-${index + mid}`}
                     className=" px-6 overflow-hidden"
                   >
-                    <AccordionTrigger className="text-left py-5 text-whitetext hover:text-green group-data-[state=open]:text-green  transition-colors justify-normal items-start">
-                      <div className="flex text-whitegraytext">
+                    <AccordionTrigger className="text-left py-5 text-whitegraytext group-data-[state=open]:text-globalgreen transition-colors justify-normal items-start">
+                      <div className="flex">
                         <span className="mr-[15px]">0{index + mid + 1}</span>
                         <span>{faq.question}</span>
                       </div>
