@@ -30,7 +30,7 @@ const DotBackground = ({ children }: { children: React.ReactNode }) => {
   `);
   return (
     <div
-      className=" overflow-hidden h-full rounded-[24px]"
+      className=" overflow-hidden h-full rounded-2xl"
       style={{
         backgroundImage: `url("data:image/svg+xml,${dotSvg}")`,
         backgroundRepeat: "repeat",

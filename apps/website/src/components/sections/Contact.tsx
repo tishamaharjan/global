@@ -19,10 +19,10 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-contactbg border border-contactborder rounded-[24px] h-full"
+      className="bg-contactbg border border-contactborder rounded-2xl h-full"
     >
       <DotBackground>
-        <div className="py-[36px] px-[32px] rounded-[24px]">
+        <div className="py-[36px] px-[32px] rounded-2xl">
           <div>
             <h3 className="font-bold text-whitetext mb-4 text-2xl">
               How to contact?
