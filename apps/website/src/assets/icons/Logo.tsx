@@ -1,6 +1,6 @@
 const Logo = ({ className = "w-[90px] h-9" }) => {
   return (
-    <div className="w-[90px] h-9">
+    <div>
       <svg
         viewBox="0 0 136 56"
         fill="none"
