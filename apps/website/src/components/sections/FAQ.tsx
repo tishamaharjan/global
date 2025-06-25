@@ -103,7 +103,7 @@ const FAQ = () => {
                       <span>{faq.question}</span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/70 pb-5 ml-[36px]  max-w-[245px] md:max-w-[600px]">
+                  <AccordionContent className="text-whitegraytext pb-5 ml-[36px]  max-w-[245px] md:max-w-[600px]">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -124,7 +124,7 @@ const FAQ = () => {
                         <span>{faq.question}</span>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="md:text-white/70 pb-5 ml-[32px] lg:max-w-[410px]">
+                    <AccordionContent className="md:text-whitegraytext pb-5 ml-[32px] lg:max-w-[410px]">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -144,7 +144,7 @@ const FAQ = () => {
                         <span>{faq.question}</span>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="md:text-white/70 pb-5 ml-[32px] lg:max-w-[410px]">
+                    <AccordionContent className="md:text-whitegraytext pb-5 ml-[32px] lg:max-w-[410px]">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>

@@ -24,7 +24,7 @@ const CompanyIdentity = () => {
   return (
     <section
       id="about"
-      className="max-sm:pb-20 md:py-20 lg:py-[116px] md:px-12 lg:px-[156px] bg-black"
+      className="py-20 lg:py-[116px] md:px-12 lg:px-[156px] bg-black"
     >
       <div className="container mx-auto max-sm:px-4 min-h-[400px] gap-12">
         <div className="md:grid-cols-2 gap-12 items-center">
@@ -44,7 +44,7 @@ const CompanyIdentity = () => {
                   About Us
                 </span>
                 <h2 className="text-3xl md:text-[48px] font-bold mb-5 mt-5">
-                  <span className="text-white/50">Discover Our </span>
+                  <span className="text-abouttextgray">Discover Our </span>
                   <span className="md:hidden lg:flex text-greenbackground">
                     Identity
                   </span>

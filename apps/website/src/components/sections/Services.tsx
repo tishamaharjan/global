@@ -71,7 +71,7 @@ const Services = () => {
                 Our Launch
               </span>
             </h2>
-            <p className="text-servicedesc text-[16px] font-semibold">
+            <p className="text-servicedesctext text-[16px] font-semibold">
               We believe in breakthroughs where others see boundaries. If you're
               looking for sharper insights, streamlined processes, or a fresh
               perspective, let's connect—coffee's on us.
@@ -213,7 +213,7 @@ const Services = () => {
 
         <section id="services" className="py-20 lg:px-[156px]">
           <div className="container mx-auto max-sm:px-4">
-            <div className="max-w-3xl mx-auto text-center mb-16">
+            <div className="mx-auto text-center mb-16">
               <span className="py-1 px-3 border border-statbg rounded-full text-yellowgreen bg-titlescolor">
                 Services
               </span>

@@ -24,7 +24,7 @@ const Contact = () => {
       <DotBackground>
         <div className="border-contactborder py-[36px] px-[32px] rounded-[24px]">
           <div>
-            <h3 className="font-bold text-white mb-4 text-2xl">
+            <h3 className="font-bold text-whitetext mb-4 text-2xl">
               How to contact?
             </h3>
             <div className="space-y-4 flex flex-col my-[24px] font-medium text-lg">

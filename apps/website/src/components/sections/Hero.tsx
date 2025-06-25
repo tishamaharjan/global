@@ -140,7 +140,7 @@ const Hero: React.FC = () => {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-white/70 mb-8 max-w-3xl mx-auto animate-slide-up font-medium">
+            <p className="text-lg md:text-xl text-stattext mb-8 max-w-3xl mx-auto animate-slide-up font-medium">
               We turn ideas into impactful digital experiences. From strategy to
               execution, our Japan-based team delivers tech solutions that drive
               growth and inspire success.
