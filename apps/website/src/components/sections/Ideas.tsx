@@ -7,9 +7,9 @@ import { Textarea } from "../Textarea";
 const Ideas = () => {
   const [isPending, setIsPending] = useTransition();
   return (
-    <section className="bg-contactbg border-contactborder max-md:border-gray-500 py-[36px] px-[32px] rounded-2xl">
+    <section className="bg-contactbg border border-statbg py-[36px] px-[32px] rounded-2xl">
       <div>
-        <span className="font-bold text-white text-2xl">Got Ideas?</span>
+        <span className="font-bold text-whitetext text-2xl">Got Ideas?</span>
         <form
           action={async (formData) => {
             setIsPending(async () => {
@@ -25,7 +25,7 @@ const Ideas = () => {
                 name="name"
                 placeholder="Name"
                 required
-                className="py-[16px] px-[24px] h-[55px] content-between bg-white/5 bg-darkinput lg:bg-iconborder border-white/10 text-white placeholder:text-white/40"
+                className="py-[16px] px-[24px] h-[55px] content-between bg-darkinput bg-darkinput lg:bg-iconborder border-contactborder text-white placeholder:text-placeholdertext rounded-lg"
               />
 
               <Input
@@ -34,7 +34,7 @@ const Ideas = () => {
                 type="email"
                 placeholder="Email"
                 required
-                className="py-[16px] px-[24px] h-[55px] content-between bg-white/5 bg-darkinput lg:bg-iconborder border-white/10 text-white placeholder:text-white/40"
+                className="py-[16px] px-[24px] h-[55px] content-between bg-darkinput bg-darkinput lg:bg-iconborder border-contactborder text-white placeholder:text-placeholdertext rounded-lg"
               />
             </div>
           </div>
@@ -45,13 +45,13 @@ const Ideas = () => {
               name="message"
               placeholder="Message"
               required
-              className="h-[104px] py-[16px] px-[24px] bg-darkinput lg:bg-iconborder border-white/10 text-white placeholder:text-white/40"
+              className="h-[104px] py-[16px] px-[24px] bg-darkinput lg:bg-iconborder border-contactborder text-white placeholder:text-placeholdertext rounded-lg"
             />
           </div>
 
           <Button
             type="submit"
-            className="cursor-pointer w-full h-[51px] text-darkergreen hover:bg-darkergreen px-[16px] py-[12px] mt-10"
+            className="cursor-pointer w-full h-[51px] text-darkergreen hover:bg-darkergreen px-[16px] py-[12px] mt-10 rounded-lg"
             style={{
               background: "rgba(25, 25, 25, 0.80)",
               borderRight:

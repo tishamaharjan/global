@@ -1,12 +1,11 @@
-const Logo = () => {
+const Logo = ({ className = "w-[90px] h-9" }) => {
   return (
-    <div>
+    <div className="w-[90px] h-9">
       <svg
-        width="136"
-        height="56"
         viewBox="0 0 136 56"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={className}
       >
         <rect
           x="0.5"

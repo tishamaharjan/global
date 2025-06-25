@@ -33,7 +33,7 @@
 }
 
 @theme {
-  --color-green: #c6ff00;
+  --color-globalgreen: #c6ff00;
   --color-darkergreen: #a8d900;
   --color-yellowgreen: #cfe93a;
   --color-greenbackground: #dbfb36;
@@ -54,6 +54,7 @@
   --color-graytext: #b3b3b3;
   --color-floatbg: #1d1d1d;
   --color-herotext: #dcfc36;
+  --color-herotextgray: #7f7f7f;
   --color-whitegraytext: #ccc;
   --color-whitetext: #fff;
   --color-servicetitlebg1: #131a25;
@@ -62,11 +63,15 @@
   --color-gradientlight: #edfe8c;
   --color-gradientdark: #62b904;
   --color-semititlegray: #eaeaea80;
-  --color-semititlegray: #eaeaea80;
   --color-desc: #191919cc;
   --color-lightbg: #fbffe7;
   --color-aboutdesc: #000;
   --color-featurebg: #f4ffbe;
+  --color-servicedesc: #ffffff80;
+  --color-abouttextgray: #808080;
+  --color-placeholdertext: #666;
+  --color-footerborder: #ffffff33;
+  --color-servicedesctext: #ffffff4d;
 }
 
 .dark {

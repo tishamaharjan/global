@@ -80,7 +80,7 @@ const floatingIcons = [
 const Hero: React.FC = () => {
   return (
     <>
-      <section className="relative bg-black mt-[90px] md:pb-32 object-fit content-center lg:mt-0 lg:min-h-[898px]">
+      <section className="relative bg-black max-sm:mt-16 mt-[90px] md:pb-32 object-fit content-center lg:mt-0 lg:min-h-[898px]">
         <span className="w-full">
           <img
             src="Earth.gif"
@@ -140,7 +140,7 @@ const Hero: React.FC = () => {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-white/70 mb-8 max-w-3xl mx-auto animate-slide-up font-medium">
+            <p className="text-lg md:text-xl text-stattext mb-8 max-w-3xl mx-auto animate-slide-up font-medium">
               We turn ideas into impactful digital experiences. From strategy to
               execution, our Japan-based team delivers tech solutions that drive
               growth and inspire success.
@@ -157,7 +157,7 @@ const Hero: React.FC = () => {
                   <span>
                     Explore <span className="max-sm:hidden">More</span>
                   </span>
-                  <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+                  <div className="ml-3 w-[32px] h-[32px]">
                     <Component1 />
                   </div>
                 </Button>
@@ -165,7 +165,7 @@ const Hero: React.FC = () => {
               <a href="#footer">
                 <Button
                   variant="outline"
-                  className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-green px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+                  className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-globalgreen px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
                   style={{
                     animationDelay: "0.5s",
                     borderRight: "2px solid rgba(234, 234, 234, 0.50)",
@@ -173,7 +173,7 @@ const Hero: React.FC = () => {
                   }}
                 >
                   Contact Us
-                  <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+                  <div className="ml-3 w-[32px] h-[32px]">
                     <Component1 />
                   </div>
                 </Button>
@@ -201,7 +201,7 @@ const Hero: React.FC = () => {
             <span>
               Explore <span className="max-sm:hidden">More</span>
             </span>
-            <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+            <div className="ml-3 w-[32px] h-[32px]">
               <Component1 />
             </div>
           </Button>
@@ -209,7 +209,7 @@ const Hero: React.FC = () => {
         <a href="#contact">
           <Button
             variant="outline"
-            className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-green px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+            className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-globalgreen px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
             style={{
               animationDelay: "0.5s",
               borderRight: "2px solid rgba(234, 234, 234, 0.50)",
@@ -217,7 +217,7 @@ const Hero: React.FC = () => {
             }}
           >
             Contact Us
-            <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+            <div className="ml-3 w-[32px] h-[32px]">
               <Component1 />
             </div>
           </Button>

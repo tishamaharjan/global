@@ -6,7 +6,7 @@ import ColoredVector from "../../../public/ColoredVectorBg.svg";
 const Newsletter = () => {
   return (
     <section
-      className="bg-contactbg border-contactborder py-[80px] px-[36px] relative overflow-hidden items-start rounded-2xl"
+      className="bg-contactbg border border-statbg py-[80px] px-[36px] relative overflow-hidden items-start rounded-2xl"
       style={{
         backgroundImage: `url(${ColoredVector.src})`,
         backgroundRepeat: "no-repeat",
@@ -43,7 +43,7 @@ const Newsletter = () => {
               }}
             >
               Join
-              <div className="bg-black rounded-full p-2 ml-1 w-[32px] h-[32px]">
+              <div className="ml-1 w-[32px] h-[32px]">
                 <Component1 />
               </div>
             </Button>

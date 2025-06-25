@@ -41,37 +41,38 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full h-[90px] z-50 transition-all duration-300 pt-[14px] px-6 md:px-12 lg:px-[156px]",
+        "fixed top-0 left-0 w-full max-sm:h-16 h-[90px] z-50 transition-all duration-300 pt-[14px] px-6 md:px-12 lg:px-[156px]",
         scrolled ? "backdrop-blur-md" : "bg-black",
         isMenuOpen ? "bg-black" : "backdrop-blur-md"
       )}
     >
-      <div className="container mx-auto ">
+      <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <a href="#">
-            <div className="flex items-center gap-2">
-              <Logo />
+            <div className="flex items-center gap-2 ">
+              <Logo className="w-[90px] h-9 sm:w-[136px] sm:h-[56px]" />
             </div>
           </a>
 
-          <nav className="hidden font-medium text-lg lg:flex  items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-titlescolor lg:border lg:border-border text-whitetext">
+          <nav className="hidden font-medium text-lg lg:flex items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-titlescolor lg:border lg:border-border text-whitetext">
             <a
               href="#services"
               className="text-lg hover:text-green transition-colors"
             >
               Services
             </a>
-            <a
-              href="#features"
-              className="text-lg hover:text-green transition-colors"
-            >
-              Features
-            </a>
+
             <a
               href="#about"
               className="text-lg hover:text-green transition-colors"
             >
               About
+            </a>
+            <a
+              href="#faq"
+              className="text-lg hover:text-green transition-colors"
+            >
+              FAQ's
             </a>
           </nav>
 
@@ -83,7 +84,7 @@ const Header = () => {
             }}
           >
             Contact Us{" "}
-            <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+            <div className="ml-3 w-[32px] h-[32px]">
               <Component1 />
             </div>
           </Button>
@@ -93,7 +94,11 @@ const Header = () => {
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <HamMenu />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <HamMenu className="w-9 h-9 sm:w-12 sm:h-12" />
+            )}
           </button>
         </div>
       </div>

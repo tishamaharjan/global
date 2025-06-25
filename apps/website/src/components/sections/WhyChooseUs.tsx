@@ -2,6 +2,7 @@ import Icon1 from "@/assets/icons/Icon1";
 import Icon2 from "@/assets/icons/Icon2";
 import Icon3 from "@/assets/icons/Icon3";
 import Icon4 from "@/assets/icons/Icon4";
+import Icon5 from "@/assets/icons/Icon5";
 
 type FeatureProps = {
   icon: React.ReactNode;
@@ -47,7 +48,7 @@ const WhyChooseUs = () => {
     },
 
     {
-      icon: <Icon4 />,
+      icon: <Icon5 />,
       title: "Cost-Effective Services",
       description:
         "We deliver premium-quality solutions at competitive prices, making innovation accessible for businesses of all sizes.",
@@ -63,14 +64,11 @@ const WhyChooseUs = () => {
   return (
     <section
       id="features"
-      className="py-20 md:px-12 lg:px-[156px] bg-lightbg text-black"
+      className="py-10 md:px-12 lg:px-[156px] bg-lightbg text-black"
     >
       <div className="container mx-auto max-sm:px-4">
         <div className="max-w-3xl max-lg:mx-auto mb-9">
-          <span className="py-[6px] px-3 rounded-full text-black text-[16px] font-medium bg-greenbackground">
-            About us
-          </span>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-5">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Why choose us?
           </h1>
           <p className="text-aboutdesc) ] text-[20px]">

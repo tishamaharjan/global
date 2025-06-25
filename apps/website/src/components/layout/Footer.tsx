@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="py-5 w-full md:px-[156px] border-t border-white/10 text-sm text-center lg:bg-gradient-to-br from-yellowgreen to-footerblack">
+      <div className="py-5 w-full md:px-[156px] border-t border-footerborder text-sm text-center">
         <p>© 2023 GlobalSquare. All rights reserved.</p>
       </div>
     </>

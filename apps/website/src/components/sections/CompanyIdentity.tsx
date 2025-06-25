@@ -24,7 +24,7 @@ const CompanyIdentity = () => {
   return (
     <section
       id="about"
-      className="max-sm:pb-20 md:py-20 lg:py-[116px] md:px-12 lg:px-[156px] bg-black"
+      className="py-20 lg:py-[116px] md:px-12 lg:px-[156px] bg-black"
     >
       <div className="container mx-auto max-sm:px-4 min-h-[400px] gap-12">
         <div className="md:grid-cols-2 gap-12 items-center">
@@ -40,11 +40,11 @@ const CompanyIdentity = () => {
                 </div>
               </div>
               <div className="w-full md:w-[49%]">
-                <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-greenbackground bg-[titlescolor]">
+                <span className="py-[6px] px-3 border border-statbg rounded-full text-greenbackground bg-titlescolor">
                   About Us
                 </span>
                 <h2 className="text-3xl md:text-[48px] font-bold mb-5 mt-5">
-                  <span className="text-white/50">Discover Our </span>
+                  <span className="text-abouttextgray">Discover Our </span>
                   <span className="md:hidden lg:flex text-greenbackground">
                     Identity
                   </span>
@@ -52,7 +52,7 @@ const CompanyIdentity = () => {
                     Identity
                   </span>
                 </h2>
-                <p className="text-white/40 mb-8 leading-relaxed">
+                <p className="text-servicedesc mb-8 text-[16px] font-medium leading-relaxed">
                   At GS, we are more than just a team—we are innovators,
                   creators, and problem solvers dedicated to crafting
                   cutting-edge web solutions. Our mission is to transform ideas
@@ -68,14 +68,14 @@ const CompanyIdentity = () => {
                       }}
                     >
                       Contact Us
-                      <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+                      <div className="ml-3 w-[32px] h-[32px]">
                         <Component1 />
                       </div>
                     </Button>
                   </a>
-                  <Button
+                  {/* <Button
                     variant="outline"
-                    className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-green px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+                    className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-globalgreen px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
                     style={{
                       animationDelay: "0.5s",
                       borderRight: "2px solid rgba(234, 234, 234, 0.50)",
@@ -83,10 +83,10 @@ const CompanyIdentity = () => {
                     }}
                   >
                     View Projects
-                    <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+                    <div className="ml-3 w-[32px] h-[32px]">
                       <Component1 />
                     </div>
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ const CompanyIdentity = () => {
           />
         </div>
 
-        <div className="w-full flex flex-wrap gap-2 md:gap-5 lg:gap-5 justify-between">
+        <div className="w-full mt-12 md:mt-6 lg:mt-12 flex flex-wrap gap-2 md:gap-5 lg:gap-5 justify-between">
           {stats.map((stat) => (
             <div
               key={stat.title}
