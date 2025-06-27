@@ -1,4 +1,6 @@
 import Overlay from "../Overlay";
+import ParallaxContents from "../ParallaxContents";
+import ParallaxWrapper from "../ParallaxWrapper";
 
 const Services = () => {
   const services = [
@@ -41,42 +43,44 @@ const Services = () => {
         className="py-[56px] md:py-20 md:px-12 bg-black flex justify-center"
       >
         <div className="container max-sm:px-4 lg:hidden relative">
-          <div className="max-w-3xl text-center mb-12">
-            <span className="py-[6px] px-3 border border-statbg rounded-full text-yellowgreen bg-titlescolor">
-              Services
-            </span>
-
-            <h2 className="hidden md:flex lg:hidden text-3xl md:text-4xl font-bold mb-4 mt-5 text-white justify-center">
-              <span className="text-white/60">Your Thoughts, </span>{" "}
-              <span
-                className="bg-clip-text text-transparent"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, yellowgreen 35.52%)",
-                }}
-              >
-                Our Launch
+          <ParallaxContents animationType="fade-up" delay={100}>
+            <div className="max-w-3xl text-center mb-12">
+              <span className="py-[6px] px-3 border border-statbg rounded-full text-yellowgreen bg-titlescolor">
+                Services
               </span>
-            </h2>
 
-            <h2 className="flex md:hidden max-lg:flex flex-col text-3xl md:text-4xl font-bold mb-4 mt-5 text-white">
-              <span className="text-white/60">Your Thoughts, </span>
-              <span
-                className="bg-clip-text text-transparent"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, yellowgreen 35.52%)",
-                }}
-              >
-                Our Launch
-              </span>
-            </h2>
-            <p className="text-servicedesctext text-[16px] font-semibold">
-              We believe in breakthroughs where others see boundaries. If you're
-              looking for sharper insights, streamlined processes, or a fresh
-              perspective, let's connect—coffee's on us.
-            </p>
-          </div>
+              <h2 className="hidden md:flex lg:hidden text-3xl md:text-4xl font-bold mb-4 mt-5 text-white justify-center">
+                <span className="text-white/60">Your Thoughts, </span>{" "}
+                <span
+                  className="bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, yellowgreen 35.52%)",
+                  }}
+                >
+                  Our Launch
+                </span>
+              </h2>
+
+              <h2 className="flex md:hidden max-lg:flex flex-col text-3xl md:text-4xl font-bold mb-4 mt-5 text-white">
+                <span className="text-white/60">Your Thoughts, </span>
+                <span
+                  className="bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, yellowgreen 35.52%)",
+                  }}
+                >
+                  Our Launch
+                </span>
+              </h2>
+              <p className="text-servicedesctext text-[16px] font-semibold">
+                We believe in breakthroughs where others see boundaries. If
+                you're looking for sharper insights, streamlined processes, or a
+                fresh perspective, let's connect—coffee's on us.
+              </p>
+            </div>
+          </ParallaxContents>
 
           <div className="flex flex-col md:grid-cols-2 gap-6 content-center w-[100%]">
             <div className="md:hidden flex flex-col gap-6">
@@ -239,6 +243,7 @@ const Services = () => {
 
             <div className="max-md:hidden">
               <div className="flex gap-4 ">
+                {/* <ParallaxWrapper animationType="fade-left" delay={100}> */}
                 <div className="w-[50%] p-8 border  border-gray-600 rounded-lg bg-servicetitlebg1">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -258,7 +263,9 @@ const Services = () => {
                     <img src="Service1.png" alt="01" />
                   </div>
                 </div>
+                {/* </ParallaxWrapper> */}
 
+                {/* <ParallaxWrapper animationType="fade-right" delay={100}> */}
                 <div className="w-[50%] p-8 border border-gray-600 rounded-lg ">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -277,9 +284,11 @@ const Services = () => {
                     <img src="Service2.png" alt="01" />
                   </div>
                 </div>
+                {/* </ParallaxWrapper> */}
               </div>
 
               <div className="flex gap-4 mt-4">
+                {/* <ParallaxWrapper animationType="fade-left" delay={200}> */}
                 <div className="w-[30%] p-8 border border-gray-600 rounded-lg ">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -301,7 +310,9 @@ const Services = () => {
                     <img src="Service3.png" alt="01" />
                   </div>
                 </div>
+                {/* </ParallaxWrapper> */}
 
+                {/* <ParallaxWrapper animationType="fade-right" delay={200}> */}
                 <div className="w-[70%] p-8 border border-gray-600 rounded-lg bg-servicetitlebg2">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -322,6 +333,7 @@ const Services = () => {
                     <img src="Service4.png" alt="01" />
                   </div>
                 </div>
+                {/* </ParallaxWrapper> */}
               </div>
             </div>
           </div>

@@ -5,14 +5,52 @@ import Services from "@/components/sections/Services";
 import CompanyIdentity from "@/components/sections/CompanyIdentity";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FAQ from "@/components/sections/FAQ";
+import ParallaxWrapper from "@/components/ParallaxWrapper";
+
 ---
 
 <Layout title="Global Square - Connecting Opportunities, Harvesting Success">
   <main class="overflow-hidden">
-    <Hero client:load />
-    <Services />
-    <CompanyIdentity />
-    <WhyChooseUs />
-    <FAQ client:load />
-  </main>
+    <section>
+      <Hero />
+    </section>
+  
+    <ParallaxWrapper client:load animationType="fade-up" delay={100}>
+      <Services />
+    </ParallaxWrapper>
+  
+    <ParallaxWrapper client:load animationType="fade-up" delay={200}>
+      <CompanyIdentity />
+    </ParallaxWrapper>
+
+    <ParallaxWrapper client:load animationType="fade-up" delay={300}>
+      <WhyChooseUs />
+    </ParallaxWrapper>
+  
+    <ParallaxWrapper client:load animationType="fade-up" delay={400}>
+      <FAQ />
+    </ParallaxWrapper>
+    </main>
 </Layout>
+
+<!-- <main class="overflow-hidden">
+  <section>
+    <Hero />
+  </section>
+
+  <ParallaxWrapper client:load animationType="fade-up" delay={100}>
+    <Services />
+  </ParallaxWrapper>
+
+  <ParallaxWrapper client:load animationType="fade-up" delay={200}>
+    <CompanyIdentity />
+  </ParallaxWrapper>
+
+  <ParallaxWrapper client:load animationType="fade-up" delay={300}>
+    <WhyChooseUs />
+  </ParallaxWrapper>
+
+  <ParallaxWrapper client:load animationType="fade-up" delay={400}>
+    <FAQ />
+  </ParallaxWrapper>
+  </main> -->
