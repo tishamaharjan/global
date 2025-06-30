@@ -1,5 +1,4 @@
 import Overlay from "../Overlay";
-import ParallaxContents from "../ParallaxContents";
 import ParallaxWrapper from "../ParallaxWrapper";
 
 const Services = () => {
@@ -241,7 +240,6 @@ const Services = () => {
 
             <div className="max-md:hidden">
               <div className="flex gap-4 ">
-                {/* <ParallaxWrapper animationType="fade-left" delay={100}> */}
                 <div className="w-[50%] p-8 border  border-gray-600 rounded-lg bg-servicetitlebg1">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -261,9 +259,7 @@ const Services = () => {
                     <img src="Service1.png" alt="01" />
                   </div>
                 </div>
-                {/* </ParallaxWrapper> */}
 
-                {/* <ParallaxWrapper animationType="fade-right" delay={100}> */}
                 <div className="w-[50%] p-8 border border-gray-600 rounded-lg ">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -282,11 +278,9 @@ const Services = () => {
                     <img src="Service2.png" alt="01" />
                   </div>
                 </div>
-                {/* </ParallaxWrapper> */}
               </div>
 
               <div className="flex gap-4 mt-4">
-                {/* <ParallaxWrapper animationType="fade-left" delay={200}> */}
                 <div className="w-[30%] p-8 border border-gray-600 rounded-lg ">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -308,9 +302,7 @@ const Services = () => {
                     <img src="Service3.png" alt="01" />
                   </div>
                 </div>
-                {/* </ParallaxWrapper> */}
 
-                {/* <ParallaxWrapper animationType="fade-right" delay={200}> */}
                 <div className="w-[70%] p-8 border border-gray-600 rounded-lg bg-servicetitlebg2">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -331,7 +323,6 @@ const Services = () => {
                     <img src="Service4.png" alt="01" />
                   </div>
                 </div>
-                {/* </ParallaxWrapper> */}
               </div>
             </div>
           </div>

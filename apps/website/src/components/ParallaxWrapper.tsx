@@ -16,7 +16,6 @@ interface ParallaxWrapperProps {
   duration?: number;
   threshold?: number;
   rootMargin?: string;
-  // once?: boolean;
 }
 
 const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
@@ -26,7 +25,6 @@ const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
   duration = 100,
   threshold = 0.1,
   rootMargin = "0px 0px -29px 0px",
-  // once = true,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -38,9 +36,6 @@ const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
         if (entry.isIntersecting && !hasAnimated) {
           setTimeout(() => {
             setIsVisible(true);
-            // if (once) {
-            //   setHasAnimated(true);
-            // }
           }, delay);
         } else if (!entry.isIntersecting) {
           setIsVisible(false);
