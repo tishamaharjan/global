@@ -1,4 +1,6 @@
 import Overlay from "../Overlay";
+import ParallaxContents from "../ParallaxContents";
+import ParallaxWrapper from "../ParallaxWrapper";
 
 const Services = () => {
   const services = [
@@ -38,9 +40,9 @@ const Services = () => {
     <>
       <section
         id="services"
-        className="py-[56px] md:py-20 md:px-12 bg-black flex justify-center"
+        className="py-[56px] md:py-20 md:px-12 bg-black flex justify-center lg:hidden"
       >
-        <div className="container max-sm:px-4 lg:hidden relative">
+        <div className="container max-sm:px-4  relative">
           <div className="max-w-3xl text-center mb-12">
             <span className="py-[6px] px-3 border border-statbg rounded-full text-yellowgreen bg-titlescolor">
               Services
@@ -212,7 +214,7 @@ const Services = () => {
         <Overlay />
 
         <section id="services" className="py-20 lg:px-[156px]">
-          <div className="container mx-auto max-sm:px-4">
+          <div className="container mx-auto max-sm:px-4 mt-10">
             <div className="mx-auto text-center mb-16">
               <span className="py-1 px-3 border border-statbg rounded-full text-yellowgreen bg-titlescolor">
                 Services
@@ -239,6 +241,7 @@ const Services = () => {
 
             <div className="max-md:hidden">
               <div className="flex gap-4 ">
+                {/* <ParallaxWrapper animationType="fade-left" delay={100}> */}
                 <div className="w-[50%] p-8 border  border-gray-600 rounded-lg bg-servicetitlebg1">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -258,7 +261,9 @@ const Services = () => {
                     <img src="Service1.png" alt="01" />
                   </div>
                 </div>
+                {/* </ParallaxWrapper> */}
 
+                {/* <ParallaxWrapper animationType="fade-right" delay={100}> */}
                 <div className="w-[50%] p-8 border border-gray-600 rounded-lg ">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -277,9 +282,11 @@ const Services = () => {
                     <img src="Service2.png" alt="01" />
                   </div>
                 </div>
+                {/* </ParallaxWrapper> */}
               </div>
 
               <div className="flex gap-4 mt-4">
+                {/* <ParallaxWrapper animationType="fade-left" delay={200}> */}
                 <div className="w-[30%] p-8 border border-gray-600 rounded-lg ">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -301,7 +308,9 @@ const Services = () => {
                     <img src="Service3.png" alt="01" />
                   </div>
                 </div>
+                {/* </ParallaxWrapper> */}
 
+                {/* <ParallaxWrapper animationType="fade-right" delay={200}> */}
                 <div className="w-[70%] p-8 border border-gray-600 rounded-lg bg-servicetitlebg2">
                   <div className="flex">
                     <span className="text-yellowgreen mb-2 text-[20px] font-semibold">
@@ -322,6 +331,7 @@ const Services = () => {
                     <img src="Service4.png" alt="01" />
                   </div>
                 </div>
+                {/* </ParallaxWrapper> */}
               </div>
             </div>
           </div>
