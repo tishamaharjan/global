@@ -1,4 +1,5 @@
 import Overlay from "../Overlay";
+import ParallaxWrapper from "../ParallaxWrapper";
 
 const Services = () => {
   const services = [
@@ -38,9 +39,9 @@ const Services = () => {
     <>
       <section
         id="services"
-        className="py-[56px] md:py-20 md:px-12 bg-black flex justify-center"
+        className="py-[56px] md:py-20 md:px-12 bg-black flex justify-center lg:hidden"
       >
-        <div className="container max-sm:px-4 lg:hidden relative">
+        <div className="container max-sm:px-4  relative">
           <div className="max-w-3xl text-center mb-12">
             <span className="py-[6px] px-3 border border-statbg rounded-full text-yellowgreen bg-titlescolor">
               Services
@@ -212,7 +213,7 @@ const Services = () => {
         <Overlay />
 
         <section id="services" className="py-20 lg:px-[156px]">
-          <div className="container mx-auto max-sm:px-4">
+          <div className="container mx-auto max-sm:px-4 mt-10">
             <div className="mx-auto text-center mb-16">
               <span className="py-1 px-3 border border-statbg rounded-full text-yellowgreen bg-titlescolor">
                 Services
