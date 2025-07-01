@@ -13,6 +13,11 @@ const FAQ = () => {
         "We offer a full range of tech solutions to help your business grow — from web and mobile app development to UI/UX design, cloud services, digital consulting, and custom software. Whatever your goals, we’ll help you get there with the right tools and strategy.",
     },
     {
+      question: "Who will be working on my project?",
+      answer:
+        "Your project will be handled by a dedicated team of experienced developers, designers, and project managers. You’ll have a clear point of contact and full visibility throughout the process.",
+    },
+    {
       question: "How involved will I be in the project development process?",
       answer:
         "As involved as you want to be. We keep you in the loop at every stage — from planning and design to development and launch. Your feedback is essential, and we make sure you always know what’s going on and where the project stands.",
@@ -99,7 +104,10 @@ const FAQ = () => {
                 >
                   <AccordionTrigger className="text-left py-5 text-whitegraytext group-data-[state=open]:text-globalgreen  transition-colors justify-normal items-start cursor-pointer">
                     <div className="flex">
-                      <span className="mr-[15px] h-full ">0{index + 1}</span>
+                      <span className="mr-[15px] h-full ">
+                        {index + 1 < 10 ? "0" : ""}
+                        {index + 1}
+                      </span>
                       <span>{faq.question}</span>
                     </div>
                   </AccordionTrigger>
@@ -140,7 +148,10 @@ const FAQ = () => {
                   >
                     <AccordionTrigger className="text-left py-5 text-whitegraytext group-data-[state=open]:text-globalgreen transition-colors justify-normal items-start">
                       <div className="flex">
-                        <span className="mr-[15px]">0{index + mid + 1}</span>
+                        <span className="mr-[15px]">
+                          {index + mid + 1 < 10 ? "0" : ""}
+                          {index + mid + 1}
+                        </span>
                         <span>{faq.question}</span>
                       </div>
                     </AccordionTrigger>
