@@ -8,16 +8,16 @@ const Component1 = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_1521_10717)">
+        <g clipPath="url(#clip0_1521_10717)">
           <rect width="32" height="32" rx="16" fill="#0A0A0A" />
-          <g clip-path="url(#clip1_1521_10717)">
-            <g clip-path="url(#clip2_1521_10717)">
+          <g clipPath="url(#clip1_1521_10717)">
+            <g clipPath="url(#clip2_1521_10717)">
               <path
                 d="M13.6422 12.7H19.2992M19.2992 12.7V18.357M19.2992 12.7L12.6992 19.3"
                 stroke="#CFE93A"
-                stroke-width="1.4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </g>
           </g>
