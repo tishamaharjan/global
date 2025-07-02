@@ -33,7 +33,7 @@ const CompanyIdentity = () => {
               <div className="w-[49%] h-[368px] relative mt-6 mb-6 max-md:hidden">
                 <div className="absolute top-0 left-0 h-full rounded-2xl">
                   <img
-                    src="Aboutusvid.gif"
+                    src="aboutusvid.gif"
                     alt=""
                     className="h-full rounded-2xl object-cover"
                   />
@@ -94,7 +94,7 @@ const CompanyIdentity = () => {
         </div>
         <div className="relative mt-6 mb-6 md:hidden">
           <img
-            src="Aboutusvid.gif"
+            src="aboutusvid.gif"
             alt=""
             className="w-full h-full rounded-2xl"
           />
