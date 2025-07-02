@@ -11,8 +11,6 @@ export const server = {
       const email = form.get("email");
       const message = form.get("message");
 
-      console.log(name, email, message);
-
       const { data, error } = await resend.emails.send({
         from: "noreply@globalsquareit.com",
         to: [
