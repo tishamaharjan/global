@@ -27,18 +27,28 @@ const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
   rootMargin = "0px 0px -29px 0px",
 }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const hasAnimated = useRef(false);
   const elementRef = useRef<HTMLDivElement | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
+    const animateIn = () => {
+      if (!hasAnimated.current) {
+        hasAnimated.current = true;
+        if (delay > 0) {
+          timeoutRef.current = setTimeout(() => {
+            requestAnimationFrame(() => setIsVisible(true));
+          }, delay);
+        } else {
+          requestAnimationFrame(() => setIsVisible(true));
+        }
+      }
+    };
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setTimeout(() => {
-            setIsVisible(true);
-          }, delay);
-        } else if (!entry.isIntersecting) {
-          setIsVisible(false);
+        if (entry.isIntersecting) {
+          animateIn();
         }
       },
       {
@@ -54,8 +64,11 @@ const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
       if (elementRef.current) {
         observer.unobserve(elementRef.current);
       }
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
     };
-  }, [delay, threshold, rootMargin, hasAnimated]);
+  }, [delay, threshold, rootMargin]);
 
   const getDuration = (): string => {
     switch (duration) {
