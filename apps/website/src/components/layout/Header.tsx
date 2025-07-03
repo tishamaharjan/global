@@ -114,18 +114,14 @@ const Header = () => {
               Services
             </a>
             <a
-              href="#features"
-              className="text-lg font-medium"
-              onClick={toggleMenu}
-            >
-              Features
-            </a>
-            <a
               href="#about"
               className="text-lg font-medium"
               onClick={toggleMenu}
             >
               About
+            </a>
+            <a href="#faq" className="text-lg font-medium" onClick={toggleMenu}>
+              FAQ's
             </a>
 
             <Button
