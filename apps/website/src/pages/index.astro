@@ -6,6 +6,7 @@ import CompanyIdentity from "@/components/sections/CompanyIdentity";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FAQ from "@/components/sections/FAQ";
 import ParallaxWrapper from "@/components/ParallaxWrapper";
+import { Toaster } from "@workspace/ui/components/sonner";
 
 ---
 
@@ -30,5 +31,7 @@ import ParallaxWrapper from "@/components/ParallaxWrapper";
     <ParallaxWrapper client:load animationType="fade-up" delay={400}>
       <FAQ client:load />
     </ParallaxWrapper>
+
+    <Toaster client:load  richColors  />
     </main>
 </Layout>
