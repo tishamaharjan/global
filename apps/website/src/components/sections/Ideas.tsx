@@ -3,8 +3,7 @@ import { useTransition } from "react";
 import { Button } from "../Button";
 import { Input } from "../Input";
 import { Textarea } from "../Textarea";
-import { Toaster } from "@workspace/ui/components/sonner";
-import { toast } from "sonner";
+import { toast } from "@workspace/ui/components/sonner";
 
 const Ideas = () => {
   const [isPending, setIsPending] = useTransition();
@@ -74,7 +73,6 @@ const Ideas = () => {
           </form>
         </div>
       </section>
-      <Toaster />
     </>
   );
 };

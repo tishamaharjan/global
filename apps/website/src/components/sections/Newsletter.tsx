@@ -3,8 +3,7 @@ import { Button } from "../Button";
 import { Input } from "../Input";
 import ColoredVector from "../../../public/ColoredVectorBg.svg";
 import { useState } from "react";
-import { Toaster } from "@workspace/ui/components/sonner";
-import { toast } from "sonner";
+import { toast } from "@workspace/ui/components/sonner";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +20,11 @@ const Newsletter = () => {
     return response.json();
   };
 
-  const JoinUsEmail = async () => {
+  const joinUsEmail = async () => {
+    if (!email) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
     try {
       setIsLoading(true);
       const res = await subscribeToNewsletter(email, url);
@@ -81,7 +84,7 @@ const Newsletter = () => {
                 style={{
                   animationDelay: "0.3s",
                 }}
-                onClick={JoinUsEmail}
+                onClick={joinUsEmail}
                 disabled={isLoading}
               >
                 {isLoading ? (
@@ -97,7 +100,6 @@ const Newsletter = () => {
           </div>
         </div>
       </section>
-      <Toaster />
     </>
   );
 };
