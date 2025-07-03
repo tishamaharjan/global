@@ -5,12 +5,13 @@ import ColoredVector from "../../../public/ColoredVectorBg.svg";
 import { useState } from "react";
 import { toast } from "@workspace/ui/components/sonner";
 
+const isValidEmail = (email: string) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+const url =
+  "https://script.google.com/macros/s/AKfycbxBb2C8b8geYvjxTcYPQCqhNr-vlkYfkqdXMqXcwpmyGeVm77_2oQg02FPupTWtmbg/exec";
 const Newsletter = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
-  const url =
-    "https://script.google.com/macros/s/AKfycbxBb2C8b8geYvjxTcYPQCqhNr-vlkYfkqdXMqXcwpmyGeVm77_2oQg02FPupTWtmbg/exec";
 
   const subscribeToNewsletter = async (email: string, url: string) => {
     const response = await fetch(url, {
@@ -22,6 +23,10 @@ const Newsletter = () => {
 
   const joinUsEmail = async () => {
     if (!email) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+    if (!isValidEmail(email)) {
       toast.error("Please enter a valid email address.");
       return;
     }
