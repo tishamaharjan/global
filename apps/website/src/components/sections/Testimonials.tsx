@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Button } from "../Button";
 
 type TestimonialProps = {
   name: string;
@@ -13,39 +13,26 @@ const Testimonial: React.FC<TestimonialProps> = ({
   position,
   company,
   testimonial,
-  rating,
 }) => {
   return (
-    <div className="bg-[#1A1A1A] border border-white/5 rounded-xl p-6 hover:border-[#C6FF00]/30 transition-all">
-      {/* Rating */}
-      <div className="flex mb-4">
-        {[...Array(5)].map((_, i) => (
-          <Star
-            key={i}
-            className={`h-4 w-4 ${
-              i < rating ? "text-[#C6FF00] fill-[#C6FF00]" : "text-white/20"
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Testimonial Text */}
-      <p className="text-white/70 mb-6 text-sm leading-relaxed">
-        "{testimonial}"
-      </p>
-
-      {/* Author Info */}
-      <div className="flex items-center">
-        <div className="w-10 h-10 bg-gradient-to-br from-[#C6FF00]/80 to-[#C6FF00]/30 rounded-full flex items-center justify-center text-black font-bold">
+    <div className="bg-lightblack flex-shrink-0 overflow-y-hidden border border-white/5 rounded-xl p-6 hover:border-green/30 transition-all w-[300px] font-[Space_Grotesk]">
+      <div className="flex items-center mb-3">
+        <div className="w-10 h-10 bg-gradient-to-br from-green/80 to-green/30 rounded-full flex items-center justify-center text-black font-bold">
           {name.charAt(0)}
         </div>
         <div className="ml-3">
-          <p className="font-medium text-white">{name}</p>
+          <p className="font-medium text-white text-lg">{name}</p>
           <p className="text-xs text-white/50">
             {position} at {company}
           </p>
         </div>
       </div>
+
+      <p className="text-white/60 mb-6 text-base leading-relaxed">
+        "{testimonial}"
+      </p>
+
+      <div className="text-white/40">03 Jan 2025</div>
     </div>
   );
 };
@@ -87,23 +74,42 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-[#121212]">
+    <section
+      id="testimonials"
+      className="py-20 md:px-[48px] lg:px-[156px] bg-black"
+    >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            What our clients{" "}
-            <span className="text-[#C6FF00]">say about us</span>
-          </h2>
-          <p className="text-white/60">
-            Don't just take our word for it. Here's what our clients have to say
-            about their experience working with us.
+        <div className="max-w-3xl mx-auto mb-16 md:text-center">
+          <span className="pb-1 pt-1 pl-3 pr-3 rounded-full text-yellowgreen bg-titlescolor">
+            Testimonials
+          </span>
+          <div>
+            <h2 className="md:hidden text-5xl font-bold mb-4 mt-2 text-white/60">
+              What our{" "}
+              <span className="text-greenbackground">
+                clients say <br /> about us
+              </span>
+            </h2>
+
+            <h2 className="hidden md:block text-5xl md:text-4xl mb-4 mt-2 text-white/60 font-[Space_Grotesk]">
+              What our{" "}
+              <span className="bg-gradient-to-r from-gradientdark to-gradientlight bg-clip-text text-transparent">
+                clients say <br />
+              </span>
+              <span className="bg-gradient-to-r from-gradientdark to-gradientlight bg-clip-text text-transparent">
+                about us
+              </span>
+            </h2>
+          </div>
+          <p className="text-semititlegray">
+            Hear from those who know us best.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {testimonials.map((testimonial, index) => (
+        <div className="flex md:grid-cols-2 gap-6 overflow-x-auto scrollbar-none">
+          {testimonials.map((testimonial) => (
             <Testimonial
-              key={index}
+              key={testimonial.company}
               name={testimonial.name}
               position={testimonial.position}
               company={testimonial.company}
@@ -111,6 +117,20 @@ const Testimonials = () => {
               rating={testimonial.rating}
             />
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <a href="#footer">
+            <Button
+              className="cursor-pointer bg-statbg hover:bg-darkergreen text-greenbackground px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
+              Join Us
+              <div className="bg-black rounded-full p-2 ml-3 w-[32px] h-[32px]">
+                <img src="Component1.svg" alt="component" />
+              </div>
+            </Button>
+          </a>
         </div>
       </div>
     </section>

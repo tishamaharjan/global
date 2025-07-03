@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
-import { Button } from "@workspace/ui/components/button";
-import { Menu, X } from "lucide-react";
-import { cn } from "@workspace/ui/lib/utils";
+import { Button } from "../Button";
+import { X } from "lucide-react";
+import { cn } from "../lib/utils";
+import HamMenu from "@/assets/icons/Menu";
+import Logo from "@/assets/icons/Logo";
+import Component1 from "@/assets/icons/Component1";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,77 +41,71 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4",
-        scrolled ? "bg-black/90 backdrop-blur-md" : "bg-transparent"
+        "fixed top-0 left-0 w-full max-sm:h-16 h-[90px] z-50 transition-all duration-300 pt-[14px] px-6 md:px-12 lg:px-[156px]",
+        scrolled ? "backdrop-blur-md" : "bg-black",
+        isMenuOpen ? "bg-black" : "backdrop-blur-md"
       )}
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 bg-[#C6FF00] rounded-md flex items-center justify-center">
-              <span className="font-bold text-black">G</span>
+          <a href="#">
+            <div className="flex items-center gap-2 ">
+              <Logo className="w-[90px] h-9 sm:w-[136px] sm:h-[56px]" />
             </div>
-            <span className="text-xl font-bold">
-              Global<span className="text-[#C6FF00]">Square</span>
-            </span>
-          </div>
+          </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden font-medium text-lg lg:flex items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-titlescolor lg:border lg:border-border text-whitetext">
             <a
               href="#services"
-              className="text-sm hover:text-[#C6FF00] transition-colors"
+              className="text-lg hover:text-green transition-colors"
             >
               Services
             </a>
-            <a
-              href="#features"
-              className="text-sm hover:text-[#C6FF00] transition-colors"
-            >
-              Features
-            </a>
+
             <a
               href="#about"
-              className="text-sm hover:text-[#C6FF00] transition-colors"
+              className="text-lg hover:text-green transition-colors"
             >
               About
             </a>
             <a
-              href="#testimonials"
-              className="text-sm hover:text-[#C6FF00] transition-colors"
+              href="#faq"
+              className="text-lg hover:text-green transition-colors"
             >
-              Testimonials
+              FAQ's
             </a>
           </nav>
 
-          {/* CTA Button */}
           <Button
             onClick={scrollToContact}
-            className="hidden md:flex bg-[#C6FF00] text-black hover:bg-[#a8d900] transition-colors"
+            className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground text-lg hidden h-12 lg:flex bg-yellowgreen hover:bg-darkergreen text-black transition-colors rounded-full font-medium"
+            style={{
+              animationDelay: "0.3s",
+            }}
           >
-            Contact Us
+            Contact Us{" "}
+            <div className="ml-3 w-[32px] h-[32px]">
+              <Component1 />
+            </div>
           </Button>
 
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="cursor-pointer lg:hidden text-white"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <HamMenu className="w-9 h-9 sm:w-12 sm:h-12" />
             )}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[64px] bg-black z-40">
-          <nav className="flex flex-col p-6 space-y-6">
+        <div className="lg:hidden h-screen fixed inset-0 top-[64px] bg-black lg:pl-[156px]">
+          <nav className="flex flex-col p-6 space-y-6 font-medium">
             <a
               href="#services"
               className="text-lg font-medium"
@@ -130,16 +127,10 @@ const Header = () => {
             >
               About
             </a>
-            <a
-              href="#testimonials"
-              className="text-lg font-medium"
-              onClick={toggleMenu}
-            >
-              Testimonials
-            </a>
+
             <Button
               onClick={scrollToContact}
-              className="bg-[#C6FF00] text-black hover:bg-[#a8d900] w-full"
+              className="cursor-pointer text-lg bg-yellowgreen border-r-[2px] border-b-[4px] border-greenbackground text-black hover:bg-darkergreen w-full md:w-[50%]"
             >
               Contact Us
             </Button>

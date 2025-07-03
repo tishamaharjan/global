@@ -4,21 +4,34 @@ import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import CompanyIdentity from "@/components/sections/CompanyIdentity";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
-import Newsletter from "@/components/sections/Newsletter";
-import Contact from "@/components/sections/Contact";
+import ParallaxWrapper from "@/components/ParallaxWrapper";
+import { Toaster } from "@workspace/ui/components/sonner";
+
 ---
 
-<Layout title="Global Square - Digital Innovation Agency">
+<Layout title="Global Square - Connecting Opportunities, Harvesting Success">
   <main class="overflow-hidden">
-    <Hero client:load />
-    <Services />
-    <CompanyIdentity />
-    <WhyChooseUs />
-    <FAQ client:load />
-    <Testimonials />
-    <Contact client:load />
-    <Newsletter />
-  </main>
+    <section>
+      <Hero />
+    </section>
+  
+    <ParallaxWrapper client:load animationType="fade-up" delay={100}>
+      <Services />
+    </ParallaxWrapper>
+  
+    <ParallaxWrapper client:load animationType="fade-up" delay={200}>
+      <CompanyIdentity />
+    </ParallaxWrapper>
+
+    <ParallaxWrapper client:load animationType="fade-up" delay={300}>
+      <WhyChooseUs />
+    </ParallaxWrapper>
+  
+    <ParallaxWrapper client:load animationType="fade-up" delay={400}>
+      <FAQ client:load />
+    </ParallaxWrapper>
+
+    <Toaster client:load  richColors  />
+    </main>
 </Layout>

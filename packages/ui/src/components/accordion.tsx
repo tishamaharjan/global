@@ -1,8 +1,9 @@
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { ChevronDown } from "lucide-react";
 
 import { cn } from "@workspace/ui/lib/utils";
+import PlusDarkIcon from "../icons/PlusDarkIcon.tsx";
+import MinusDarkIcon from "../icons/MinusDarkIcon.tsx";
 
 const Accordion = AccordionPrimitive.Root;
 
@@ -12,7 +13,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("border-b", className)}
+    className={cn(" group", className)}
     {...props}
   />
 ));
@@ -26,13 +27,21 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+        "flex flex-1 items-center justify-between py-3 font-medium transition-all hover:underline",
         className
       )}
       {...props}
     >
-      {children}
-      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+      <span className="min-w-[230px] mr-[5px]">{children}</span>
+
+      <div className="ml-auto">
+        <span className="group-data-[state=open]:hidden">
+          <PlusDarkIcon />
+        </span>
+        <span className="hidden group-data-[state=open]:block">
+          <MinusDarkIcon />
+        </span>
+      </div>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));

@@ -1,64 +1,117 @@
+import Component1 from "@/assets/icons/Component1";
+import { Button } from "../Button";
+
 const CompanyIdentity = () => {
+  const stats = [
+    {
+      stats: "2023",
+      title: "Year Founded",
+    },
+    {
+      stats: "5+",
+      title: "Completed Projects",
+    },
+    {
+      stats: "20+",
+      title: "Team Members",
+    },
+    {
+      stats: "20+",
+      title: "Clients",
+    },
+  ];
+
   return (
-    <section id="about" className="py-20 bg-[#121212]">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <div className="aspect-[4/3] bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] rounded-lg overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Team collaboration"
-                className="w-full h-full object-cover mix-blend-overlay opacity-60"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-[#C6FF00]/20"></div>
-            </div>
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#1E1E1E] rounded-lg -z-10"></div>
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#C6FF00]/10 rounded-lg -z-10"></div>
-          </div>
+    <section
+      id="about"
+      className="py-20 lg:py-[116px] md:px-12 lg:px-[156px] bg-black"
+    >
+      <div className="container mx-auto max-sm:px-4 min-h-[400px] gap-12">
+        <div className="md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Discover Our <span className="text-[#C6FF00]">Identity</span>
-            </h2>
-            <p className="text-white/70 mb-8 leading-relaxed">
-              At GS, we are more than just a tech company. We're your innovation
-              partner, constantly pushing boundaries and solving complex digital
-              challenges with passion and expertise. We pride ourselves on
-              transforming businesses through our innovative digital solutions.
-            </p>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 mb-10">
-              <div className="border-l-2 border-[#C6FF00] pl-4">
-                <p className="text-3xl font-bold">2023</p>
-                <p className="text-sm text-white/50">Founded</p>
+            <div className="flex gap-[48px]">
+              <div className="w-[49%] h-[368px] relative mt-6 mb-6 max-md:hidden">
+                <div className="absolute top-0 left-0 h-full rounded-2xl">
+                  <img
+                    src="aboutusvid.gif"
+                    alt=""
+                    className="h-full rounded-2xl object-cover"
+                  />
+                </div>
               </div>
-              <div className="border-l-2 border-[#C6FF00] pl-4">
-                <p className="text-3xl font-bold">25+</p>
-                <p className="text-sm text-white/50">Team Members</p>
-              </div>
-              <div className="border-l-2 border-[#C6FF00] pl-4">
-                <p className="text-3xl font-bold">20+</p>
-                <p className="text-sm text-white/50">Projects Delivered</p>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-2">
-              {[
-                "Innovation",
-                "Technology",
-                "Design",
-                "Development",
-                "Strategy",
-              ].map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm"
-                >
-                  {tag}
+              <div className="w-full md:w-[49%]">
+                <span className="py-[6px] px-3 border border-statbg rounded-full text-greenbackground bg-titlescolor">
+                  About Us
                 </span>
-              ))}
+                <h2 className="text-3xl md:text-[48px] font-bold mb-5 mt-5">
+                  <span className="text-abouttextgray">Discover Our </span>
+                  <span className="md:hidden lg:flex text-greenbackground">
+                    Identity
+                  </span>
+                  <span className="hidden md:flex lg:hidden bg-gradient-to-t from-darkgreen to-yellowgreen bg-clip-text text-transparent">
+                    Identity
+                  </span>
+                </h2>
+                <p className="text-servicedesc mb-8 text-[16px] font-medium leading-relaxed">
+                  At GS, we are more than just a team—we are innovators,
+                  creators, and problem solvers dedicated to crafting
+                  cutting-edge web solutions. Our mission is to transform ideas
+                  into reality, empowering businesses with seamless digital
+                  experiences.
+                </p>
+                <div className="flex sm:flex-row max-lg:hidden gap-4 lg:my-8">
+                  <a href="#contact">
+                    <Button
+                      className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground bg-yellowgreen hover:bg-darkergreen text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+                      style={{
+                        animationDelay: "0.3s",
+                      }}
+                    >
+                      Contact Us
+                      <div className="ml-3 w-[32px] h-[32px]">
+                        <Component1 />
+                      </div>
+                    </Button>
+                  </a>
+                  {/* <Button
+                    variant="outline"
+                    className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-globalgreen px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+                    style={{
+                      animationDelay: "0.5s",
+                      borderRight: "2px solid rgba(234, 234, 234, 0.50)",
+                      borderBottom: "4px solid rgba(234, 234, 234, 0.50)",
+                    }}
+                  >
+                    View Projects
+                    <div className="ml-3 w-[32px] h-[32px]">
+                      <Component1 />
+                    </div>
+                  </Button> */}
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <div className="relative mt-6 mb-6 md:hidden">
+          <img
+            src="aboutusvid.gif"
+            alt=""
+            className="w-full h-full rounded-2xl"
+          />
+        </div>
+
+        <div className="w-full mt-12 md:mt-6 lg:mt-12 flex flex-wrap gap-2 md:gap-5 lg:gap-5 justify-between">
+          {stats.map((stat) => (
+            <div
+              key={stat.title}
+              className="bg-statbg font-medium text-[18px] text-center p-3 flex flex-col justify-center h-[108px] w-[48%] md:w-[160px] lg:w-[265px] rounded-[15px]"
+            >
+              <p className="text-2xl font-bold text-stattext">{stat.stats}</p>
+              <p className="text-[18px] font-medium text-stattextgray">
+                {stat.title}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
