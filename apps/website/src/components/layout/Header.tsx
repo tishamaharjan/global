@@ -46,61 +46,56 @@ const Header = () => {
         isMenuOpen ? "bg-black" : "backdrop-blur-md"
       )}
     >
-      <div className="container mx-auto">
-        <div className="flex items-center justify-between">
-          <a href="#">
-            <div className="flex items-center gap-2 ">
-              <Logo className="w-[90px] h-9 sm:w-[136px] sm:h-[56px]" />
-            </div>
+      <div className="container mx-auto flex items-center justify-between">
+        <a href="#">
+          <div className="flex items-center gap-2 ">
+            <Logo className="w-[90px] h-9 sm:w-[136px] sm:h-[56px]" />
+          </div>
+        </a>
+
+        <nav className="hidden font-medium text-lg lg:flex items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-titlescolor lg:border lg:border-border text-whitetext">
+          <a
+            href="#services"
+            className="text-lg hover:text-green transition-colors"
+          >
+            Services
           </a>
 
-          <nav className="hidden font-medium text-lg lg:flex items-center gap-6 h-[68px] px-[28px] py-5 rounded-[63px] bg-titlescolor lg:border lg:border-border text-whitetext">
-            <a
-              href="#services"
-              className="text-lg hover:text-green transition-colors"
-            >
-              Services
-            </a>
-
-            <a
-              href="#about"
-              className="text-lg hover:text-green transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#faq"
-              className="text-lg hover:text-green transition-colors"
-            >
-              FAQ's
-            </a>
-          </nav>
-
-          <Button
-            onClick={scrollToContact}
-            className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground text-lg hidden h-12 lg:flex bg-yellowgreen hover:bg-darkergreen text-black transition-colors rounded-full font-medium"
-            style={{
-              animationDelay: "0.3s",
-            }}
+          <a
+            href="#about"
+            className="text-lg hover:text-green transition-colors"
           >
-            Contact Us{" "}
-            <div className="ml-3 w-[32px] h-[32px]">
-              <Component1 />
-            </div>
-          </Button>
+            About
+          </a>
+          <a href="#faq" className="text-lg hover:text-green transition-colors">
+            FAQ's
+          </a>
+        </nav>
 
-          <button
-            className="cursor-pointer lg:hidden text-white"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <HamMenu className="w-9 h-9 sm:w-12 sm:h-12" />
-            )}
-          </button>
-        </div>
+        <Button
+          onClick={scrollToContact}
+          className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground text-lg hidden h-12 lg:flex bg-yellowgreen hover:bg-darkergreen text-black transition-colors rounded-full font-medium"
+          style={{
+            animationDelay: "0.3s",
+          }}
+        >
+          Contact Us{" "}
+          <div className="ml-3 w-[32px] h-[32px]">
+            <Component1 />
+          </div>
+        </Button>
+
+        <button
+          className="cursor-pointer lg:hidden text-white"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <HamMenu className="w-9 h-9 sm:w-12 sm:h-12" />
+          )}
+        </button>
       </div>
 
       {isMenuOpen && (

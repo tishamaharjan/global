@@ -17,7 +17,7 @@ const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => {
         {icon}
       </div>
       <div>
-        <h3 className="text-2xl font-bold mb-2 text-darkinput">{title}</h3>
+        <h1 className="text-2xl font-bold mb-2 text-darkinput">{title}</h1>
         <p className="text-black text-lg font-medium text-desc leading-relaxed">
           {description}
         </p>

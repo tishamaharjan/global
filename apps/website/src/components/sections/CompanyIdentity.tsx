@@ -32,11 +32,14 @@ const CompanyIdentity = () => {
             <div className="flex gap-[48px]">
               <div className="w-[49%] h-[368px] relative mt-6 mb-6 max-md:hidden">
                 <div className="absolute top-0 left-0 h-full rounded-2xl">
-                  <img
-                    src="aboutusvid.gif"
-                    alt=""
+                  <video
+                    autoPlay
+                    loop
+                    muted
                     className="h-full rounded-2xl object-cover"
-                  />
+                  >
+                    <source src="/AboutUs.webm" type="video/webm" />
+                  </video>
                 </div>
               </div>
               <div className="w-full md:w-[49%]">
@@ -93,11 +96,14 @@ const CompanyIdentity = () => {
           </div>
         </div>
         <div className="relative mt-6 mb-6 md:hidden">
-          <img
-            src="aboutusvid.gif"
-            alt=""
-            className="w-full h-full rounded-2xl"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            className="h-full rounded-2xl object-cover"
+          >
+            <source src="/AboutUs.webm" type="video/webm" />
+          </video>
         </div>
 
         <div className="w-full mt-12 md:mt-6 lg:mt-12 flex flex-wrap gap-2 md:gap-5 lg:gap-5 justify-between">

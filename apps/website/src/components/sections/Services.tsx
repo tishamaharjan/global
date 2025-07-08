@@ -45,7 +45,7 @@ const Services = () => {
         className="py-20 md:py-20 lg:py-20 md:px-12 lg:px-[156px] max-lg:bg-black"
       >
         <div className="flex justify-center lg:hidden">
-          <div className="container max-sm:px-4  relative">
+          <div className="container max-sm:px-4 relative">
             <div className="max-w-3xl text-center mb-12">
               <span className="py-[6px] px-3 border border-statbg rounded-full text-yellowgreen bg-titlescolor">
                 Services

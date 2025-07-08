@@ -82,11 +82,14 @@ const Hero: React.FC = () => {
     <>
       <section className="relative bg-black max-sm:mt-16 mt-[90px] md:pb-32 object-fit content-center lg:mt-0 lg:min-h-[898px]">
         <span className="w-full">
-          <img
-            src="Earth.gif"
-            alt=""
+          <video
+            autoPlay
+            loop
+            muted
             className="absolute w-full h-full z-0 object-cover"
-          />
+          >
+            <source src="/Earth.webm" type="video/webm" />
+          </video>
         </span>
 
         <div className="max-lg:hidden">
@@ -120,65 +123,62 @@ const Hero: React.FC = () => {
           })}
         </div>
 
-        <div className="container mt-22 mx-auto px-4 md:px-6 relative z-10 pt-45">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-[58px] lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
-              Bringing Your{" "}
-              <span className="text-herotext">
-                <HeroTextLoop />
-              </span>{" "}
-              to Life with <span className="text-herotextgray">Innovation</span>{" "}
-              &{" "}
-              <span
-                className="bg-clip-text text-transparent"
+        <div className="container mt-22 px-4 md:px-6 relative z-10 pt-45 max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-[58px] lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
+            Bringing Your{" "}
+            <span className="text-herotext">
+              <HeroTextLoop />
+            </span>{" "}
+            to Life with <span className="text-herotextgray">Innovation</span> &{" "}
+            <span
+              className="bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, yellowgreen 35.52%);",
+              }}
+            >
+              Precision
+            </span>
+          </h1>
+
+          <p className="text-lg md:text-xl text-stattext mb-8 max-w-3xl mx-auto animate-slide-up font-medium">
+            We turn ideas into impactful digital experiences. From strategy to
+            execution, our Japan-based team delivers tech solutions that drive
+            growth and inspire success.
+          </p>
+
+          <div className="hidden md:flex sm:flex-row justify-center items-center gap-4">
+            <a href="#services">
+              <Button
+                className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground bg-yellowgreen hover:bg-darkergreen text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
                 style={{
-                  backgroundImage:
-                    "linear-gradient(278deg, rgba(0, 0, 0, 0.51) -14.35%, rgba(209, 232, 77, 0.70) 16.07%, yellowgreen 35.52%);",
+                  animationDelay: "0.3s",
                 }}
               >
-                Precision
-              </span>
-            </h1>
-
-            <p className="text-lg md:text-xl text-stattext mb-8 max-w-3xl mx-auto animate-slide-up font-medium">
-              We turn ideas into impactful digital experiences. From strategy to
-              execution, our Japan-based team delivers tech solutions that drive
-              growth and inspire success.
-            </p>
-
-            <div className="hidden md:flex sm:flex-row justify-center items-center gap-4">
-              <a href="#services">
-                <Button
-                  className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground bg-yellowgreen hover:bg-darkergreen text-black px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
-                  style={{
-                    animationDelay: "0.3s",
-                  }}
-                >
-                  <span>
-                    Explore <span className="max-sm:hidden">More</span>
-                  </span>
-                  <div className="ml-3 w-[32px] h-[32px]">
-                    <Component1 />
-                  </div>
-                </Button>
-              </a>
-              <a href="#footer">
-                <Button
-                  variant="outline"
-                  className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-globalgreen px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
-                  style={{
-                    animationDelay: "0.5s",
-                    borderRight: "2px solid rgba(234, 234, 234, 0.50)",
-                    borderBottom: "4px solid rgba(234, 234, 234, 0.50)",
-                  }}
-                >
-                  Contact Us
-                  <div className="ml-3 w-[32px] h-[32px]">
-                    <Component1 />
-                  </div>
-                </Button>
-              </a>
-            </div>
+                <span>
+                  Explore <span className="max-sm:hidden">More</span>
+                </span>
+                <div className="ml-3 w-[32px] h-[32px]">
+                  <Component1 />
+                </div>
+              </Button>
+            </a>
+            <a href="#footer">
+              <Button
+                variant="outline"
+                className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-globalgreen px-4 py-6 h-[52px] text-[18px] font-medium rounded-[25px] animate-fade-in"
+                style={{
+                  animationDelay: "0.5s",
+                  borderRight: "2px solid rgba(234, 234, 234, 0.50)",
+                  borderBottom: "4px solid rgba(234, 234, 234, 0.50)",
+                }}
+              >
+                Contact Us
+                <div className="ml-3 w-[32px] h-[32px]">
+                  <Component1 />
+                </div>
+              </Button>
+            </a>
           </div>
         </div>
       </section>
