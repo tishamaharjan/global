@@ -23,7 +23,7 @@ const Contact = () => {
     >
       <DotBackground>
         <div className="py-[36px] px-[32px] rounded-2xl">
-          <div>
+          <>
             <h3 className="font-bold text-whitetext mb-4 text-2xl">
               How to contact?
             </h3>
@@ -51,23 +51,21 @@ const Contact = () => {
                 <span className="text-lg py-[10px]">Kathmandu, Nepal</span>
               </div>
             </div>
-          </div>
+          </>
           <div className="flex flex-col mt-6 ">
             <span className="text-whitetext text-[16px] font-semibold">
               Our Socials
             </span>
-            <div className="flex mt-3">
-              <span className="flex gap-4">
-                {socials.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="hover:text-globalgreen transition-colors border border-iconborder rounded-[10px]"
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </span>
+            <div className="flex mt-3 gap-4">
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="hover:text-globalgreen transition-colors border border-iconborder rounded-[10px]"
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
         </div>

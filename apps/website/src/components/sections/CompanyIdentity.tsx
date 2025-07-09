@@ -28,55 +28,53 @@ const CompanyIdentity = () => {
     >
       <div className="container mx-auto max-sm:px-4 min-h-[400px] gap-12">
         <div className="md:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="flex gap-[48px]">
-              <div className="w-[49%] h-[368px] relative mt-6 mb-6 max-md:hidden">
-                <div className="absolute top-0 left-0 h-full rounded-2xl">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    className="h-full rounded-2xl object-cover"
-                  >
-                    <source src="/AboutUs.webm" type="video/webm" />
-                  </video>
-                </div>
+          <div className="flex gap-[48px]">
+            <div className="w-[49%] h-[368px] relative mt-6 mb-6 max-md:hidden">
+              <div className="absolute top-0 left-0 h-full rounded-2xl">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  className="h-full rounded-2xl object-cover"
+                >
+                  <source src="/AboutUs.webm" type="video/webm" />
+                </video>
               </div>
-              <div className="w-full md:w-[49%]">
-                <span className="py-[6px] px-3 border border-statbg rounded-full text-greenbackground bg-titlescolor">
-                  About Us
+            </div>
+            <div className="w-full md:w-[49%]">
+              <span className="py-[6px] px-3 border border-statbg rounded-full text-greenbackground bg-titlescolor">
+                About Us
+              </span>
+              <h2 className="text-3xl md:text-[48px] font-bold mb-5 mt-5">
+                <span className="text-abouttextgray">Discover Our </span>
+                <span className="md:hidden lg:flex text-greenbackground">
+                  Identity
                 </span>
-                <h2 className="text-3xl md:text-[48px] font-bold mb-5 mt-5">
-                  <span className="text-abouttextgray">Discover Our </span>
-                  <span className="md:hidden lg:flex text-greenbackground">
-                    Identity
-                  </span>
-                  <span className="hidden md:flex lg:hidden bg-gradient-to-t from-darkgreen to-yellowgreen bg-clip-text text-transparent">
-                    Identity
-                  </span>
-                </h2>
-                <p className="text-servicedesc mb-8 text-[16px] font-medium leading-relaxed">
-                  At GS, we are more than just a team—we are innovators,
-                  creators, and problem solvers dedicated to crafting
-                  cutting-edge web solutions. Our mission is to transform ideas
-                  into reality, empowering businesses with seamless digital
-                  experiences.
-                </p>
-                <div className="flex sm:flex-row max-lg:hidden gap-4 lg:my-8">
-                  <a href="#contact">
-                    <Button
-                      className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground bg-yellowgreen hover:bg-darkergreen text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
-                      style={{
-                        animationDelay: "0.3s",
-                      }}
-                    >
-                      Contact Us
-                      <div className="ml-3 w-[32px] h-[32px]">
-                        <Component1 />
-                      </div>
-                    </Button>
-                  </a>
-                  {/* <Button
+                <span className="hidden md:flex lg:hidden bg-gradient-to-t from-darkgreen to-yellowgreen bg-clip-text text-transparent">
+                  Identity
+                </span>
+              </h2>
+              <p className="text-servicedesc mb-8 text-[16px] font-medium leading-relaxed">
+                At GS, we are more than just a team—we are innovators, creators,
+                and problem solvers dedicated to crafting cutting-edge web
+                solutions. Our mission is to transform ideas into reality,
+                empowering businesses with seamless digital experiences.
+              </p>
+              <div className="flex sm:flex-row max-lg:hidden gap-4 lg:my-8">
+                <a href="#contact">
+                  <Button
+                    className="cursor-pointer border-r-[2px] border-b-[4px] border-greenbackground bg-yellowgreen hover:bg-darkergreen text-black px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
+                    style={{
+                      animationDelay: "0.3s",
+                    }}
+                  >
+                    Contact Us
+                    <div className="ml-3 w-[32px] h-[32px]">
+                      <Component1 />
+                    </div>
+                  </Button>
+                </a>
+                {/* <Button
                     variant="outline"
                     className="cursor-pointer bg-black text-yellowgreen hover:bg-gray/90 hover:text-globalgreen px-6 py-6 h-10 text-base rounded-[25px] animate-fade-in"
                     style={{
@@ -90,7 +88,6 @@ const CompanyIdentity = () => {
                       <Component1 />
                     </div>
                   </Button> */}
-                </div>
               </div>
             </div>
           </div>

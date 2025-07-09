@@ -68,102 +68,99 @@ const FAQ = () => {
       id="faq"
       className="py-[69px] lg:py-20 md:px-12 lg:px-[156px]  bg-black text-stattext"
     >
-      <div className="container mx-auto max-sm:px-4">
-        <div className="lg:w-full max-lg:mx-auto">
-          <div className="text-center mb-12">
-            <span className="py-[6px] px-[12px] border border-statbg rounded-full text-[16px] font-medium bg-titlescolor text-yellowgreen md:bg-titlescolor">
-              FAQs
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold my-4">
-              Got Questions?
-              <br />
-              <div
-                className="mt-3 bg-clip-text text-transparent font-bold"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(18deg, darkgreen -2.03%, rgba(209, 232, 77, 0.70) 46.84%, yellowgreen 101.07%)",
-                }}
+      <div className="container mx-auto max-sm:px-4 lg:w-full max-lg:mx-auto">
+        <div className="text-center mb-12">
+          <span className="py-[6px] px-[12px] border border-statbg rounded-full text-[16px] font-medium bg-titlescolor text-yellowgreen md:bg-titlescolor">
+            FAQs
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold my-4">
+            Got Questions?
+            <br />
+            <div
+              className="mt-3 bg-clip-text text-transparent font-bold"
+              style={{
+                backgroundImage:
+                  "linear-gradient(18deg, darkgreen -2.03%, rgba(209, 232, 77, 0.70) 46.84%, yellowgreen 101.07%)",
+              }}
+            >
+              We've Got Answers!
+            </div>
+          </h2>
+          <p className="text-[15px] font-normal text-graytext">
+            If you have any additional questions or need further clarification,
+            don't hesitate to get in touch with our team directly.
+          </p>
+        </div>
+
+        <Accordion type="single" collapsible>
+          <div className="lg:hidden">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className=" border-b-[1px] border-iconborder px-6 overflow-hidden"
               >
-                We've Got Answers!
-              </div>
-            </h2>
-            <p className="text-[15px] font-normal text-graytext">
-              If you have any additional questions or need further
-              clarification, don't hesitate to get in touch with our team
-              directly.
-            </p>
+                <AccordionTrigger className="text-left py-5 text-whitegraytext group-data-[state=open]:text-globalgreen  transition-colors justify-normal items-start cursor-pointer">
+                  <div className="flex">
+                    <span className="mr-[15px] h-full ">
+                      {index + 1 < 10 ? "0" : ""}
+                      {index + 1}
+                    </span>
+                    <span>{faq.question}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-whitegraytext pb-5 ml-[36px]  max-w-[245px] md:max-w-[600px]">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
           </div>
 
-          <Accordion type="single" collapsible>
-            <div className="lg:hidden">
-              {faqs.map((faq, index) => (
+          <div className="max-lg:hidden lg:grid lg:grid-cols-2 gap-[30px]">
+            <div className="border-[1px] border-iconborder rounded-xl">
+              {leftCol.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className=" border-b-[1px] border-iconborder px-6 overflow-hidden"
+                  className="px-6"
                 >
                   <AccordionTrigger className="text-left py-5 text-whitegraytext group-data-[state=open]:text-globalgreen  transition-colors justify-normal items-start cursor-pointer">
                     <div className="flex">
-                      <span className="mr-[15px] h-full ">
-                        {index + 1 < 10 ? "0" : ""}
-                        {index + 1}
-                      </span>
+                      <span className="mr-[15px] h-full">0{index + 1}</span>
                       <span>{faq.question}</span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-whitegraytext pb-5 ml-[36px]  max-w-[245px] md:max-w-[600px]">
+                  <AccordionContent className="md:text-whitegraytext pb-5 ml-[32px] lg:max-w-[410px]">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
               ))}
             </div>
 
-            <div className="max-lg:hidden lg:grid lg:grid-cols-2 gap-[30px]">
-              <div className="border-[1px] border-iconborder rounded-xl">
-                {leftCol.map((faq, index) => (
-                  <AccordionItem
-                    key={index}
-                    value={`item-${index}`}
-                    className="px-6"
-                  >
-                    <AccordionTrigger className="text-left py-5 text-whitegraytext group-data-[state=open]:text-globalgreen  transition-colors justify-normal items-start cursor-pointer">
-                      <div className="flex">
-                        <span className="mr-[15px] h-full">0{index + 1}</span>
-                        <span>{faq.question}</span>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="md:text-whitegraytext pb-5 ml-[32px] lg:max-w-[410px]">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </div>
-
-              <div className="border-[1px] border-iconborder rounded-xl">
-                {RightCol.map((faq, index) => (
-                  <AccordionItem
-                    key={index + mid}
-                    value={`item-${index + mid}`}
-                    className=" px-6 overflow-hidden"
-                  >
-                    <AccordionTrigger className="text-left py-5 text-whitegraytext group-data-[state=open]:text-globalgreen transition-colors justify-normal items-start">
-                      <div className="flex">
-                        <span className="mr-[15px]">
-                          {index + mid + 1 < 10 ? "0" : ""}
-                          {index + mid + 1}
-                        </span>
-                        <span>{faq.question}</span>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="md:text-whitegraytext pb-5 ml-[32px] lg:max-w-[410px]">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </div>
+            <div className="border-[1px] border-iconborder rounded-xl">
+              {RightCol.map((faq, index) => (
+                <AccordionItem
+                  key={index + mid}
+                  value={`item-${index + mid}`}
+                  className=" px-6 overflow-hidden"
+                >
+                  <AccordionTrigger className="text-left py-5 text-whitegraytext group-data-[state=open]:text-globalgreen transition-colors justify-normal items-start">
+                    <div className="flex">
+                      <span className="mr-[15px]">
+                        {index + mid + 1 < 10 ? "0" : ""}
+                        {index + mid + 1}
+                      </span>
+                      <span>{faq.question}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="md:text-whitegraytext pb-5 ml-[32px] lg:max-w-[410px]">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
             </div>
-          </Accordion>
-        </div>
+          </div>
+        </Accordion>
       </div>
     </section>
   );
